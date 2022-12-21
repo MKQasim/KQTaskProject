@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  KQTaskProject
 //
-//  Created by PSE on 21/12/2022.
+//  Created by KamsQue on 21/12/2022.
 //
 
 import UIKit

@@ -20,6 +20,24 @@
 		5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C422953843600270CD2 /* ContactAPI.swift */; };
 		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
 		5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C0692953956F0003A0B7 /* KQViewController.swift */; };
+		5D6D6B4F2953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
+		5D6D6B502953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
+		5D6D6B512953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
+		5D6D6B522953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
+		5D6D6B532953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
+		5D6D6B542953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
+		5D6D6B552953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
+		5D6D6B562953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
+		5D6D6B572953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
+		5D6D6B582953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
+		5D6D6B592953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
+		5D6D6B5A2953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
+		5D6D6B5B2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
+		5D6D6B5C2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
+		5D6D6B5D2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
+		5D6D6B5E2953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
+		5D6D6B5F2953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
+		5D6D6B602953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +75,12 @@
 		5D1A7C422953843600270CD2 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
 		5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQContactTableViewCell.swift; sourceTree = "<group>"; };
 		5D54C0692953956F0003A0B7 /* KQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQViewController.swift; sourceTree = "<group>"; };
+		5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCPresenter.swift; sourceTree = "<group>"; };
+		5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCWorker.swift; sourceTree = "<group>"; };
+		5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCRouter.swift; sourceTree = "<group>"; };
+		5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCModels.swift; sourceTree = "<group>"; };
+		5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewController.swift; sourceTree = "<group>"; };
+		5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +174,12 @@
 			children = (
 				5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */,
 				5D54C0692953956F0003A0B7 /* KQViewController.swift */,
+				5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */,
+				5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */,
+				5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */,
+				5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */,
+				5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */,
+				5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */,
 			);
 			path = CleanSwift;
 			sourceTree = "<group>";
@@ -366,13 +396,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
+				5D6D6B5B2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
 				5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */,
 				5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
 				5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */,
 				5D1A7C412953841F00270CD2 /* Contact.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
+				5D6D6B522953A95B00087A66 /* HomeVCWorker.swift in Sources */,
+				5D6D6B4F2953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
+				5D6D6B552953A95B00087A66 /* HomeVCRouter.swift in Sources */,
 				5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */,
+				5D6D6B5E2953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
+				5D6D6B582953A95B00087A66 /* HomeVCModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6D6B562953A95B00087A66 /* HomeVCRouter.swift in Sources */,
+				5D6D6B592953A95B00087A66 /* HomeVCModels.swift in Sources */,
+				5D6D6B502953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
+				5D6D6B532953A95B00087A66 /* HomeVCWorker.swift in Sources */,
+				5D6D6B5C2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
+				5D6D6B5F2953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
 				5D1A7C1929525ECD00270CD2 /* KQTaskProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +431,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1A7C2329525ECD00270CD2 /* KQTaskProjectUITests.swift in Sources */,
+				5D6D6B542953A95B00087A66 /* HomeVCWorker.swift in Sources */,
+				5D6D6B512953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
+				5D6D6B572953A95B00087A66 /* HomeVCRouter.swift in Sources */,
 				5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */,
+				5D6D6B5D2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
+				5D6D6B602953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
+				5D6D6B5A2953A95B00087A66 /* HomeVCModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
