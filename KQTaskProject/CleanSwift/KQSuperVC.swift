@@ -1,19 +1,20 @@
 //
 //  ViewController.swift
-//  KQTaskProject
+//  ProjectTask
 //
-//  Created by PSE on 21/12/2022.
+//  Created by PSE on 20/12/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class KQSuperVC: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        print("KQSuperVC  didLoad Called")
     }
-
-
 }
+
 

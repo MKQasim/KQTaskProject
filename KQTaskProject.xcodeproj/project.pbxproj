@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */; };
 		5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */; };
-		5D1A7C0629525ECC00270CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0529525ECC00270CD2 /* ViewController.swift */; };
-		5D1A7C0929525ECC00270CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0729525ECC00270CD2 /* Main.storyboard */; };
 		5D1A7C0B29525ECD00270CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0A29525ECD00270CD2 /* Assets.xcassets */; };
 		5D1A7C0E29525ECD00270CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0C29525ECD00270CD2 /* LaunchScreen.storyboard */; };
 		5D1A7C1929525ECD00270CD2 /* KQTaskProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C1829525ECD00270CD2 /* KQTaskProjectTests.swift */; };
 		5D1A7C2329525ECD00270CD2 /* KQTaskProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C2229525ECD00270CD2 /* KQTaskProjectUITests.swift */; };
 		5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */; };
+		5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C382952657600270CD2 /* KQSuperTableView.swift */; };
+		5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */; };
+		5D1A7C412953841F00270CD2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* Contact.swift */; };
+		5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C422953843600270CD2 /* ContactAPI.swift */; };
+		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
+		5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C0692953956F0003A0B7 /* KQViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		5D1A7BFE29525ECC00270CD2 /* KQTaskProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KQTaskProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D1A7C0529525ECC00270CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D1A7C0829525ECC00270CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D1A7C0A29525ECD00270CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1A7C0D29525ECD00270CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1A7C0F29525ECD00270CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		5D1A7C1E29525ECD00270CD2 /* KQTaskProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KQTaskProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A7C2229525ECD00270CD2 /* KQTaskProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQTaskProjectUITests.swift; sourceTree = "<group>"; };
 		5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQTaskProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D1A7C382952657600270CD2 /* KQSuperTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperTableView.swift; sourceTree = "<group>"; };
+		5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperVC.swift; sourceTree = "<group>"; };
+		5D1A7C402953841F00270CD2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5D1A7C422953843600270CD2 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
+		5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQContactTableViewCell.swift; sourceTree = "<group>"; };
+		5D54C0692953956F0003A0B7 /* KQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +107,13 @@
 		5D1A7C0029525ECC00270CD2 /* KQTaskProject */ = {
 			isa = PBXGroup;
 			children = (
-				5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */,
-				5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */,
-				5D1A7C0529525ECC00270CD2 /* ViewController.swift */,
-				5D1A7C0729525ECC00270CD2 /* Main.storyboard */,
-				5D1A7C0A29525ECD00270CD2 /* Assets.xcassets */,
+				5D1A7C3E295383F300270CD2 /* App Services */,
+				5D1A7C3C295383A900270CD2 /* App Models */,
+				5D1A7C362952616200270CD2 /* SupportingFiles */,
+				5D1A7C352952614C00270CD2 /* Assets */,
+				5D1A7C342952613D00270CD2 /* StoryBoards */,
+				5D1A7C32295260BE00270CD2 /* CleanSwift */,
+				5D1A7C31295260AF00270CD2 /* AppCommon */,
 				5D1A7C0C29525ECD00270CD2 /* LaunchScreen.storyboard */,
 				5D1A7C0F29525ECD00270CD2 /* Info.plist */,
 			);
@@ -125,6 +135,104 @@
 				5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */,
 			);
 			path = KQTaskProjectUITests;
+			sourceTree = "<group>";
+		};
+		5D1A7C31295260AF00270CD2 /* AppCommon */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C372952657600270CD2 /* UIEliments */,
+			);
+			path = AppCommon;
+			sourceTree = "<group>";
+		};
+		5D1A7C32295260BE00270CD2 /* CleanSwift */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */,
+				5D54C0692953956F0003A0B7 /* KQViewController.swift */,
+			);
+			path = CleanSwift;
+			sourceTree = "<group>";
+		};
+		5D1A7C342952613D00270CD2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		5D1A7C352952614C00270CD2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C0A29525ECD00270CD2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5D1A7C362952616200270CD2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */,
+				5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5D1A7C372952657600270CD2 /* UIEliments */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C44295386DB00270CD2 /* TableViewCells */,
+				5D1A7C382952657600270CD2 /* KQSuperTableView.swift */,
+			);
+			path = UIEliments;
+			sourceTree = "<group>";
+		};
+		5D1A7C3C295383A900270CD2 /* App Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C3D295383BD00270CD2 /* ContactModel */,
+			);
+			path = "App Models";
+			sourceTree = "<group>";
+		};
+		5D1A7C3D295383BD00270CD2 /* ContactModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C402953841F00270CD2 /* Contact.swift */,
+			);
+			path = ContactModel;
+			sourceTree = "<group>";
+		};
+		5D1A7C3E295383F300270CD2 /* App Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C3F295383FF00270CD2 /* ContactApi */,
+			);
+			path = "App Services";
+			sourceTree = "<group>";
+		};
+		5D1A7C3F295383FF00270CD2 /* ContactApi */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C422953843600270CD2 /* ContactAPI.swift */,
+			);
+			path = ContactApi;
+			sourceTree = "<group>";
+		};
+		5D1A7C44295386DB00270CD2 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5D1A7C45295386E800270CD2 /* ContactTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5D1A7C45295386E800270CD2 /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */,
+			);
+			path = ContactTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +341,6 @@
 			files = (
 				5D1A7C0E29525ECD00270CD2 /* LaunchScreen.storyboard in Resources */,
 				5D1A7C0B29525ECD00270CD2 /* Assets.xcassets in Resources */,
-				5D1A7C0929525ECC00270CD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1A7C0629525ECC00270CD2 /* ViewController.swift in Sources */,
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
+				5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */,
+				5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
+				5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */,
+				5D1A7C412953841F00270CD2 /* Contact.swift in Sources */,
+				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
+				5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +409,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D1A7C0729525ECC00270CD2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D1A7C0829525ECC00270CD2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D1A7C0C29525ECD00270CD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,14 +543,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CT7H96YF74;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KQTaskProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,14 +571,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CT7H96YF74;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KQTaskProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
