@@ -1,5 +1,5 @@
 //
-//  HomeVCRouter.swift
+//  KQHomeRouter.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol HomeVCRoutingLogic
+@objc protocol KQHomeRoutingLogic
 {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol HomeVCDataPassing
+protocol KQHomeDataPassing
 {
-  var dataStore: HomeVCDataStore? { get }
+  var dataStore: KQHomeDataStore? { get }
 }
 
-class HomeVCRouter: NSObject, HomeVCRoutingLogic, HomeVCDataPassing
+class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
 {
-  weak var viewController: HomeVCViewController?
-  var dataStore: HomeVCDataStore?
+  weak var viewController: KQHomeViewController?
+  var dataStore: KQHomeDataStore?
   
   // MARK: Routing
   
@@ -46,14 +46,14 @@ class HomeVCRouter: NSObject, HomeVCRoutingLogic, HomeVCDataPassing
 
   // MARK: Navigation
   
-  //func navigateToSomewhere(source: HomeVCViewController, destination: SomewhereViewController)
+  //func navigateToSomewhere(source: KQHomeViewController, destination: SomewhereViewController)
   //{
   //  source.show(destination, sender: nil)
   //}
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: HomeVCDataStore, destination: inout SomewhereDataStore)
+  //func passDataToSomewhere(source: KQHomeDataStore, destination: inout SomewhereDataStore)
   //{
   //  destination.name = source.name
   //}

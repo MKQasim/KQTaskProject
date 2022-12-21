@@ -1,5 +1,5 @@
 //
-//  HomeVCPresenter.swift
+//  KQHomePresenter.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-protocol HomeVCPresentationLogic
+protocol KQHomePresentationLogic
 {
-  func presentSomething(response: HomeVC.Something.Response)
+  func presentSomething(response: KQHome.Something.Response)
 }
 
-class HomeVCPresenter: HomeVCPresentationLogic
+class KQHomePresenter: KQHomePresentationLogic
 {
-  weak var viewController: HomeVCDisplayLogic?
+  weak var viewController: KQHomeDisplayLogic?
   
   // MARK: Do something
   
-  func presentSomething(response: HomeVC.Something.Response)
+  func presentSomething(response: KQHome.Something.Response)
   {
-    let viewModel = HomeVC.Something.ViewModel()
+    let viewModel = KQHome.Something.ViewModel()
     viewController?.displaySomething(viewModel: viewModel)
   }
 }

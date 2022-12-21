@@ -1,5 +1,5 @@
 //
-//  HomeVCInteractor.swift
+//  KQHomeInteractor.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,30 +12,30 @@
 
 import UIKit
 
-protocol HomeVCBusinessLogic
+protocol KQHomeBusinessLogic
 {
-  func doSomething(request: HomeVC.Something.Request)
+  func doSomething(request: KQHome.Something.Request)
 }
 
-protocol HomeVCDataStore
+protocol KQHomeDataStore
 {
   //var name: String { get set }
 }
 
-class HomeVCInteractor: HomeVCBusinessLogic, HomeVCDataStore
+class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
 {
-  var presenter: HomeVCPresentationLogic?
-  var worker: HomeVCWorker?
+  var presenter: KQHomePresentationLogic?
+  var worker: KQHomeWorker?
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: HomeVC.Something.Request)
+  func doSomething(request: KQHome.Something.Request)
   {
-    worker = HomeVCWorker()
+    worker = KQHomeWorker()
     worker?.doSomeWork()
     
-    let response = HomeVC.Something.Response()
+    let response = KQHome.Something.Response()
     presenter?.presentSomething(response: response)
   }
 }

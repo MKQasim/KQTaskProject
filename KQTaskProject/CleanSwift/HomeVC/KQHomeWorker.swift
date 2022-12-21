@@ -1,5 +1,5 @@
 //
-//  HomeVCModels.swift
+//  KQHomeWorker.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,20 +12,9 @@
 
 import UIKit
 
-enum HomeVC
+class KQHomeWorker
 {
-  // MARK: Use cases
-  
-  enum Something
+  func doSomeWork()
   {
-    struct Request
-    {
-    }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
   }
 }
