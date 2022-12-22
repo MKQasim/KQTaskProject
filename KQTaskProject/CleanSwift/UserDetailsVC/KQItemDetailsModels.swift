@@ -1,5 +1,5 @@
 //
-//  KQHomeModels.swift
+//  KQItemDetailsModels.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,28 +12,20 @@
 
 import UIKit
 
-
-enum KQHome
+enum KQItemDetails
 {
   // MARK: Use cases
-
-  enum Api
+  
+  enum Something
   {
     struct Request
     {
-        var api_key : String
-        var value   : String
     }
-      // MARK: - Home
-      struct Response {
-          var code: Int?
-          var message: String?
-          var homeUsers : [Post]?
-      }
-      
+    struct Response
+    {
+    }
     struct ViewModel
     {
-        var users: [Post]?
     }
   }
 }

@@ -14,7 +14,7 @@ import UIKit
 
 protocol KQHomeDisplayLogic: class
 {
-    func displaySomething(viewModel: KQHome.Something.ViewModel)
+    func displayHomeList(viewModel: KQHome.Api.ViewModel)
 }
 
 class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
@@ -32,7 +32,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         return  view
     }()
     
-    private let contacts = ContactAPI.getContacts() // model
+    private var homeUsers : [Post]? // model
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -105,36 +105,51 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         setUpNavigation()
         view.backgroundColor = .red
         configureUI()
-        doSomething()
+        homeApiRequestCall()
     }
     
-    // MARK: Do something
     
-    //@IBOutlet weak var nameTextField: UITextField!
+    // MARK: Home Api Request Call
     
-    func doSomething()
+    func homeApiRequestCall()
     {
-        let request = KQHome.Something.Request()
-        interactor?.doSomething(request: request)
+        let request = KQHome.Api.Request(api_key: "api-key", value: AppShared.shared().token)
+        interactor?.homeApiCall(request: request)
     }
     
-    func displaySomething(viewModel: KQHome.Something.ViewModel)
+    func displayHomeList(viewModel: KQHome.Api.ViewModel)
     {
-        //nameTextField.text = viewModel.name
+        DispatchQueue.main.async() {
+            self.homeUsers = viewModel.users
+            self.tableView.reloadData()
+            print(viewModel.users?.count)
+        }
+    }
+    
+    func displayItemDetails(selectedUser:Post?) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // your code here
+            if var rout = self.router{
+                print("Move to Home")
+                rout.dataStore?.selectedUser = selectedUser
+                rout.routeToDetails(segue: nil)
+            }
+        }
     }
 }
 
 // MARK: - UITableViewDataSource and UITableViewDelegate
 extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return homeUsers?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: KQContactTableViewCell.identifire, for: indexPath) as! KQContactTableViewCell
-        cell.contact = contacts[indexPath.row]
-        print(contacts[indexPath.row])
+        cell.user = homeUsers?[indexPath.row]
+        print(homeUsers?[indexPath.row])
         return cell
     }
     
@@ -148,5 +163,6 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        displayItemDetails(selectedUser: homeUsers?[indexPath.row])
     }
 }

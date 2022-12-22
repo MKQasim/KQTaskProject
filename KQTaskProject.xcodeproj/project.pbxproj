@@ -16,28 +16,82 @@
 		5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */; };
 		5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C382952657600270CD2 /* KQSuperTableView.swift */; };
 		5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */; };
-		5D1A7C412953841F00270CD2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* Contact.swift */; };
+		5D1A7C412953841F00270CD2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* HomeModel.swift */; };
 		5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C422953843600270CD2 /* ContactAPI.swift */; };
 		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
-		5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C0692953956F0003A0B7 /* KQViewController.swift */; };
-		5D6D6B4F2953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
-		5D6D6B502953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
-		5D6D6B512953A95B00087A66 /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */; };
-		5D6D6B522953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
-		5D6D6B532953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
-		5D6D6B542953A95B00087A66 /* HomeVCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */; };
-		5D6D6B552953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
-		5D6D6B562953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
-		5D6D6B572953A95B00087A66 /* HomeVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */; };
-		5D6D6B582953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
-		5D6D6B592953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
-		5D6D6B5A2953A95B00087A66 /* HomeVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */; };
-		5D6D6B5B2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
-		5D6D6B5C2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
-		5D6D6B5D2953A95B00087A66 /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */; };
-		5D6D6B5E2953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
-		5D6D6B5F2953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
-		5D6D6B602953A95B00087A66 /* HomeVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */; };
+		5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */; };
+		5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */; };
+		5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */; };
+		5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */; };
+		5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */; };
+		5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */; };
+		5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */; };
+		5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
+		5D6D6B682953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
+		5D6D6B692953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
+		5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
+		5D6D6B6B2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
+		5D6D6B6C2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
+		5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
+		5D6D6B6E2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
+		5D6D6B6F2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
+		5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
+		5D6D6B712953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
+		5D6D6B722953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
+		5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
+		5D6D6B742953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
+		5D6D6B752953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
+		5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
+		5D6D6B772953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
+		5D6D6B782953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
+		5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
+		5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
+		5D6D6B962953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
+		5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */; };
+		5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */; };
+		5D6D6B992953B16800087A66 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */; };
+		5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B812953B16800087A66 /* AuthRequest.swift */; };
+		5D6D6B9B2953B16800087A66 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B812953B16800087A66 /* AuthRequest.swift */; };
+		5D6D6B9C2953B16800087A66 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B812953B16800087A66 /* AuthRequest.swift */; };
+		5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B822953B16800087A66 /* DefaultRequest.swift */; };
+		5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B822953B16800087A66 /* DefaultRequest.swift */; };
+		5D6D6B9F2953B16800087A66 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B822953B16800087A66 /* DefaultRequest.swift */; };
+		5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B832953B16800087A66 /* RequestBuilder.swift */; };
+		5D6D6BA12953B16800087A66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B832953B16800087A66 /* RequestBuilder.swift */; };
+		5D6D6BA22953B16800087A66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B832953B16800087A66 /* RequestBuilder.swift */; };
+		5D6D6BA32953B16800087A66 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B842953B16800087A66 /* Request.swift */; };
+		5D6D6BA42953B16800087A66 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B842953B16800087A66 /* Request.swift */; };
+		5D6D6BA52953B16800087A66 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B842953B16800087A66 /* Request.swift */; };
+		5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */; };
+		5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */; };
+		5D6D6BA82953B16900087A66 /* ApiResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */; };
+		5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */; };
+		5D6D6BAA2953B16900087A66 /* DefaultResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */; };
+		5D6D6BAB2953B16900087A66 /* DefaultResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */; };
+		5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B882953B16800087A66 /* ApiHandler.swift */; };
+		5D6D6BAD2953B16900087A66 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B882953B16800087A66 /* ApiHandler.swift */; };
+		5D6D6BAE2953B16900087A66 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B882953B16800087A66 /* ApiHandler.swift */; };
+		5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
+		5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
+		5D6D6BB12953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
+		5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
+		5D6D6BB32953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
+		5D6D6BB42953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
+		5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
+		5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
+		5D6D6BB72953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
+		5D6D6BBB2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
+		5D6D6BBC2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
+		5D6D6BBD2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
+		5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
+		5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
+		5D6D6BC22953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
+		5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
+		5D6D6BDB2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
+		5D6D6BDC2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
+		5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
+		5D6D6BE02953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
+		5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,16 +125,38 @@
 		5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQTaskProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D1A7C382952657600270CD2 /* KQSuperTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperTableView.swift; sourceTree = "<group>"; };
 		5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperVC.swift; sourceTree = "<group>"; };
-		5D1A7C402953841F00270CD2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5D1A7C402953841F00270CD2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5D1A7C422953843600270CD2 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
 		5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQContactTableViewCell.swift; sourceTree = "<group>"; };
-		5D54C0692953956F0003A0B7 /* KQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQViewController.swift; sourceTree = "<group>"; };
-		5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCPresenter.swift; sourceTree = "<group>"; };
-		5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCWorker.swift; sourceTree = "<group>"; };
-		5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCRouter.swift; sourceTree = "<group>"; };
-		5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCModels.swift; sourceTree = "<group>"; };
-		5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewController.swift; sourceTree = "<group>"; };
-		5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCInteractor.swift; sourceTree = "<group>"; };
+		5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsPresenter.swift; sourceTree = "<group>"; };
+		5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsWorker.swift; sourceTree = "<group>"; };
+		5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsRouter.swift; sourceTree = "<group>"; };
+		5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsModels.swift; sourceTree = "<group>"; };
+		5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsViewController.swift; sourceTree = "<group>"; };
+		5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsInteractor.swift; sourceTree = "<group>"; };
+		5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomePresenter.swift; sourceTree = "<group>"; };
+		5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeWorker.swift; sourceTree = "<group>"; };
+		5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeRouter.swift; sourceTree = "<group>"; };
+		5D6D6B642953AB7000087A66 /* KQHomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeModels.swift; sourceTree = "<group>"; };
+		5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeViewController.swift; sourceTree = "<group>"; };
+		5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeInteractor.swift; sourceTree = "<group>"; };
+		5D6D6B7D2953B16800087A66 /* ApiLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLoader.swift; sourceTree = "<group>"; };
+		5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
+		5D6D6B812953B16800087A66 /* AuthRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		5D6D6B822953B16800087A66 /* DefaultRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
+		5D6D6B832953B16800087A66 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		5D6D6B842953B16800087A66 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponseHandler.swift; sourceTree = "<group>"; };
+		5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultResponseParser.swift; sourceTree = "<group>"; };
+		5D6D6B882953B16800087A66 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		5D6D6B8A2953B16800087A66 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		5D6D6B8C2953B16800087A66 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		5D6D6B8E2953B16800087A66 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5D6D6B932953B16800087A66 /* HomeApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeApiHandler.swift; sourceTree = "<group>"; };
+		5D6D6BBF2953B38A00087A66 /* AppShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
+		5D6D6BD92953D04200087A66 /* HomeBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
+		5D6D6BDE2953D06500087A66 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +207,9 @@
 		5D1A7C0029525ECC00270CD2 /* KQTaskProject */ = {
 			isa = PBXGroup;
 			children = (
+				5D6D6BBE2953B38A00087A66 /* AppShared */,
+				5D6D6B7A2953B16800087A66 /* AppNetworkManager */,
+				5D6D6BC32953CDCE00087A66 /* AppBusiness */,
 				5D1A7C3E295383F300270CD2 /* App Services */,
 				5D1A7C3C295383A900270CD2 /* App Models */,
 				5D1A7C362952616200270CD2 /* SupportingFiles */,
@@ -172,14 +251,9 @@
 		5D1A7C32295260BE00270CD2 /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5D6528ED2953E5810056DAD4 /* UserDetailsVC */,
 				5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */,
-				5D54C0692953956F0003A0B7 /* KQViewController.swift */,
-				5D6D6B492953A95B00087A66 /* HomeVCPresenter.swift */,
-				5D6D6B4A2953A95B00087A66 /* HomeVCWorker.swift */,
-				5D6D6B4B2953A95B00087A66 /* HomeVCRouter.swift */,
-				5D6D6B4C2953A95B00087A66 /* HomeVCModels.swift */,
-				5D6D6B4D2953A95B00087A66 /* HomeVCViewController.swift */,
-				5D6D6B4E2953A95B00087A66 /* HomeVCInteractor.swift */,
+				5D6D6B792953ACE800087A66 /* HomeVC */,
 			);
 			path = CleanSwift;
 			sourceTree = "<group>";
@@ -220,22 +294,23 @@
 		5D1A7C3C295383A900270CD2 /* App Models */ = {
 			isa = PBXGroup;
 			children = (
-				5D1A7C3D295383BD00270CD2 /* ContactModel */,
+				5D1A7C3D295383BD00270CD2 /* HomeModel */,
 			);
 			path = "App Models";
 			sourceTree = "<group>";
 		};
-		5D1A7C3D295383BD00270CD2 /* ContactModel */ = {
+		5D1A7C3D295383BD00270CD2 /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
-				5D1A7C402953841F00270CD2 /* Contact.swift */,
+				5D1A7C402953841F00270CD2 /* HomeModel.swift */,
 			);
-			path = ContactModel;
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		5D1A7C3E295383F300270CD2 /* App Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D6D6BDD2953D06500087A66 /* HomeServices */,
 				5D1A7C3F295383FF00270CD2 /* ContactApi */,
 			);
 			path = "App Services";
@@ -261,8 +336,167 @@
 			isa = PBXGroup;
 			children = (
 				5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */,
+				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
 			);
 			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
+		5D6528ED2953E5810056DAD4 /* UserDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */,
+				5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */,
+				5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */,
+				5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */,
+				5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */,
+				5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */,
+			);
+			path = UserDetailsVC;
+			sourceTree = "<group>";
+		};
+		5D6D6B792953ACE800087A66 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */,
+				5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */,
+				5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */,
+				5D6D6B642953AB7000087A66 /* KQHomeModels.swift */,
+				5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */,
+				5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		5D6D6B7A2953B16800087A66 /* AppNetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B7B2953B16800087A66 /* ApiHandler */,
+				5D6D6B892953B16800087A66 /* ServiceError */,
+				5D6D6B8B2953B16800087A66 /* Enviroment */,
+				5D6D6B8D2953B16800087A66 /* Reachability */,
+				5D6D6B8F2953B16800087A66 /* ApiHandlerType */,
+			);
+			path = AppNetworkManager;
+			sourceTree = "<group>";
+		};
+		5D6D6B7B2953B16800087A66 /* ApiHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B7C2953B16800087A66 /* ApiLoader */,
+				5D6D6B7E2953B16800087A66 /* ApiRequestHandler */,
+				5D6D6B802953B16800087A66 /* CreateRequests */,
+				5D6D6B852953B16800087A66 /* ApiResponseHandler */,
+				5D6D6B882953B16800087A66 /* ApiHandler.swift */,
+			);
+			path = ApiHandler;
+			sourceTree = "<group>";
+		};
+		5D6D6B7C2953B16800087A66 /* ApiLoader */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B7D2953B16800087A66 /* ApiLoader.swift */,
+			);
+			path = ApiLoader;
+			sourceTree = "<group>";
+		};
+		5D6D6B7E2953B16800087A66 /* ApiRequestHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */,
+			);
+			path = ApiRequestHandler;
+			sourceTree = "<group>";
+		};
+		5D6D6B802953B16800087A66 /* CreateRequests */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B812953B16800087A66 /* AuthRequest.swift */,
+				5D6D6B822953B16800087A66 /* DefaultRequest.swift */,
+				5D6D6B832953B16800087A66 /* RequestBuilder.swift */,
+				5D6D6B842953B16800087A66 /* Request.swift */,
+			);
+			path = CreateRequests;
+			sourceTree = "<group>";
+		};
+		5D6D6B852953B16800087A66 /* ApiResponseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */,
+				5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */,
+			);
+			path = ApiResponseHandler;
+			sourceTree = "<group>";
+		};
+		5D6D6B892953B16800087A66 /* ServiceError */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B8A2953B16800087A66 /* ServiceError.swift */,
+			);
+			path = ServiceError;
+			sourceTree = "<group>";
+		};
+		5D6D6B8B2953B16800087A66 /* Enviroment */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B8C2953B16800087A66 /* Enviroment.swift */,
+			);
+			path = Enviroment;
+			sourceTree = "<group>";
+		};
+		5D6D6B8D2953B16800087A66 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B8E2953B16800087A66 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		5D6D6B8F2953B16800087A66 /* ApiHandlerType */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B922953B16800087A66 /* HomeApiHadler */,
+			);
+			path = ApiHandlerType;
+			sourceTree = "<group>";
+		};
+		5D6D6B922953B16800087A66 /* HomeApiHadler */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6B932953B16800087A66 /* HomeApiHandler.swift */,
+			);
+			path = HomeApiHadler;
+			sourceTree = "<group>";
+		};
+		5D6D6BBE2953B38A00087A66 /* AppShared */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6BBF2953B38A00087A66 /* AppShared.swift */,
+			);
+			path = AppShared;
+			sourceTree = "<group>";
+		};
+		5D6D6BC32953CDCE00087A66 /* AppBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6BD82953D04200087A66 /* HomeBusines */,
+			);
+			path = AppBusiness;
+			sourceTree = "<group>";
+		};
+		5D6D6BD82953D04200087A66 /* HomeBusines */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6BD92953D04200087A66 /* HomeBusiness.swift */,
+			);
+			path = HomeBusines;
+			sourceTree = "<group>";
+		};
+		5D6D6BDD2953D06500087A66 /* HomeServices */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D6BDE2953D06500087A66 /* HomeService.swift */,
+			);
+			path = HomeServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,20 +629,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */,
+				5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */,
+				5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */,
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
-				5D6D6B5B2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
+				5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */,
+				5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */,
+				5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */,
 				5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */,
+				5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 				5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */,
+				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
-				5D54C06A2953956F0003A0B7 /* KQViewController.swift in Sources */,
-				5D1A7C412953841F00270CD2 /* Contact.swift in Sources */,
+				5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */,
+				5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */,
+				5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */,
+				5D6D6BBB2953B16900087A66 /* HomeApiHandler.swift in Sources */,
+				5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
+				5D6D6BA32953B16800087A66 /* Request.swift in Sources */,
+				5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */,
+				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
+				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
+				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
+				5D1A7C412953841F00270CD2 /* HomeModel.swift in Sources */,
+				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
+				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
-				5D6D6B522953A95B00087A66 /* HomeVCWorker.swift in Sources */,
-				5D6D6B4F2953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
-				5D6D6B552953A95B00087A66 /* HomeVCRouter.swift in Sources */,
+				5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */,
+				5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */,
+				5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */,
 				5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */,
-				5D6D6B5E2953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
-				5D6D6B582953A95B00087A66 /* HomeVCModels.swift in Sources */,
+				5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */,
+				5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */,
+				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,
+				5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
+				5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,13 +672,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6D6B562953A95B00087A66 /* HomeVCRouter.swift in Sources */,
-				5D6D6B592953A95B00087A66 /* HomeVCModels.swift in Sources */,
-				5D6D6B502953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
-				5D6D6B532953A95B00087A66 /* HomeVCWorker.swift in Sources */,
-				5D6D6B5C2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
-				5D6D6B5F2953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
+				5D6D6B712953AB7000087A66 /* KQHomeModels.swift in Sources */,
+				5D6D6BA42953B16800087A66 /* Request.swift in Sources */,
+				5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */,
+				5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */,
+				5D6D6BAD2953B16900087A66 /* ApiHandler.swift in Sources */,
+				5D6D6B6B2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
 				5D1A7C1929525ECD00270CD2 /* KQTaskProjectTests.swift in Sources */,
+				5D6D6BA12953B16800087A66 /* RequestBuilder.swift in Sources */,
+				5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */,
+				5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */,
+				5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */,
+				5D6D6B742953AB7000087A66 /* KQHomeViewController.swift in Sources */,
+				5D6D6BE02953D06500087A66 /* HomeService.swift in Sources */,
+				5D6D6B682953AB7000087A66 /* KQHomePresenter.swift in Sources */,
+				5D6D6B6E2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */,
+				5D6D6BBC2953B16900087A66 /* HomeApiHandler.swift in Sources */,
+				5D6D6BB32953B16900087A66 /* Enviroment.swift in Sources */,
+				5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */,
+				5D6D6B772953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
+				5D6D6B9B2953B16800087A66 /* AuthRequest.swift in Sources */,
+				5D6D6BDB2953D04200087A66 /* HomeBusiness.swift in Sources */,
+				5D6D6BAA2953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,14 +702,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6D6BAE2953B16900087A66 /* ApiHandler.swift in Sources */,
+				5D6D6B6C2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
+				5D6D6BC22953B38A00087A66 /* AppShared.swift in Sources */,
+				5D6D6B9C2953B16800087A66 /* AuthRequest.swift in Sources */,
+				5D6D6B782953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
+				5D6D6BA22953B16800087A66 /* RequestBuilder.swift in Sources */,
 				5D1A7C2329525ECD00270CD2 /* KQTaskProjectUITests.swift in Sources */,
-				5D6D6B542953A95B00087A66 /* HomeVCWorker.swift in Sources */,
-				5D6D6B512953A95B00087A66 /* HomeVCPresenter.swift in Sources */,
-				5D6D6B572953A95B00087A66 /* HomeVCRouter.swift in Sources */,
+				5D6D6BB12953B16900087A66 /* ServiceError.swift in Sources */,
+				5D6D6B752953AB7000087A66 /* KQHomeViewController.swift in Sources */,
+				5D6D6B6F2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5D6D6BDC2953D04200087A66 /* HomeBusiness.swift in Sources */,
+				5D6D6BAB2953B16900087A66 /* DefaultResponseParser.swift in Sources */,
+				5D6D6B962953B16800087A66 /* ApiLoader.swift in Sources */,
+				5D6D6BBD2953B16900087A66 /* HomeApiHandler.swift in Sources */,
 				5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */,
-				5D6D6B5D2953A95B00087A66 /* HomeVCViewController.swift in Sources */,
-				5D6D6B602953A95B00087A66 /* HomeVCInteractor.swift in Sources */,
-				5D6D6B5A2953A95B00087A66 /* HomeVCModels.swift in Sources */,
+				5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */,
+				5D6D6BA82953B16900087A66 /* ApiResponseHandler.swift in Sources */,
+				5D6D6B722953AB7000087A66 /* KQHomeModels.swift in Sources */,
+				5D6D6B9F2953B16800087A66 /* DefaultRequest.swift in Sources */,
+				5D6D6BB42953B16900087A66 /* Enviroment.swift in Sources */,
+				5D6D6BA52953B16800087A66 /* Request.swift in Sources */,
+				5D6D6B692953AB7000087A66 /* KQHomePresenter.swift in Sources */,
+				5D6D6BB72953B16900087A66 /* Reachability.swift in Sources */,
+				5D6D6B992953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +814,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -580,6 +869,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -598,7 +888,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,7 +916,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

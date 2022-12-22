@@ -14,7 +14,7 @@ import UIKit
 
 protocol KQHomePresentationLogic
 {
-  func presentSomething(response: KQHome.Something.Response)
+  func presentSomething(response: KQHome.Api.Response)
 }
 
 class KQHomePresenter: KQHomePresentationLogic
@@ -23,9 +23,9 @@ class KQHomePresenter: KQHomePresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: KQHome.Something.Response)
+    func presentSomething(response: KQHome.Api.Response)
   {
-    let viewModel = KQHome.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+      let viewModel = KQHome.Api.ViewModel(users: response.homeUsers)
+      viewController?.displayHomeList(viewModel: viewModel)
   }
 }

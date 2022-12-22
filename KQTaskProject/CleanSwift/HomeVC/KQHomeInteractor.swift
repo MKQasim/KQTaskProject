@@ -14,28 +14,33 @@ import UIKit
 
 protocol KQHomeBusinessLogic
 {
-  func doSomething(request: KQHome.Something.Request)
+    func homeApiCall(request: KQHome.Api.Request)
 }
 
 protocol KQHomeDataStore
 {
-  //var name: String { get set }
+    var selectedUser: Post? { get set }
 }
 
 class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
 {
-  var presenter: KQHomePresentationLogic?
-  var worker: KQHomeWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: KQHome.Something.Request)
-  {
-    worker = KQHomeWorker()
-    worker?.doSomeWork()
+
+    var selectedUser: Post?
+    var homeList: [Post]?
+    var presenter: KQHomePresentationLogic?
+    var worker: KQHomeWorker?
+    var homeBusiness = HomeBusiness()
     
-    let response = KQHome.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    
+    // MARK: Home Api Call
+    
+    func homeApiCall(request: KQHome.Api.Request) {
+        let parameters = ["api-key": "=NklDh6oq4hHAAK1v8nH8j3Ggc1PagBZG"]
+        
+        self.homeBusiness.homeApiCall(parameters: parameters, completion: {(users, error) in
+            self.worker = KQHomeWorker()
+            let response = KQHome.Api.Response(code: nil, message: error?.localizedDescription, homeUsers: users)
+            self.presenter?.presentSomething(response: response)
+        })
+    }
 }

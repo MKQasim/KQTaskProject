@@ -9,18 +9,20 @@ import UIKit
 
 class KQContactTableViewCell: UITableViewCell {
     static let identifire: String =  "KQContactTableViewCell"
-    var contact:Contact? {
+    var user:Post? {
             didSet {
-                guard let contactItem = contact else {return}
-                if let name = contactItem.name {
-                    profileImageView.image = UIImage(named: "qasim")
+                guard let user = user else {return}
+                if let name = user.title {
+//                    profileImageView.image = UIImage(named: "qasim")
+                    let url = URL(string: (user.media?.first?.mediaMetadata?.first?.url)!)!
+                    profileImageView.load(url: url)
                     nameLabel.text = name
                 }
-                if let jobTitle = contactItem.jobTitle {
+                if let jobTitle = user.geoFacet {
                    jobTitleDetailedLabel.text = " \(jobTitle) "
                 }
                
-                if let country = contactItem.country {
+                if let country = user.media {
                     countryImageView.image = UIImage(named: "flag")
                 }
             }
