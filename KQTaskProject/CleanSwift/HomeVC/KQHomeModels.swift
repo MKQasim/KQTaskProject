@@ -1,5 +1,5 @@
 //
-//  KQHomeModels.swift
+//  KQUserModels.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -21,19 +21,16 @@ enum KQHome
   {
     struct Request
     {
-        var api_key : String
-        var value   : String
+     
     }
       // MARK: - Home
       struct Response {
-          var code: Int?
-          var message: String?
-          var homeUsers : [Post]?
+          var homeUsers : [User]?
       }
       
     struct ViewModel
     {
-        var users: [Post]?
+        var users: [User]?
     }
   }
 }

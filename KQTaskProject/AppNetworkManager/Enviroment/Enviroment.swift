@@ -13,7 +13,7 @@ enum Environment {
     case development
     case staging
     case production
-
+    
     func baseURL() -> String {
         return "\(urlProtocol())://\(subdomain()).\(domain())\(route())"
     }
@@ -41,18 +41,17 @@ enum Environment {
     func domain() -> String {
         switch self {
         case .development, .staging, .production:
-            return "nytimes.com"
+            return "github.com"
         }
     }
 
     func route() -> String {
-        return "/svc/mostpopular/v2/emailed/7.json?"
+        return "/users"
     }
 }
 
 extension Environment {
     func host() -> String {
-        print("\(self.subdomain()).\(self.domain())")
         return "\(self.subdomain()).\(self.domain())"
     }
 }
@@ -69,13 +68,10 @@ let environment: Environment = Environment.staging
 let baseUrl = environment.baseURL()
 
 struct Path {
-    struct AppUser {
-        var login: String { return "\("https://5fd312718cee610016adfe31.mockapi.io/api/v1/login")" }
-    }
-
+   
     struct Users {
         var getMostViewedUsers : (String) -> String = { api_Key  in
-            return "\(baseUrl)api-key\(String(api_Key))"
+            return "\(baseUrl)"
         }
     }
 }

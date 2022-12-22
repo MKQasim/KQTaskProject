@@ -1,5 +1,5 @@
 //
-//  HomeModel.swift
+//  UserModel.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 21/12/2022.

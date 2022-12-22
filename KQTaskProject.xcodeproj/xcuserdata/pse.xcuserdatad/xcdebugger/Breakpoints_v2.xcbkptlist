@@ -3,4 +3,150 @@
    uuid = "A552C004-80AC-47E6-87F4-2CA3D9EC0F90"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41253D92-F3E5-4FB0-9C09-08DBE7AF02BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiLoader/ApiLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "loadAPIRequest(requestData:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "927C7662-313A-478D-A7D3-E15AB3F402CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandlerType/HomeApiHadler/HomeApiHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "parseResponse(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "146E7727-7AB5-427F-9629-FC345A2AAAAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/ApiResponseHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ResponseHandler"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5E41FCE-58B8-40AE-ADDB-461E7467E1CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "defaultParseResponse(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DD91997-FD55-473D-8C62-481152F5E668"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "defaultParseResponse(data:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3DD91997-FD55-473D-8C62-481152F5E668 - e89ab6a3c3ab6794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProject.ResponseHandler.defaultParseResponse&lt;&#x3c4;_0_0 where &#x3c4;_1_0: KQTaskProject.Response&gt;(data: Foundation.Data) throws -&gt; &#x3c4;_1_0"
+                  moduleName = "KQTaskProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "3DD91997-FD55-473D-8C62-481152F5E668 - e89ab6a3c3ab6794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProject.ResponseHandler.defaultParseResponse&lt;&#x3c4;_0_0 where &#x3c4;_1_0: KQTaskProject.Response&gt;(data: Foundation.Data) throws -&gt; &#x3c4;_1_0"
+                  moduleName = "KQTaskProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "736">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FA91929-F276-4261-8BF0-CA1C24FAF485"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "defaultParseResponse(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03EA80BB-2530-40C1-8F26-C4AF7AA59365"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProject/AppNetworkManager/ApiHandler/ApiResponseHandler/DefaultResponseParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "defaultParseResponse(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

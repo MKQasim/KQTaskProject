@@ -32,7 +32,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         return  view
     }()
     
-    private var homeUsers : [Post]? // model
+    private var homeUsers : [User]? // model
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -65,7 +65,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     // MARK: - SetUp Navigation
     private func setUpNavigation() {
-        navigationItem.title = "Contacts"
+        navigationItem.title = "Users List"
     }
     
     // MARK: - Private Actions
@@ -103,7 +103,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     {
         super.viewDidLoad()
         setUpNavigation()
-        view.backgroundColor = .red
+        
         configureUI()
         homeApiRequestCall()
     }
@@ -113,7 +113,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     func homeApiRequestCall()
     {
-        let request = KQHome.Api.Request(api_key: "api-key", value: AppShared.shared().token)
+        let request = KQHome.Api.Request()
         interactor?.homeApiCall(request: request)
     }
     
@@ -122,12 +122,10 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         DispatchQueue.main.async() {
             self.homeUsers = viewModel.users
             self.tableView.reloadData()
-            print(viewModel.users?.count)
         }
     }
     
-    func displayItemDetails(selectedUser:Post?) {
-        
+    func displayItemDetails(selectedUser:User?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             // your code here
             if var rout = self.router{
@@ -148,8 +146,7 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: KQContactTableViewCell.identifire, for: indexPath) as! KQContactTableViewCell
-        cell.user = homeUsers?[indexPath.row]
-        print(homeUsers?[indexPath.row])
+        cell.selectedUser = homeUsers?[indexPath.row]
         return cell
     }
     

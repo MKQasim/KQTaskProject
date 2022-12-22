@@ -13,10 +13,10 @@ class HomeBusiness {
 
     // MARK: - Home Api Call
 
-    func homeApiCall(parameters: [String : Any],completion:@escaping((_ homemodel:[Post]?,_ error:Error?) -> ())){
-        homeServices.usersList(parameters: parameters) { homeModel, error in
+    func homeApiCall(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ())){
+        homeServices.usersList(parameters:parameters) { userModel, error in
             if error == nil{
-                completion(homeModel?.results,error)
+                completion(userModel,error)
             }else{
                 print(error?.localizedDescription)
             }

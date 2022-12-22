@@ -16,8 +16,7 @@
 		5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */; };
 		5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C382952657600270CD2 /* KQSuperTableView.swift */; };
 		5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */; };
-		5D1A7C412953841F00270CD2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* HomeModel.swift */; };
-		5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C422953843600270CD2 /* ContactAPI.swift */; };
+		5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* UserModel.swift */; };
 		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
 		5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */; };
 		5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */; };
@@ -125,8 +124,7 @@
 		5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQTaskProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5D1A7C382952657600270CD2 /* KQSuperTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperTableView.swift; sourceTree = "<group>"; };
 		5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQSuperVC.swift; sourceTree = "<group>"; };
-		5D1A7C402953841F00270CD2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		5D1A7C422953843600270CD2 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
+		5D1A7C402953841F00270CD2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQContactTableViewCell.swift; sourceTree = "<group>"; };
 		5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsPresenter.swift; sourceTree = "<group>"; };
 		5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsWorker.swift; sourceTree = "<group>"; };
@@ -302,7 +300,7 @@
 		5D1A7C3D295383BD00270CD2 /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
-				5D1A7C402953841F00270CD2 /* HomeModel.swift */,
+				5D1A7C402953841F00270CD2 /* UserModel.swift */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -311,17 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				5D6D6BDD2953D06500087A66 /* HomeServices */,
-				5D1A7C3F295383FF00270CD2 /* ContactApi */,
 			);
 			path = "App Services";
-			sourceTree = "<group>";
-		};
-		5D1A7C3F295383FF00270CD2 /* ContactApi */ = {
-			isa = PBXGroup;
-			children = (
-				5D1A7C422953843600270CD2 /* ContactAPI.swift */,
-			);
-			path = ContactApi;
 			sourceTree = "<group>";
 		};
 		5D1A7C44295386DB00270CD2 /* TableViewCells */ = {
@@ -636,7 +625,6 @@
 				5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */,
 				5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */,
 				5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */,
-				5D1A7C432953843600270CD2 /* ContactAPI.swift in Sources */,
 				5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 				5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */,
 				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
@@ -652,7 +640,7 @@
 				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
-				5D1A7C412953841F00270CD2 /* HomeModel.swift in Sources */,
+				5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
 				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,

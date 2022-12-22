@@ -14,28 +14,28 @@ import UIKit
 
 protocol KQItemDetailsBusinessLogic
 {
-    func doSomething(request: KQItemDetails.Something.Request)
+    func doSomething(request: KQItemDetails.Model.Request)
 }
 
 protocol KQItemDetailsDataStore
 {
-    var selectedUser: Post? { get set }
+    var selectedUser: User? { get set }
 }
 
 class KQItemDetailsInteractor: KQItemDetailsBusinessLogic, KQItemDetailsDataStore
 {
-    var selectedUser: Post?
+    var selectedUser: User?
     var presenter: KQItemDetailsPresentationLogic?
     var worker: KQItemDetailsWorker?
     
     // MARK: Do something
     
-    func doSomething(request: KQItemDetails.Something.Request)
+    func doSomething(request: KQItemDetails.Model.Request)
     {
         worker = KQItemDetailsWorker()
         worker?.doSomeWork()
         
-        let response = KQItemDetails.Something.Response()
+        let response = KQItemDetails.Model.Response(selectedUser: selectedUser)
         presenter?.presentSomething(response: response)
     }
 }

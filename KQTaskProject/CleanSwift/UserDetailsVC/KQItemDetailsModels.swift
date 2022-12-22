@@ -14,18 +14,20 @@ import UIKit
 
 enum KQItemDetails
 {
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum Model
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var selectedUser : User?
+        }
+        struct ViewModel
+        {
+            var selectedUser : User?
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

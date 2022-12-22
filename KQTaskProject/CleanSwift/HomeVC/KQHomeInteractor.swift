@@ -19,14 +19,14 @@ protocol KQHomeBusinessLogic
 
 protocol KQHomeDataStore
 {
-    var selectedUser: Post? { get set }
+    var selectedUser: User? { get set }
 }
 
 class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
 {
 
-    var selectedUser: Post?
-    var homeList: [Post]?
+    var selectedUser: User?
+    var homeList: [User]?
     var presenter: KQHomePresentationLogic?
     var worker: KQHomeWorker?
     var homeBusiness = HomeBusiness()
@@ -35,11 +35,11 @@ class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
     // MARK: Home Api Call
     
     func homeApiCall(request: KQHome.Api.Request) {
-        let parameters = ["api-key": "=NklDh6oq4hHAAK1v8nH8j3Ggc1PagBZG"]
+        let parameters = ["": ""]
         
         self.homeBusiness.homeApiCall(parameters: parameters, completion: {(users, error) in
             self.worker = KQHomeWorker()
-            let response = KQHome.Api.Response(code: nil, message: error?.localizedDescription, homeUsers: users)
+            let response = KQHome.Api.Response(homeUsers: users)
             self.presenter?.presentSomething(response: response)
         })
     }

@@ -15,7 +15,6 @@ extension ResponseHandler {
 
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .useDefaultKeys
-
         if let body = try? jsonDecoder.decode(T.self, from: data){
             return body
         } else if let errorResponse = try? jsonDecoder.decode(ServiceError.self, from: data) {

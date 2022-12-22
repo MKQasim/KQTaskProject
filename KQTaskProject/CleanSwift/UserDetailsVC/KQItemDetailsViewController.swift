@@ -14,76 +14,210 @@ import UIKit
 
 protocol KQItemDetailsDisplayLogic: class
 {
-  func displaySomething(viewModel: KQItemDetails.Something.ViewModel)
+    func displaySomething(viewModel: KQItemDetails.Model.ViewModel)
 }
 
-class KQItemDetailsViewController: UIViewController, KQItemDetailsDisplayLogic
+class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
 {
-  var interactor: KQItemDetailsBusinessLogic?
-  var router: (NSObjectProtocol & KQItemDetailsRoutingLogic & KQItemDetailsDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = KQItemDetailsInteractor()
-    let presenter = KQItemDetailsPresenter()
-    let router = KQItemDetailsRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: KQItemDetailsBusinessLogic?
+    var router: (NSObjectProtocol & KQItemDetailsRoutingLogic & KQItemDetailsDataPassing)?
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = KQItemDetails.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: KQItemDetails.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = KQItemDetailsInteractor()
+        let presenter = KQItemDetailsPresenter()
+        let router = KQItemDetailsRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        addViews()
+        addConstraints()
+        doSomething()
+    }
+    
+    // MARK: - SetUp Navigation
+    private func setUpNavigation() {
+        navigationItem.title = "User Details"
+    }
+    
+    // MARK: @IBOutlet OR Views
+    
+    private lazy var superContainerView:UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+        return view
+    }()
+    
+    private lazy var profileImageView:UIImageView = {
+                let img = UIImageView()
+                img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
+                img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
+                img.layer.cornerRadius = 35
+                img.clipsToBounds = true
+        img.layer.borderColor = CGColor.init(red: 1, green: 1, blue: 2, alpha: 2)
+               return img
+            }()
+    
+    private lazy var nameLabel:UILabel = {
+                let label = UILabel()
+                label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+                label.textColor = UIColor(red:  0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                label.translatesAutoresizingMaskIntoConstraints = false
+                return label
+    }()
+    
+    private lazy var jobTitleDetailedLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        label.numberOfLines = 0
+        label.backgroundColor = UIColor(red: 0.2431372549, green: 0.7647058824, blue: 0.8392156863, alpha: 1)
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var containerView:UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+        return view
+    }()
+    
+    private lazy var countryImageView:UIImageView = {
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFill // without this your image will shrink and looks ugly
+        img.translatesAutoresizingMaskIntoConstraints = false
+        img.layer.cornerRadius = 13
+        img.clipsToBounds = true
+        return img
+    }()
+    
+    var selectedUser:User? {
+        didSet {
+            guard let user = selectedUser else {return}
+            if let name = user.login {
+                //                    profileImageView.image = UIImage(named: "qasim")
+                let url = URL(string: (user.avatarURL)!)!
+                profileImageView.load(url: url)
+                nameLabel.text = "Login : \(name)"
+            }
+            if let jobTitle = user.type {
+                jobTitleDetailedLabel.text = "USER TYPE: \(jobTitle) "
+            }
+            
+            if let country = user.avatarURL {
+                countryImageView.image = UIImage(named: "flag")
+            }
+        }
+    }
+    
+    
+    func doSomething()
+    {
+        let request = KQItemDetails.Model.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: KQItemDetails.Model.ViewModel)
+    {
+        selectedUser = viewModel.selectedUser
+    }
+}
+
+extension KQItemDetailsViewController{
+    
+    // MARK: - Add Views
+    private func addViews(){
+        self.view.addSubview(superContainerView)
+        self.superContainerView.addSubview(profileImageView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(jobTitleDetailedLabel)
+        self.superContainerView.addSubview(containerView)
+        self.superContainerView.addSubview(countryImageView)
+    }
+    
+    // MARK: - Add Views Constraints
+    
+    private func addConstraints(){
+        NSLayoutConstraint.activate([
+            // MARK: - superContainerView Constraints
+            
+            superContainerView.leadingAnchor.constraint(equalTo:self.view.leadingAnchor, constant:0),
+            superContainerView.trailingAnchor.constraint(equalTo:self.view.trailingAnchor, constant:0),
+            superContainerView.topAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.topAnchor, constant:0),
+            superContainerView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor, constant:0),
+            
+            // MARK: - profileImageView Constraints
+            profileImageView.topAnchor.constraint(equalTo:self.superContainerView.topAnchor,constant: 10),
+            profileImageView.centerXAnchor.constraint(equalTo:self.superContainerView.centerXAnchor, constant:0),
+            profileImageView.widthAnchor.constraint(equalToConstant:150),
+            profileImageView.heightAnchor.constraint(equalToConstant:150),
+            
+            // MARK: -  containerView Constraints
+            containerView.topAnchor.constraint(equalTo:self.profileImageView.bottomAnchor,constant: 10),
+            containerView.leadingAnchor.constraint(equalTo:self.superContainerView.leadingAnchor , constant:0),
+            containerView.trailingAnchor.constraint(equalTo:self.superContainerView.trailingAnchor, constant:0),
+            containerView.heightAnchor.constraint(equalToConstant:140),
+            // MARK: -  nameLabel Constraints
+            nameLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor,constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor, constant: -20),
+            
+            // MARK: - jobTitleDetailedLabel Constraints
+            jobTitleDetailedLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor, constant: 20),
+            jobTitleDetailedLabel.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor, constant: -20),
+            jobTitleDetailedLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor,constant: 20),
+            
+            // MARK: - countryImageView Constraints
+            countryImageView.widthAnchor.constraint(equalToConstant:50),
+            countryImageView.heightAnchor.constraint(equalToConstant:50),
+            countryImageView.topAnchor.constraint(equalTo:self.containerView.bottomAnchor, constant:00),
+            countryImageView.centerXAnchor.constraint(equalTo:self.superContainerView.centerXAnchor),
+        ])
+    }
 }
