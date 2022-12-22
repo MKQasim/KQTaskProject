@@ -91,6 +91,8 @@
 		5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 		5D6D6BE02953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 		5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
+		5D9074622954E7760086F045 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074612954E7760086F045 /* AppTheme.swift */; };
+		5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074632955043A0086F045 /* UniversalLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		5D6D6BBF2953B38A00087A66 /* AppShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		5D6D6BD92953D04200087A66 /* HomeBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
 		5D6D6BDE2953D06500087A66 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		5D9074612954E7760086F045 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		5D9074632955043A0086F045 /* UniversalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 		5D1A7C0029525ECC00270CD2 /* KQTaskProject */ = {
 			isa = PBXGroup;
 			children = (
+				5D9074602954E7610086F045 /* App Theme */,
 				5D6D6BBE2953B38A00087A66 /* AppShared */,
 				5D6D6B7A2953B16800087A66 /* AppNetworkManager */,
 				5D6D6BC32953CDCE00087A66 /* AppBusiness */,
@@ -215,7 +220,6 @@
 				5D1A7C342952613D00270CD2 /* StoryBoards */,
 				5D1A7C32295260BE00270CD2 /* CleanSwift */,
 				5D1A7C31295260AF00270CD2 /* AppCommon */,
-				5D1A7C0C29525ECD00270CD2 /* LaunchScreen.storyboard */,
 				5D1A7C0F29525ECD00270CD2 /* Info.plist */,
 			);
 			path = KQTaskProject;
@@ -259,6 +263,7 @@
 		5D1A7C342952613D00270CD2 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				5D1A7C0C29525ECD00270CD2 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			children = (
 				5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */,
 				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
+				5D9074632955043A0086F045 /* UniversalLoader.swift */,
 			);
 			path = ContactTableViewCell;
 			sourceTree = "<group>";
@@ -488,6 +494,14 @@
 			path = HomeServices;
 			sourceTree = "<group>";
 		};
+		5D9074602954E7610086F045 /* App Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5D9074612954E7760086F045 /* AppTheme.swift */,
+			);
+			path = "App Theme";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -639,6 +653,8 @@
 				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
 				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
+				5D9074622954E7760086F045 /* AppTheme.swift in Sources */,
+				5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
 				5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,

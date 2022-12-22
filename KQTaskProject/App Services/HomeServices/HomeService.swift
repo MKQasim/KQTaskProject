@@ -9,14 +9,15 @@
 import Foundation
 
 class HomeServices {
-
-
+    
+    var urlSession : URLSession?
     // MARK: - Post List
-
+    
     func usersList(parameters: [String: Any], completion: @escaping (Users?, Error?) -> ()) {
         // api
         let api = HomeApiHandler()
         // api loader
+        urlSession = APILoader(apiRequest: api).urlSession
         let apiTaskLoader = APILoader(apiRequest: api)
         apiTaskLoader.loadAPIRequest(requestData: parameters) { (result) in
             switch result{
@@ -26,5 +27,10 @@ class HomeServices {
                 completion(nil,error)
             }
         }
+    }
+    
+    func cancelAPiCall()-> Bool{
+        urlSession?.invalidateAndCancel()
+        return true
     }
 }

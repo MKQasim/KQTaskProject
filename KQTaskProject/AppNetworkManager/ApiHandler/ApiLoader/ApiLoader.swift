@@ -25,25 +25,21 @@ class APILoader<T: APIHandler> {
         if reachibility.connection == .none {
             return completionHandler(.failure(NetworkError(message: "No Internet Connection")))
         }
-        // prepare url request
-        let urlRequest = apiRequest.makeRequest(from: requestData).urlRequest
         urlSession.dataTask(with: apiRequest.makeRequest(from: requestData).urlRequest.url!) { data, response, error in
             guard let dataResponse = data , error == nil else {
-                print(error?.localizedDescription ?? "Response Error")
                 return
             }
-            
             do {
-                if dataResponse != nil {
-                    let parsedResponse = try self.apiRequest.parseResponse(data: dataResponse)
-                    return completionHandler(.success(parsedResponse))
-                }else{
-                    print("Response Error")
-                }
-                
+                let parsedResponse = try self.apiRequest.parseResponse(data: dataResponse)
+                return completionHandler(.success(parsedResponse))
             } catch let parsingError {
                 return completionHandler(.failure(parsingError))
             }
         }.resume()
     }
+    
+    func cancelApiRequest(){
+        urlSession.invalidateAndCancel()
+    }
+    
 }

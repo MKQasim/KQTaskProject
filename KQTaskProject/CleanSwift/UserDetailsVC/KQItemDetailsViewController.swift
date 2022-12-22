@@ -12,7 +12,7 @@
 
 import UIKit
 
-protocol KQItemDetailsDisplayLogic: class
+protocol KQItemDetailsDisplayLogic: AnyObject
 {
     func displaySomething(viewModel: KQItemDetails.Model.ViewModel)
 }
@@ -69,6 +69,7 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        setUpNavigation()
         addViews()
         addConstraints()
         doSomething()
@@ -84,36 +85,35 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     private lazy var superContainerView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+        view.clipsToBounds = true
         return view
     }()
     
     private lazy var profileImageView:UIImageView = {
-                let img = UIImageView()
-                img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
-                img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-                img.layer.cornerRadius = 35
-                img.clipsToBounds = true
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFill
+        img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
+        img.layer.cornerRadius = 35
+        img.clipsToBounds = true
         img.layer.borderColor = CGColor.init(red: 1, green: 1, blue: 2, alpha: 2)
-               return img
-            }()
+        return img
+    }()
     
     private lazy var nameLabel:UILabel = {
-                let label = UILabel()
-                label.font = UIFont.boldSystemFont(ofSize: 20)
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.numberOfLines = 0
         label.textAlignment = .center
-                label.textColor = UIColor(red:  0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-                label.translatesAutoresizingMaskIntoConstraints = false
-                return label
+        label.textColor = AppTheme.shared.titleTextColor
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     private lazy var jobTitleDetailedLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        label.textColor = AppTheme.shared.subTitleTextColor
         label.numberOfLines = 0
-        label.backgroundColor = UIColor(red: 0.2431372549, green: 0.7647058824, blue: 0.8392156863, alpha: 1)
         label.layer.cornerRadius = 5
         label.clipsToBounds = true
         label.textAlignment = .center
@@ -124,13 +124,13 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     private lazy var containerView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+        view.clipsToBounds = true
         return view
     }()
     
     private lazy var countryImageView:UIImageView = {
         let img = UIImageView()
-        img.contentMode = .scaleAspectFill // without this your image will shrink and looks ugly
+        img.contentMode = .scaleAspectFill
         img.translatesAutoresizingMaskIntoConstraints = false
         img.layer.cornerRadius = 13
         img.clipsToBounds = true
@@ -141,21 +141,19 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
         didSet {
             guard let user = selectedUser else {return}
             if let name = user.login {
-                //                    profileImageView.image = UIImage(named: "qasim")
-                let url = URL(string: (user.avatarURL)!)!
-                profileImageView.load(url: url)
                 nameLabel.text = "Login : \(name)"
             }
-            if let jobTitle = user.type {
-                jobTitleDetailedLabel.text = "USER TYPE: \(jobTitle) "
+            if let image = user.avatarURL , let url = URL(string:(image)) {
+                profileImageView.load(url: url)
             }
-            
-            if let country = user.avatarURL {
-                countryImageView.image = UIImage(named: "flag")
+            if let jobTitle = user.type {
+                jobTitleDetailedLabel.text = "UserType: \(jobTitle)"
+            }
+            if let image = user.avatarURL , let url = URL(string:(image)) {
+                countryImageView.load(url: url)
             }
         }
     }
-    
     
     func doSomething()
     {
@@ -173,6 +171,7 @@ extension KQItemDetailsViewController{
     
     // MARK: - Add Views
     private func addViews(){
+        view.backgroundColor = AppTheme.shared.navBackgroundColor
         self.view.addSubview(superContainerView)
         self.superContainerView.addSubview(profileImageView)
         containerView.addSubview(nameLabel)
@@ -202,7 +201,7 @@ extension KQItemDetailsViewController{
             containerView.topAnchor.constraint(equalTo:self.profileImageView.bottomAnchor,constant: 10),
             containerView.leadingAnchor.constraint(equalTo:self.superContainerView.leadingAnchor , constant:0),
             containerView.trailingAnchor.constraint(equalTo:self.superContainerView.trailingAnchor, constant:0),
-            containerView.heightAnchor.constraint(equalToConstant:140),
+            containerView.heightAnchor.constraint(equalToConstant:100),
             // MARK: -  nameLabel Constraints
             nameLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor,constant: 10),
             nameLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor, constant: 20),
@@ -216,7 +215,7 @@ extension KQItemDetailsViewController{
             // MARK: - countryImageView Constraints
             countryImageView.widthAnchor.constraint(equalToConstant:50),
             countryImageView.heightAnchor.constraint(equalToConstant:50),
-            countryImageView.topAnchor.constraint(equalTo:self.containerView.bottomAnchor, constant:00),
+            countryImageView.bottomAnchor.constraint(equalTo:self.superContainerView.bottomAnchor, constant:0),
             countryImageView.centerXAnchor.constraint(equalTo:self.superContainerView.centerXAnchor),
         ])
     }

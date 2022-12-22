@@ -7,7 +7,15 @@
 
 import Foundation
 
+// MARK: -  typealias Users
 typealias Users = [User]
+
+// MARK: -  TypeEnum
+
+enum TypeEnum: String, Codable {
+    case organization = "Organization"
+    case user = "User"
+}
 
 // MARK: - User
 public struct User: Codable {
@@ -45,13 +53,6 @@ public struct User: Codable {
     }
 }
 
-// TypeEnum.swift
 
-import Foundation
-
-enum TypeEnum: String, Codable {
-    case organization = "Organization"
-    case user = "User"
-}
 
 

@@ -10,7 +10,6 @@ import Foundation
 class HomeBusiness {
      // MARK: - HomeServices
     private lazy var homeServices = HomeServices()
-
     // MARK: - Home Api Call
 
     func homeApiCall(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ())){
@@ -18,8 +17,19 @@ class HomeBusiness {
             if error == nil{
                 completion(userModel,error)
             }else{
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         }
     }
+    
+    func homestopApiCallStart(completion:@escaping((_ isCanceled : Bool) -> ())){
+       
+        if homeServices.urlSession != nil{
+            homeServices.urlSession?.invalidateAndCancel()
+            completion(true)
+        }else{
+            completion(false)
+        }
+    }
+    
 }

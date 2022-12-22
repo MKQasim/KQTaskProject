@@ -12,16 +12,20 @@
 
 import UIKit
 
-protocol KQHomeDisplayLogic: class
+protocol KQHomeDisplayLogic: AnyObject
 {
     func displayHomeList(viewModel: KQHome.Api.ViewModel)
+    func stopApiCallSuccess(isCanceled:Bool)
 }
 
 class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
 {
-    var interactor: KQHomeBusinessLogic?
-    var router: (NSObjectProtocol & KQHomeRoutingLogic & KQHomeDataPassing)?
     
+    
+    var interactor: KQHomeBusinessLogic?
+    var homeServices : HomeServices?
+    var router: (NSObjectProtocol & KQHomeRoutingLogic & KQHomeDataPassing)?
+    var selectedUser : User?
     // MARK: - Properties
     
     lazy var tableView : UITableView = {     // view
@@ -76,6 +80,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     }
     // MARK: - SetConstraint
     func setTableViewConstraint(){
+        view.backgroundColor = AppTheme.shared.navBackgroundColor
         self.view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
@@ -103,17 +108,23 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     {
         super.viewDidLoad()
         setUpNavigation()
-        
         configureUI()
-        homeApiRequestCall()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.isUserInteractionEnabled = true
+        homeApiRequestCall()
+    }
     
     // MARK: Home Api Request Call
     
     func homeApiRequestCall()
     {
         let request = KQHome.Api.Request()
+        LoadingOverlay.shared.showOverlay(view: self.view)
+        LoadingOverlay.shared.activityIndicator.startAnimating()
+        self.tableView.isUserInteractionEnabled = false
         interactor?.homeApiCall(request: request)
     }
     
@@ -122,18 +133,30 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         DispatchQueue.main.async() {
             self.homeUsers = viewModel.users
             self.tableView.reloadData()
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+            self.tableView.isUserInteractionEnabled = true
         }
     }
     
     func displayItemDetails(selectedUser:User?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
             // your code here
             if var rout = self.router{
-                print("Move to Home")
                 rout.dataStore?.selectedUser = selectedUser
                 rout.routeToDetails(segue: nil)
             }
         }
+    }
+    
+    func stopApiCallStart(){
+        interactor?.homestopApiCallStart()
+    }
+    
+    func stopApiCallSuccess(isCanceled: Bool) {
+        LoadingOverlay.shared.activityIndicator.stopAnimating()
+        LoadingOverlay.shared.hideOverlayView()
+        displayItemDetails(selectedUser: selectedUser)
     }
 }
 
@@ -160,6 +183,11 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        displayItemDetails(selectedUser: homeUsers?[indexPath.row])
+        selectedUser = homeUsers?[indexPath.row]
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            stopApiCallStart()
+        }else{
+            displayItemDetails(selectedUser: selectedUser)
+        }
     }
 }

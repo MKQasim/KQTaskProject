@@ -13,7 +13,6 @@ struct ServiceError: Error, Codable {
     let httpStatus: Int
     let message: String
     let description: String?
-
 }
 
 struct NetworkError: Error {

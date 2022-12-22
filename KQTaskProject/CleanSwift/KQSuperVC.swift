@@ -11,10 +11,29 @@ class KQSuperVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .white
-        print("KQSuperVC  didLoad Called")
+        setStatusBar(color: AppTheme.shared.statusBarBackgroundColor)
+        self.navigationController?.navigationBar.backgroundColor = AppTheme.shared.navBackgroundColor
+        self.navigationController?.navigationBar.tintColor = AppTheme.shared.navTintColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:AppTheme.shared.navTitleTextColor]
+        
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }
 
-
+public extension UIViewController {
+    func setStatusBar(color: UIColor) {
+        let tag = 12321
+        if let taggedView = self.view.viewWithTag(tag){
+            taggedView.removeFromSuperview()
+        }
+        let overView = UIView()
+        overView.frame = UIApplication.shared.statusBarFrame
+        overView.backgroundColor = color
+        overView.tag = tag
+        self.view.addSubview(overView)
+    }
+}

@@ -15,6 +15,7 @@ import UIKit
 protocol KQHomeBusinessLogic
 {
     func homeApiCall(request: KQHome.Api.Request)
+    func homestopApiCallStart()
 }
 
 protocol KQHomeDataStore
@@ -42,5 +43,11 @@ class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
             let response = KQHome.Api.Response(homeUsers: users)
             self.presenter?.presentSomething(response: response)
         })
+    }
+    
+    func homestopApiCallStart(){
+        self.homeBusiness.homestopApiCallStart { isCanceled in
+            self.presenter?.stopApiCallSuccess(isCanceled: isCanceled)
+        }
     }
 }

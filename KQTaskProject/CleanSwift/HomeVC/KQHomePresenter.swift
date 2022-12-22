@@ -14,18 +14,23 @@ import UIKit
 
 protocol KQHomePresentationLogic
 {
-  func presentSomething(response: KQHome.Api.Response)
+    func presentSomething(response: KQHome.Api.Response)
+    func stopApiCallSuccess(isCanceled: Bool)
+    
 }
 
 class KQHomePresenter: KQHomePresentationLogic
 {
-  weak var viewController: KQHomeDisplayLogic?
-  
-  // MARK: Do something
-  
+    weak var viewController: KQHomeDisplayLogic?
+    
+    // MARK: Do something
+    
     func presentSomething(response: KQHome.Api.Response)
-  {
-      let viewModel = KQHome.Api.ViewModel(users: response.homeUsers)
-      viewController?.displayHomeList(viewModel: viewModel)
-  }
+    {
+        let viewModel = KQHome.Api.ViewModel(users: response.homeUsers)
+        viewController?.displayHomeList(viewModel: viewModel)
+    }
+    func stopApiCallSuccess(isCanceled:Bool){
+        viewController?.stopApiCallSuccess(isCanceled: isCanceled)
+    }
 }
