@@ -21,8 +21,6 @@ protocol KQItemDetailsDisplayLogic: AnyObject
 
 class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
 {
-    
-    
     var interactor: KQItemDetailsBusinessLogic?
     var router: (NSObjectProtocol & KQItemDetailsRoutingLogic & KQItemDetailsDataPassing)?
     var selectedUser : User?
@@ -145,14 +143,14 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
         didSet {
             DispatchQueue.main.async {
                 guard let user = self.userDetails else {return}
-                if let name = user.name {
+                if let name = user.twitterUsername {
                     self.nameLabel.text = "Name: \(name)"
                 }
                 if let image = user.avatarURL , let url = URL(string:(image)) {
                     self.profileImageView.load(url: url)
                 }
-                if let jobTitle = user.type {
-                    self.jobTitleDetailedLabel.text = "UserType: \(jobTitle)"
+                if let updatedAt = user.updatedAt {
+                    self.jobTitleDetailedLabel.text = "Updated At: \(updatedAt)"
                 }
                 if let image = user.avatarURL , let url = URL(string:(image)) {
                     self.countryImageView.load(url: url)

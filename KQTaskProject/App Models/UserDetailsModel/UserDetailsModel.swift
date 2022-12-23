@@ -26,7 +26,7 @@ struct UserDetails: Codable {
     var location: String?
     var twitterUsername: String?
     var publicRepos, publicGists, followers, following: Int?
-
+    var createdAt, updatedAt: Date?
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -51,5 +51,8 @@ struct UserDetails: Codable {
         case publicRepos = "public_repos"
         case publicGists = "public_gists"
         case followers, following
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+    
     }
 }
