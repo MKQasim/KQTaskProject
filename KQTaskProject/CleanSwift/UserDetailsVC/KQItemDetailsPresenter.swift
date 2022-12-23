@@ -16,12 +16,12 @@ protocol KQItemDetailsPresentationLogic
 {
     func presentUserDetails(response: KQItemDetails.Model.Response)
     func presentRequestValidationError(isValidated:Bool)
+    func stopApiCallSuccess(isCanceled: Bool)
 }
 
 class KQItemDetailsPresenter: KQItemDetailsPresentationLogic
 {
-    
-    
+  
     weak var viewController: KQItemDetailsDisplayLogic?
     
     // MARK: present User Details
@@ -34,5 +34,9 @@ class KQItemDetailsPresenter: KQItemDetailsPresentationLogic
     
     func presentRequestValidationError(isValidated: Bool) {
         viewController?.displayValidationError(isValidated: isValidated)
+    }
+    
+    func stopApiCallSuccess(isCanceled:Bool){
+        viewController?.stopApiCallSuccess(isCanceled: isCanceled)
     }
 }

@@ -16,6 +16,7 @@ protocol KQItemDetailsBusinessLogic
 {
     func displayUserData(userDetails:UserDetails?)
     func getUserDetailsApi(request: KQItemDetails.Model.Request)
+    func userstopApiCallStart()
 }
 
 protocol KQItemDetailsDataStore
@@ -51,5 +52,11 @@ class KQItemDetailsInteractor: KQItemDetailsBusinessLogic, KQItemDetailsDataStor
     {
         let response = KQItemDetails.Model.Response(selectedUser: selectedUser , userDetails: userDetails)
         presenter?.presentUserDetails(response: response)
+    }
+    
+    func userstopApiCallStart(){
+        self.userBusiness.userstopApiCallStart { isCanceled in
+            self.presenter?.stopApiCallSuccess(isCanceled: isCanceled)
+        }
     }
 }

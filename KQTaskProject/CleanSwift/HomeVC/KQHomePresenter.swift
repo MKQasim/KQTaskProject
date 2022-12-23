@@ -30,6 +30,7 @@ class KQHomePresenter: KQHomePresentationLogic
         let viewModel = KQHome.Api.ViewModel(users: response.homeUsers)
         viewController?.displayHomeList(viewModel: viewModel)
     }
+    
     func stopApiCallSuccess(isCanceled:Bool){
         viewController?.stopApiCallSuccess(isCanceled: isCanceled)
     }

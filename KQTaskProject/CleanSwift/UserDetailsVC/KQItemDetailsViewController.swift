@@ -16,6 +16,7 @@ protocol KQItemDetailsDisplayLogic: AnyObject
 {
     func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
     func displayValidationError(isValidated:Bool)
+    func stopApiCallSuccess(isCanceled:Bool)
 }
 
 class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
@@ -182,6 +183,23 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
     {
         userDetails = viewModel.userDetails
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            stopApiCallStart()
+        }
+    }
+    
+    func stopApiCallStart(){
+        interactor?.userstopApiCallStart()
+    }
+    
+    func stopApiCallSuccess(isCanceled: Bool) {
+        LoadingOverlay.shared.activityIndicator.stopAnimating()
+        LoadingOverlay.shared.hideOverlayView()
+        self.view.isUserInteractionEnabled = false
     }
 }
 
