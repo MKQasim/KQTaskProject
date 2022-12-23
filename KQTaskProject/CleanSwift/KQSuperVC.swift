@@ -7,18 +7,18 @@
 
 import UIKit
 
-class KQSuperVC: UIViewController {
+public class KQSuperVC: UIViewController {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setStatusBar(color: AppTheme.shared.statusBarBackgroundColor)
         self.navigationController?.navigationBar.backgroundColor = AppTheme.shared.navBackgroundColor
         self.navigationController?.navigationBar.tintColor = AppTheme.shared.navTintColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:AppTheme.shared.navTitleTextColor]
-        
+        view.isAccessibilityElement = true
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+   public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     

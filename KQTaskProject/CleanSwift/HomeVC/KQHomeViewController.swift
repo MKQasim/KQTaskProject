@@ -30,6 +30,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     lazy var tableView : UITableView = {     // view
         let view = UITableView()
+
         view.translatesAutoresizingMaskIntoConstraints = false
         view.register(KQContactTableViewCell.self, forCellReuseIdentifier: KQContactTableViewCell.identifire)
         view.dataSource = self
@@ -81,6 +82,8 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     // MARK: - SetConstraint
     func setTableViewConstraint(){
         view.backgroundColor = AppTheme.shared.navBackgroundColor
+        tableView.isAccessibilityElement = true
+        view.isAccessibilityElement = true
         self.view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
@@ -113,6 +116,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.isUserInteractionEnabled = true
         self.tableView.isUserInteractionEnabled = true
         homeApiRequestCall()
     }
@@ -152,10 +156,12 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     }
     
     func stopApiCallStart(){
+        self.tableView.isUserInteractionEnabled = true
         interactor?.homestopApiCallStart()
     }
     
     func stopApiCallSuccess(isCanceled: Bool) {
+        self.tableView.isUserInteractionEnabled = false
         LoadingOverlay.shared.activityIndicator.stopAnimating()
         LoadingOverlay.shared.hideOverlayView()
         displayItemDetails(selectedUser: selectedUser)
@@ -186,9 +192,11 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedUser = homeUsers?[indexPath.row]
+        
         if LoadingOverlay.shared.activityIndicator.isAnimating{
             stopApiCallStart()
         }else{
+            self.tableView.isUserInteractionEnabled = true
             displayItemDetails(selectedUser: selectedUser)
         }
     }

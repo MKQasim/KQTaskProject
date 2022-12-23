@@ -27,7 +27,7 @@ struct UserDetails: Codable {
     var twitterUsername: String?
     var publicRepos, publicGists, followers, following: Int?
     var createdAt, updatedAt: Date?
-
+    
     enum CodingKeys: String, CodingKey {
         case login, id
         case nodeID = "node_id"

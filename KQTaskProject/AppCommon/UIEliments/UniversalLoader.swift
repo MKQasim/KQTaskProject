@@ -23,15 +23,15 @@ class var shared: LoadingOverlay {
 
     public func showOverlay(view: UIView) {
 
-        overlayView.frame = CGRectMake(0, 0, 200, 200)
+        overlayView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         overlayView.center = view.center
         overlayView.backgroundColor = AppTheme.shared.subTitleTextColor.withAlphaComponent(0.3)
         overlayView.clipsToBounds = true
         overlayView.layer.cornerRadius = 10
-        activityIndicator.frame = CGRectMake(0, 0, 200, 200)
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         activityIndicator.color = .orange
         activityIndicator.style = .large
-        activityIndicator.center = CGPointMake(overlayView.bounds.width / 2, overlayView.bounds.height / 2)
+        activityIndicator.center = CGPoint(x: overlayView.bounds.width / 2, y: overlayView.bounds.height / 2)
         overlayView.addSubview(activityIndicator)
         view.addSubview(overlayView)
         activityIndicator.startAnimating()

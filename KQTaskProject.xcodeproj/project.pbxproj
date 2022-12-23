@@ -16,7 +16,12 @@
 		5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C2429525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift */; };
 		5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C382952657600270CD2 /* KQSuperTableView.swift */; };
 		5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */; };
-		5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* UserModel.swift */; };
+		5D42460E29560ECE005F4491 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* UserModel.swift */; };
+		5D42461129560F24005F4491 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* UserModel.swift */; };
+		5D42461529560F71005F4491 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
+		5D42461629560F74005F4491 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
+		5D42461729560F78005F4491 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
+		5D42461829560F78005F4491 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
 		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
 		5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */; };
 		5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */; };
@@ -26,23 +31,13 @@
 		5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */; };
 		5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */; };
 		5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
-		5D6D6B682953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
-		5D6D6B692953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
 		5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
 		5D6D6B6B2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
 		5D6D6B6C2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
 		5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
-		5D6D6B6E2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
-		5D6D6B6F2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
 		5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
-		5D6D6B712953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
-		5D6D6B722953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
 		5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
-		5D6D6B742953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
-		5D6D6B752953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
 		5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
-		5D6D6B772953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
-		5D6D6B782953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
 		5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
 		5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
 		5D6D6B962953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
@@ -79,18 +74,11 @@
 		5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
 		5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
 		5D6D6BB72953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
-		5D6D6BBB2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
-		5D6D6BBC2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
-		5D6D6BBD2953B16900087A66 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
 		5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
 		5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
 		5D6D6BC22953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
 		5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
-		5D6D6BDB2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
-		5D6D6BDC2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
 		5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
-		5D6D6BE02953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
-		5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 		5D9074622954E7760086F045 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074612954E7760086F045 /* AppTheme.swift */; };
 		5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074632955043A0086F045 /* UniversalLoader.swift */; };
 		5D907466295531540086F045 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907465295531540086F045 /* CustomAlert.swift */; };
@@ -99,6 +87,7 @@
 		5D90746E295543180086F045 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746D295543180086F045 /* UserServices.swift */; };
 		5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
 		5D90747429554D450086F045 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
+		5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,8 +254,8 @@
 		5D1A7C32295260BE00270CD2 /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
-				5D6528ED2953E5810056DAD4 /* UserDetailsVC */,
 				5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */,
+				5D6528ED2953E5810056DAD4 /* UserDetailsVC */,
 				5D6D6B792953ACE800087A66 /* HomeVC */,
 			);
 			path = CleanSwift;
@@ -696,18 +685,17 @@
 				5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */,
 				5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */,
 				5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */,
-				5D6D6BBB2953B16900087A66 /* HomeApiHandler.swift in Sources */,
 				5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
 				5D90746E295543180086F045 /* UserServices.swift in Sources */,
 				5D6D6BA32953B16800087A66 /* Request.swift in Sources */,
 				5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */,
 				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */,
 				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
 				5D9074622954E7760086F045 /* AppTheme.swift in Sources */,
 				5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
-				5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */,
 				5D907466295531540086F045 /* CustomAlert.swift in Sources */,
 				5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
@@ -719,6 +707,7 @@
 				5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */,
 				5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */,
 				5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */,
+				5D42461129560F24005F4491 /* UserModel.swift in Sources */,
 				5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */,
 				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,
 				5D907468295537960086F045 /* TopMostController.swift in Sources */,
@@ -732,7 +721,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6D6B712953AB7000087A66 /* KQHomeModels.swift in Sources */,
 				5D6D6BA42953B16800087A66 /* Request.swift in Sources */,
 				5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */,
 				5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */,
@@ -743,17 +731,12 @@
 				5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */,
 				5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */,
 				5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */,
-				5D6D6B742953AB7000087A66 /* KQHomeViewController.swift in Sources */,
-				5D6D6BE02953D06500087A66 /* HomeService.swift in Sources */,
-				5D6D6B682953AB7000087A66 /* KQHomePresenter.swift in Sources */,
-				5D6D6B6E2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5D42461729560F78005F4491 /* UserDetailsModel.swift in Sources */,
+				5D42461529560F71005F4491 /* UserApiHandler.swift in Sources */,
 				5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */,
-				5D6D6BBC2953B16900087A66 /* HomeApiHandler.swift in Sources */,
 				5D6D6BB32953B16900087A66 /* Enviroment.swift in Sources */,
 				5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */,
-				5D6D6B772953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
 				5D6D6B9B2953B16800087A66 /* AuthRequest.swift in Sources */,
-				5D6D6BDB2953D04200087A66 /* HomeBusiness.swift in Sources */,
 				5D6D6BAA2953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,24 +749,19 @@
 				5D6D6B6C2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
 				5D6D6BC22953B38A00087A66 /* AppShared.swift in Sources */,
 				5D6D6B9C2953B16800087A66 /* AuthRequest.swift in Sources */,
-				5D6D6B782953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
 				5D6D6BA22953B16800087A66 /* RequestBuilder.swift in Sources */,
+				5D42461829560F78005F4491 /* UserDetailsModel.swift in Sources */,
 				5D1A7C2329525ECD00270CD2 /* KQTaskProjectUITests.swift in Sources */,
 				5D6D6BB12953B16900087A66 /* ServiceError.swift in Sources */,
-				5D6D6B752953AB7000087A66 /* KQHomeViewController.swift in Sources */,
-				5D6D6B6F2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
-				5D6D6BDC2953D04200087A66 /* HomeBusiness.swift in Sources */,
+				5D42461629560F74005F4491 /* UserApiHandler.swift in Sources */,
+				5D42460E29560ECE005F4491 /* UserModel.swift in Sources */,
 				5D6D6BAB2953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6B962953B16800087A66 /* ApiLoader.swift in Sources */,
-				5D6D6BBD2953B16900087A66 /* HomeApiHandler.swift in Sources */,
 				5D1A7C2529525ECD00270CD2 /* KQTaskProjectUITestsLaunchTests.swift in Sources */,
-				5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */,
 				5D6D6BA82953B16900087A66 /* ApiResponseHandler.swift in Sources */,
-				5D6D6B722953AB7000087A66 /* KQHomeModels.swift in Sources */,
 				5D6D6B9F2953B16800087A66 /* DefaultRequest.swift in Sources */,
 				5D6D6BB42953B16900087A66 /* Enviroment.swift in Sources */,
 				5D6D6BA52953B16800087A66 /* Request.swift in Sources */,
-				5D6D6B692953AB7000087A66 /* KQHomePresenter.swift in Sources */,
 				5D6D6BB72953B16900087A66 /* Reachability.swift in Sources */,
 				5D6D6B992953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 			);
@@ -1046,7 +1024,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CT7H96YF74;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1069,7 +1047,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CT7H96YF74;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
