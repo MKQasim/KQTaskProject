@@ -73,6 +73,10 @@ struct Path {
         var getMostViewedUsers : (String) -> String = { api_Key  in
             return "\(baseUrl)"
         }
+        
+        var getUserDetails : (String) -> String = { api_Key  in
+            return "\(baseUrl)/\(api_Key)"
+        }
     }
 }
 

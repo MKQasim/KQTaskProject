@@ -14,7 +14,8 @@ import UIKit
 
 protocol KQItemDetailsBusinessLogic
 {
-    func doSomething(request: KQItemDetails.Model.Request)
+    func displayUserData(userDetails:UserDetails?)
+    func getUserDetailsApi(request: KQItemDetails.Model.Request)
 }
 
 protocol KQItemDetailsDataStore
@@ -27,15 +28,28 @@ class KQItemDetailsInteractor: KQItemDetailsBusinessLogic, KQItemDetailsDataStor
     var selectedUser: User?
     var presenter: KQItemDetailsPresentationLogic?
     var worker: KQItemDetailsWorker?
+    var userBusiness = UserBusiness()
     
-    // MARK: Do something
+    // MARK: get User Details Api
     
-    func doSomething(request: KQItemDetails.Model.Request)
-    {
+    func getUserDetailsApi(request: KQItemDetails.Model.Request){
         worker = KQItemDetailsWorker()
-        worker?.doSomeWork()
-        
-        let response = KQItemDetails.Model.Response(selectedUser: selectedUser)
-        presenter?.presentSomething(response: response)
+        worker?.validateRequest(request: request, completion: { isValidate in
+            if isValidate{
+                self.userBusiness.userDetailsApiCall(parameters: ["loginId":(request.loginId ?? "") as String]) { userDetails, error in
+                    self.displayUserData(userDetails: userDetails)
+                }
+            }else{
+                self.presenter?.presentRequestValidationError(isValidated: isValidate)
+            }
+        })
+    }
+    
+    // MARK: display User Data
+    
+    func displayUserData(userDetails:UserDetails?)
+    {
+        let response = KQItemDetails.Model.Response(selectedUser: selectedUser , userDetails: userDetails)
+        presenter?.presentUserDetails(response: response)
     }
 }

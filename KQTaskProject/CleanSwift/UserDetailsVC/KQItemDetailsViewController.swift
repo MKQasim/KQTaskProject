@@ -14,14 +14,17 @@ import UIKit
 
 protocol KQItemDetailsDisplayLogic: AnyObject
 {
-    func displaySomething(viewModel: KQItemDetails.Model.ViewModel)
+    func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
+    func displayValidationError(isValidated:Bool)
 }
 
 class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
 {
+    
+    
     var interactor: KQItemDetailsBusinessLogic?
     var router: (NSObjectProtocol & KQItemDetailsRoutingLogic & KQItemDetailsDataPassing)?
-    
+    var selectedUser : User?
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -72,7 +75,7 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
         setUpNavigation()
         addViews()
         addConstraints()
-        doSomething()
+        getUserDetailsApiCall()
     }
     
     // MARK: - SetUp Navigation
@@ -137,33 +140,48 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
         return img
     }()
     
-    var selectedUser:User? {
+    var userDetails:UserDetails? {
         didSet {
-            guard let user = selectedUser else {return}
-            if let name = user.login {
-                nameLabel.text = "Login : \(name)"
-            }
-            if let image = user.avatarURL , let url = URL(string:(image)) {
-                profileImageView.load(url: url)
-            }
-            if let jobTitle = user.type {
-                jobTitleDetailedLabel.text = "UserType: \(jobTitle)"
-            }
-            if let image = user.avatarURL , let url = URL(string:(image)) {
-                countryImageView.load(url: url)
+            DispatchQueue.main.async {
+                guard let user = self.userDetails else {return}
+                if let name = user.name {
+                    self.nameLabel.text = "Name: \(name)"
+                }
+                if let image = user.avatarURL , let url = URL(string:(image)) {
+                    self.profileImageView.load(url: url)
+                }
+                if let jobTitle = user.type {
+                    self.jobTitleDetailedLabel.text = "UserType: \(jobTitle)"
+                }
+                if let image = user.avatarURL , let url = URL(string:(image)) {
+                    self.countryImageView.load(url: url)
+                }
+                LoadingOverlay.shared.activityIndicator.stopAnimating()
+                LoadingOverlay.shared.hideOverlayView()
+                self.view.isUserInteractionEnabled = false
             }
         }
     }
     
-    func doSomething()
-    {
-        let request = KQItemDetails.Model.Request()
-        interactor?.doSomething(request: request)
+    func getUserDetailsApiCall(){
+        selectedUser = router?.dataStore?.selectedUser
+        let request = KQItemDetails.Model.Request(loginId: selectedUser?.login)
+        LoadingOverlay.shared.showOverlay(view: self.view)
+        LoadingOverlay.shared.activityIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        interactor?.getUserDetailsApi(request: request)
     }
     
-    func displaySomething(viewModel: KQItemDetails.Model.ViewModel)
+    func displayValidationError(isValidated: Bool) {
+        if !isValidated{
+            AlertHelper.showAlert("Warning",message: "Request Validation Error", style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
+            }
+        }
+    }
+    
+    func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
     {
-        selectedUser = viewModel.selectedUser
+        userDetails = viewModel.userDetails
     }
 }
 

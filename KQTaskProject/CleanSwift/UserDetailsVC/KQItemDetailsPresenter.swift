@@ -14,18 +14,25 @@ import UIKit
 
 protocol KQItemDetailsPresentationLogic
 {
-  func presentSomething(response: KQItemDetails.Model.Response)
+    func presentUserDetails(response: KQItemDetails.Model.Response)
+    func presentRequestValidationError(isValidated:Bool)
 }
 
 class KQItemDetailsPresenter: KQItemDetailsPresentationLogic
 {
-  weak var viewController: KQItemDetailsDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: KQItemDetails.Model.Response)
-  {
-      let viewModel = KQItemDetails.Model.ViewModel(selectedUser: response.selectedUser)
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    
+    
+    weak var viewController: KQItemDetailsDisplayLogic?
+    
+    // MARK: present User Details
+    
+    func presentUserDetails(response: KQItemDetails.Model.Response)
+    {
+        let viewModel = KQItemDetails.Model.ViewModel(selectedUser : response.selectedUser , userDetails: response.userDetails)
+        viewController?.displayUserDetails(viewModel: viewModel)
+    }
+    
+    func presentRequestValidationError(isValidated: Bool) {
+        viewController?.displayValidationError(isValidated: isValidated)
+    }
 }

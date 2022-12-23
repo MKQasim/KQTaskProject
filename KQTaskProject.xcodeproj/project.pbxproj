@@ -93,6 +93,12 @@
 		5D6D6BE12953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 		5D9074622954E7760086F045 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074612954E7760086F045 /* AppTheme.swift */; };
 		5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074632955043A0086F045 /* UniversalLoader.swift */; };
+		5D907466295531540086F045 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907465295531540086F045 /* CustomAlert.swift */; };
+		5D907468295537960086F045 /* TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907467295537960086F045 /* TopMostController.swift */; };
+		5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746A295542DC0086F045 /* UserBusiness.swift */; };
+		5D90746E295543180086F045 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746D295543180086F045 /* UserServices.swift */; };
+		5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
+		5D90747429554D450086F045 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +165,12 @@
 		5D6D6BDE2953D06500087A66 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		5D9074612954E7760086F045 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		5D9074632955043A0086F045 /* UniversalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLoader.swift; sourceTree = "<group>"; };
+		5D907465295531540086F045 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		5D907467295537960086F045 /* TopMostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMostController.swift; sourceTree = "<group>"; };
+		5D90746A295542DC0086F045 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
+		5D90746D295543180086F045 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		5D907470295549DA0086F045 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
+		5D90747329554D450086F045 /* UserApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +300,12 @@
 		5D1A7C372952657600270CD2 /* UIEliments */ = {
 			isa = PBXGroup;
 			children = (
+				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
+				5D9074632955043A0086F045 /* UniversalLoader.swift */,
 				5D1A7C44295386DB00270CD2 /* TableViewCells */,
 				5D1A7C382952657600270CD2 /* KQSuperTableView.swift */,
+				5D907465295531540086F045 /* CustomAlert.swift */,
+				5D907467295537960086F045 /* TopMostController.swift */,
 			);
 			path = UIEliments;
 			sourceTree = "<group>";
@@ -297,6 +313,7 @@
 		5D1A7C3C295383A900270CD2 /* App Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D90746F295549B30086F045 /* UserDetailsModel */,
 				5D1A7C3D295383BD00270CD2 /* HomeModel */,
 			);
 			path = "App Models";
@@ -313,6 +330,7 @@
 		5D1A7C3E295383F300270CD2 /* App Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D90746C295543080086F045 /* UserServices */,
 				5D6D6BDD2953D06500087A66 /* HomeServices */,
 			);
 			path = "App Services";
@@ -330,8 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */,
-				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
-				5D9074632955043A0086F045 /* UniversalLoader.swift */,
 			);
 			path = ContactTableViewCell;
 			sourceTree = "<group>";
@@ -449,6 +465,7 @@
 		5D6D6B8F2953B16800087A66 /* ApiHandlerType */ = {
 			isa = PBXGroup;
 			children = (
+				5D90747229554D290086F045 /* UserApiHandler */,
 				5D6D6B922953B16800087A66 /* HomeApiHadler */,
 			);
 			path = ApiHandlerType;
@@ -473,6 +490,7 @@
 		5D6D6BC32953CDCE00087A66 /* AppBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				5D907469295542B90086F045 /* UserBusiness */,
 				5D6D6BD82953D04200087A66 /* HomeBusines */,
 			);
 			path = AppBusiness;
@@ -500,6 +518,38 @@
 				5D9074612954E7760086F045 /* AppTheme.swift */,
 			);
 			path = "App Theme";
+			sourceTree = "<group>";
+		};
+		5D907469295542B90086F045 /* UserBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				5D90746A295542DC0086F045 /* UserBusiness.swift */,
+			);
+			path = UserBusiness;
+			sourceTree = "<group>";
+		};
+		5D90746C295543080086F045 /* UserServices */ = {
+			isa = PBXGroup;
+			children = (
+				5D90746D295543180086F045 /* UserServices.swift */,
+			);
+			path = UserServices;
+			sourceTree = "<group>";
+		};
+		5D90746F295549B30086F045 /* UserDetailsModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D907470295549DA0086F045 /* UserDetailsModel.swift */,
+			);
+			path = UserDetailsModel;
+			sourceTree = "<group>";
+		};
+		5D90747229554D290086F045 /* UserApiHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5D90747329554D450086F045 /* UserApiHandler.swift */,
+			);
+			path = UserApiHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,6 +698,7 @@
 				5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */,
 				5D6D6BBB2953B16900087A66 /* HomeApiHandler.swift in Sources */,
 				5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
+				5D90746E295543180086F045 /* UserServices.swift in Sources */,
 				5D6D6BA32953B16800087A66 /* Request.swift in Sources */,
 				5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */,
 				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
@@ -657,18 +708,23 @@
 				5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
 				5D1A7C412953841F00270CD2 /* UserModel.swift in Sources */,
+				5D907466295531540086F045 /* CustomAlert.swift in Sources */,
+				5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
 				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
 				5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */,
 				5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */,
 				5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */,
+				5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */,
 				5D1A7C392952657600270CD2 /* KQSuperTableView.swift in Sources */,
 				5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */,
 				5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */,
 				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,
+				5D907468295537960086F045 /* TopMostController.swift in Sources */,
 				5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
 				5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */,
+				5D90747429554D450086F045 /* UserApiHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

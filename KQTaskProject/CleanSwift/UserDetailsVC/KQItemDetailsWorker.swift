@@ -14,7 +14,12 @@ import UIKit
 
 class KQItemDetailsWorker
 {
-  func doSomeWork()
-  {
-  }
+    func validateRequest(request:KQItemDetails.Model.Request,completion:@escaping((_ isValidate:Bool) -> ()))
+    {
+        if request.loginId != nil {
+            completion(true)
+        }else{
+            completion(false)
+        }
+    }
 }

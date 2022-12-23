@@ -20,14 +20,17 @@ enum KQItemDetails
     {
         struct Request
         {
+        var loginId: String?
         }
         struct Response
         {
             var selectedUser : User?
+            var userDetails  : UserDetails?
         }
         struct ViewModel
         {
             var selectedUser : User?
+            var userDetails  : UserDetails?
         }
     }
 }

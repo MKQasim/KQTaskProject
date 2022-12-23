@@ -126,6 +126,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         LoadingOverlay.shared.activityIndicator.startAnimating()
         self.tableView.isUserInteractionEnabled = false
         interactor?.homeApiCall(request: request)
+       
     }
     
     func displayHomeList(viewModel: KQHome.Api.ViewModel)
@@ -136,6 +137,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
             LoadingOverlay.shared.activityIndicator.stopAnimating()
             LoadingOverlay.shared.hideOverlayView()
             self.tableView.isUserInteractionEnabled = true
+           
         }
     }
     
@@ -191,3 +193,4 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
         }
     }
 }
+
