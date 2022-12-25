@@ -14,8 +14,8 @@ import UIKit
 
 protocol KQHomeDisplayLogic: AnyObject
 {
-    func displayHomeList(viewModel: KQHome.Api.ViewModel)
-    func stopApiCallSuccess(isCanceled:Bool)
+    func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
+    func stopUrlSession(isCanceled:Bool)
 }
 
 class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
@@ -30,14 +30,14 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     lazy var tableView : UITableView = {     // view
         let view = UITableView()
-
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         view.register(KQContactTableViewCell.self, forCellReuseIdentifier: KQContactTableViewCell.identifire)
         view.dataSource = self
         return  view
     }()
     
-    private var homeUsers : [User]? // model
+    var displayUsers : [User]? // model
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -57,12 +57,12 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     private func setup()
     {
         let viewController = self
-        let interactor = KQHomeInteractor()
         let presenter = KQHomePresenter()
+        let interactor = KQHomeInteractor(presenter: presenter)
         let router = KQHomeRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
+        //        interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
@@ -78,19 +78,6 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         // The .xib files should have the same name as the class file
         setTableViewConstraint()
         tableView.delegate = self
-    }
-    // MARK: - SetConstraint
-    func setTableViewConstraint(){
-        view.backgroundColor = AppTheme.shared.navBackgroundColor
-        tableView.isAccessibilityElement = true
-        view.isAccessibilityElement = true
-        self.view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
     }
     
     // MARK: Routing
@@ -110,74 +97,101 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         setUpNavigation()
         configureUI()
+        accessibility()
+    }
+    
+    private func accessibility(){
+        self.view.isAccessibilityElement = true
+        self.view.accessibilityLabel = "KQHomeViewController"
+        tableView.isAccessibilityElement = true
+        tableView.accessibilityLabel = "tableView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.isUserInteractionEnabled = true
         self.tableView.isUserInteractionEnabled = true
-        homeApiRequestCall()
+        fetchUsers()
     }
     
-    // MARK: Home Api Request Call
+    // MARK: Fetch Users
     
-    func homeApiRequestCall()
+    func fetchUsers()
     {
-        let request = KQHome.Api.Request()
+        let request = KQHome.HomeUsers.Request()
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
         self.tableView.isUserInteractionEnabled = false
-        interactor?.homeApiCall(request: request)
-       
+        interactor?.fetchUsers(request: request)
+        
     }
-    
-    func displayHomeList(viewModel: KQHome.Api.ViewModel)
+    // MARK: Display Users
+    func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
     {
+        self.displayUsers = viewModel.users
         DispatchQueue.main.async() {
-            self.homeUsers = viewModel.users
             self.tableView.reloadData()
             LoadingOverlay.shared.activityIndicator.stopAnimating()
             LoadingOverlay.shared.hideOverlayView()
             self.tableView.isUserInteractionEnabled = true
-           
         }
     }
     
-    func displayItemDetails(selectedUser:User?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-            // your code here
-            if var rout = self.router{
-                rout.dataStore?.selectedUser = selectedUser
-                rout.routeToDetails(segue: nil)
-            }
+    func moveToItemDetails(selectedUser:User?) {
+        //        DispatchQueue.main.asyncAfter(deadline: .now()) {  [weak self] in
+        //            // your code here
+        //
+        //        }
+        
+        if var rout = self.router{
+            rout.dataStore?.selectedUser = selectedUser
+            rout.routeToDetails(segue: nil)
         }
     }
     
-    func stopApiCallStart(){
+    func stopUrlSessionInit(){
         self.tableView.isUserInteractionEnabled = true
-        interactor?.homestopApiCallStart()
+        interactor?.stopUrlSessionInit()
     }
     
-    func stopApiCallSuccess(isCanceled: Bool) {
+    func stopUrlSession(isCanceled: Bool) {
         self.tableView.isUserInteractionEnabled = false
         LoadingOverlay.shared.activityIndicator.stopAnimating()
         LoadingOverlay.shared.hideOverlayView()
-        displayItemDetails(selectedUser: selectedUser)
+        moveToItemDetails(selectedUser: selectedUser)
+    }
+}
+
+extension KQHomeViewController{
+    // MARK: - SetConstraint
+    func setTableViewConstraint(){
+        view.backgroundColor = AppTheme.shared.navBackgroundColor
+        tableView.isAccessibilityElement = true
+        view.isAccessibilityElement = true
+        self.view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 
 // MARK: - UITableViewDataSource and UITableViewDelegate
 extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeUsers?.count ?? 0
+        return displayUsers?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: KQContactTableViewCell.identifire, for: indexPath) as! KQContactTableViewCell
-        cell.selectedUser = homeUsers?[indexPath.row]
+        
+        cell.selectedUser = displayUsers?[indexPath.row]
         return cell
     }
     
@@ -191,14 +205,17 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedUser = homeUsers?[indexPath.row]
-        
-        if LoadingOverlay.shared.activityIndicator.isAnimating{
-            stopApiCallStart()
-        }else{
-            self.tableView.isUserInteractionEnabled = true
-            displayItemDetails(selectedUser: selectedUser)
+        selectedUser = displayUsers?[indexPath.row]
+        if var rout = self.router{
+            rout.dataStore?.selectedUser = selectedUser
+            rout.routeToDetails(segue: nil)
         }
+        //        if LoadingOverlay.shared.activityIndicator.isAnimating{
+        //            stopUrlSessionInit()
+        //        }else{
+        //            self.tableView.isUserInteractionEnabled = true
+        //            moveToItemDetails(selectedUser: selectedUser)
+        //        }
     }
 }
 

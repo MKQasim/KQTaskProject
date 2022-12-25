@@ -15,13 +15,13 @@ public class KQContactTableViewCell: UITableViewCell {
         didSet {
             guard let user = selectedUser else {return}
             if let name = user.login {
-                nameLabel.text = "Login : \(name)"
+                nameLabel.text = "Login:\(name)"
             }
             if let image = user.avatarURL , let url = URL(string:(image)) {
                 profileImageView.load(url: url)
             }
-            if let jobTitle = user.type {
-                jobTitleDetailedLabel.text = "User Type: \(jobTitle)"
+            if let jobTitle = user.url {
+                jobTitleDetailedLabel.text = "\(jobTitle)"
             }
             if let image = user.avatarURL , let url = URL(string:(image)) {
                 countryImageView.load(url: url)
@@ -46,22 +46,22 @@ public class KQContactTableViewCell: UITableViewCell {
         return img
     }()
     
-    private lazy var nameLabel:UILabel = {
+    lazy var nameLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textAlignment = .justified
+        label.numberOfLines = 0
         label.textColor = AppTheme.shared.titleTextColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var jobTitleDetailedLabel:UILabel = {
+    lazy var jobTitleDetailedLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor =  AppTheme.shared.subTitleTextColor
         label.layer.cornerRadius = 5
+        label.numberOfLines = 0
         label.clipsToBounds = true
-        label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -86,15 +86,33 @@ public class KQContactTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addViews()
         addConstraints()
+        accessibility()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    private func accessibility(){
+        self.isAccessibilityElement = true
+        self.accessibilityLabel = "KQContactTableViewCell"
+        superContainerView.isAccessibilityElement = true
+        superContainerView.accessibilityLabel = "superContainerView"
+        profileImageView.isAccessibilityElement = true
+        profileImageView.accessibilityLabel = "profileImageView"
+        nameLabel.isAccessibilityElement = true
+        nameLabel.accessibilityLabel = "nameLabel"
+        jobTitleDetailedLabel.isAccessibilityElement = true
+        jobTitleDetailedLabel.accessibilityLabel = "jobTitleDetailedLabel"
+        containerView.isAccessibilityElement = true
+        containerView.accessibilityLabel = "containerView"
+        countryImageView.isAccessibilityElement = true
+        countryImageView.accessibilityLabel = "countryImageView"
+    }
     // MARK: - Add Views
     
     private func addViews(){
+        
         self.contentView.addSubview(superContainerView)
         self.superContainerView.addSubview(profileImageView)
         containerView.addSubview(nameLabel)
@@ -107,6 +125,7 @@ public class KQContactTableViewCell: UITableViewCell {
     
     private func addConstraints(){
         NSLayoutConstraint.activate([
+            
             // MARK: - superContainerView Constraints
             superContainerView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor,constant: 0),
             superContainerView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:0),
@@ -125,14 +144,18 @@ public class KQContactTableViewCell: UITableViewCell {
             containerView.leadingAnchor.constraint(equalTo:self.profileImageView.trailingAnchor , constant:10),
             containerView.trailingAnchor.constraint(equalTo:self.superContainerView.trailingAnchor, constant:0),
             containerView.heightAnchor.constraint(equalTo:superContainerView.heightAnchor),
+            
             // MARK: -  nameLabel Constraints
             nameLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor,constant: 20),
             nameLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor),
             nameLabel.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor),
+            nameLabel.heightAnchor.constraint(equalToConstant: self.contentView.frame.height/2),
             
             // MARK: - jobTitleDetailedLabel Constraints
-            jobTitleDetailedLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor,constant: 10),
+            jobTitleDetailedLabel.heightAnchor.constraint(equalToConstant: 60),
+            jobTitleDetailedLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor,constant: -10),
             jobTitleDetailedLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor),
+            jobTitleDetailedLabel.trailingAnchor.constraint(equalTo:self.countryImageView.leadingAnchor),
             
             // MARK: - countryImageView Constraints
             countryImageView.widthAnchor.constraint(equalToConstant:26),

@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D1A7C1D29525ECD00270CD2"
+               BlueprintIdentifier = "5D415F7729563A9300C33DD3"
                BuildableName = "KQTaskProjectUITests.xctest"
                BlueprintName = "KQTaskProjectUITests"
                ReferencedContainer = "container:KQTaskProject.xcodeproj">
@@ -70,13 +70,6 @@
             ReferencedContainer = "container:KQTaskProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OS_ACTIVITY_MODE"
-            value = "disable"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

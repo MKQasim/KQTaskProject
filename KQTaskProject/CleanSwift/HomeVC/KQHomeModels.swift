@@ -15,22 +15,26 @@ import UIKit
 
 enum KQHome
 {
-  // MARK: Use cases
-
-  enum Api
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum HomeUsers
     {
-     
+        struct Request
+        {
+            
+        }
+        // MARK: - Home
+        struct Response {
+            var homeUsers : [User]?
+        }
+        
+        struct ViewModel
+        {
+            struct DisplayUser
+            {
+                var displayUser: User?
+            }
+            var users: [User]?
+        }
     }
-      // MARK: - Home
-      struct Response {
-          var homeUsers : [User]?
-      }
-      
-    struct ViewModel
-    {
-        var users: [User]?
-    }
-  }
 }

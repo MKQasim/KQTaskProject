@@ -14,8 +14,8 @@ import UIKit
 
 protocol KQHomeBusinessLogic
 {
-    func homeApiCall(request: KQHome.Api.Request)
-    func homestopApiCallStart()
+    func fetchUsers(request: KQHome.HomeUsers.Request)
+    func stopUrlSessionInit()
 }
 
 protocol KQHomeDataStore
@@ -25,29 +25,32 @@ protocol KQHomeDataStore
 
 class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
 {
-
+    
     var selectedUser: User?
     var homeList: [User]?
     var presenter: KQHomePresentationLogic?
     var worker: KQHomeWorker?
-    var homeBusiness = HomeBusiness()
+    var homeBusiness: HomeBusinessProtocol
     
+    init(homeBusiness: HomeBusinessProtocol =  HomeBusiness(),
+         presenter: KQHomePresentationLogic?) {
+        self.homeBusiness = homeBusiness
+        self.presenter = presenter
+    }
     
-    // MARK: Home Api Call
+    // MARK: fetch Users Api Call
     
-    func homeApiCall(request: KQHome.Api.Request) {
+    func fetchUsers(request: KQHome.HomeUsers.Request) {
         let parameters = ["": ""]
-        
-        self.homeBusiness.homeApiCall(parameters: parameters, completion: {(users, error) in
-            self.worker = KQHomeWorker()
-            let response = KQHome.Api.Response(homeUsers: users)
-            self.presenter?.presentSomething(response: response)
+        self.homeBusiness.fetchUsers(parameters: parameters, completion: {(users, error) in
+            let response = KQHome.HomeUsers.Response(homeUsers: users)
+            self.presenter?.presentUsers(response: response)
         })
     }
     
-    func homestopApiCallStart(){
+    func stopUrlSessionInit(){
         self.homeBusiness.homestopApiCallStart { isCanceled in
-            self.presenter?.stopApiCallSuccess(isCanceled: isCanceled)
+            self.presenter?.stopUrlSession(isCanceled: isCanceled)
         }
     }
 }

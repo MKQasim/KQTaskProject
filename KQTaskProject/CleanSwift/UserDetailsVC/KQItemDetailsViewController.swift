@@ -43,8 +43,8 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     private func setup()
     {
         let viewController = self
-        let interactor = KQItemDetailsInteractor()
         let presenter = KQItemDetailsPresenter()
+        let interactor = KQItemDetailsInteractor()
         let router = KQItemDetailsRouter()
         viewController.interactor = interactor
         viewController.router = router

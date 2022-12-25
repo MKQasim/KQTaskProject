@@ -20,7 +20,7 @@ enum KQItemDetails
     {
         struct Request
         {
-        var loginId: String?
+            var loginId: String?
         }
         struct Response
         {

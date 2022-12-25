@@ -7,12 +7,17 @@
 
 import Foundation
 
-class HomeBusiness {
+protocol HomeBusinessProtocol {
+    func fetchUsers(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ()))
+    func homestopApiCallStart(completion:@escaping((_ isCanceled : Bool) -> ()))
+}
+
+class HomeBusiness: HomeBusinessProtocol {
      // MARK: - HomeServices
     private lazy var homeServices = HomeServices()
     // MARK: - Home Api Call
 
-    func homeApiCall(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ())){
+    func fetchUsers(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ())){
         homeServices.usersList(parameters:parameters) { userModel, error in
             if error == nil{
                 completion(userModel,error)

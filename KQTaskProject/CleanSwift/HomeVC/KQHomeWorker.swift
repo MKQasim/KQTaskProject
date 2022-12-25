@@ -11,10 +11,43 @@
 //
 
 import UIKit
+// MARK: - User List API
+
+protocol UserListProtocol
+{
+    // MARK: CRUD operations - Optional error
+    
+    func fetchOrders(completionHandler: @escaping ([User], UsersListError?) -> Void)
+}
 
 class KQHomeWorker
 {
-  func doSomeWork()
-  {
-  }
+    var usersList: UserListProtocol?
+    init() {}
+    
+    func fetchOrders(completionHandler: @escaping ([User]) -> Void)
+    {
+        
+    }
+}
+
+// MARK: - Orders store CRUD operation errors
+
+enum UsersListError: Equatable, Error
+{
+    case CannotFetch(String)
+    case CannotCreate(String)
+    case CannotUpdate(String)
+    case CannotDelete(String)
+}
+
+func ==(lhs: UsersListError, rhs: UsersListError) -> Bool
+{
+    switch (lhs, rhs) {
+    case (.CannotFetch(let a), .CannotFetch(let b)) where a == b: return true
+    case (.CannotCreate(let a), .CannotCreate(let b)) where a == b: return true
+    case (.CannotUpdate(let a), .CannotUpdate(let b)) where a == b: return true
+    case (.CannotDelete(let a), .CannotDelete(let b)) where a == b: return true
+    default: return false
+    }
 }

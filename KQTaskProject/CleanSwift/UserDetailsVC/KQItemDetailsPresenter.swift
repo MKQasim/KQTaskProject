@@ -21,7 +21,7 @@ protocol KQItemDetailsPresentationLogic
 
 class KQItemDetailsPresenter: KQItemDetailsPresentationLogic
 {
-  
+    
     weak var viewController: KQItemDetailsDisplayLogic?
     
     // MARK: present User Details

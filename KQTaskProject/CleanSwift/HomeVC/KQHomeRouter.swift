@@ -14,44 +14,44 @@ import UIKit
 
 @objc protocol KQHomeRoutingLogic
 {
-  func routeToDetails(segue: UIStoryboardSegue?)
+    func routeToDetails(segue: UIStoryboardSegue?)
 }
 
 protocol KQHomeDataPassing
 {
-  var dataStore: KQHomeDataStore? { get set}
+    var dataStore: KQHomeDataStore? { get set}
 }
 
 class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
 {
     
-  weak var viewController: KQHomeViewController?
+    weak var viewController: KQHomeViewController?
     var dataStore: KQHomeDataStore?
-  
-  // MARK: Routing
-  
-  func routeToDetails(segue: UIStoryboardSegue?)
-  {
-      let destinationVC = KQItemDetailsViewController()
-      guard let viewController = self.viewController else{return}
-      guard let destinationRouter = destinationVC.router else {return}
-      guard var destinationDS = destinationRouter.dataStore else {return}
-      guard let sourceDS = dataStore else {return}
-      passDataToSomewhere(source: sourceDS , destination: &destinationDS)
-      navigateToItemDetails(source: viewController, destination: destinationVC)
-  }
-
-  // MARK: Navigation
-  
-  func navigateToItemDetails(source: KQHomeViewController, destination: KQItemDetailsViewController)
-  {
-    source.show(destination, sender: nil)
-  }
-  
-//   MARK: Passing data
-  
-  func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQItemDetailsDataStore)
-  {
-      destination.selectedUser = source.selectedUser
-  }
+    
+    // MARK: Routing
+    
+    func routeToDetails(segue: UIStoryboardSegue?)
+    {
+        let destinationVC = KQItemDetailsViewController()
+        guard let viewController = self.viewController else{return}
+        guard let destinationRouter = destinationVC.router else {return}
+        guard var destinationDS = destinationRouter.dataStore else {return}
+        guard let sourceDS = dataStore else {return}
+        passDataToSomewhere(source: sourceDS , destination: &destinationDS)
+        navigateToItemDetails(source: viewController, destination: destinationVC)
+    }
+    
+    // MARK: Navigation
+    
+    func navigateToItemDetails(source: KQHomeViewController, destination: KQItemDetailsViewController)
+    {
+        source.show(destination, sender: nil)
+    }
+    
+    //   MARK: Passing data
+    
+    func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQItemDetailsDataStore)
+    {
+        destination.selectedUser = source.selectedUser
+    }
 }

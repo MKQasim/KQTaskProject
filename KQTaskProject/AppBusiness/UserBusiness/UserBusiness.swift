@@ -7,10 +7,12 @@
 
 import Foundation
 
+protocol UserBusinessProtocol {
+    func userDetailsApiCall(parameters: [String : Any],completion:@escaping((_ userDetails:UserDetails?,_ error:Error?) -> ()))
+    func userstopApiCallStart(completion:@escaping((_ isCanceled : Bool) -> ()))
+}
 
-import Foundation
-
-class UserBusiness {
+class UserBusiness : UserBusinessProtocol{
      // MARK: - UserServices
     private lazy var userServices = UserServices()
     // MARK: - User Api Call
