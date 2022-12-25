@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TopMostVC {
+class TopMostController {
     class func topMostViewController() -> UIViewController {
         if var topController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {

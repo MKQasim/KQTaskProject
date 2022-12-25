@@ -32,7 +32,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         let view = UITableView()
         
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.register(KQContactTableViewCell.self, forCellReuseIdentifier: KQContactTableViewCell.identifire)
+        view.register(KQUsersTableViewCell.self, forCellReuseIdentifier: KQUsersTableViewCell.identifire)
         view.dataSource = self
         return  view
     }()
@@ -189,7 +189,7 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: KQContactTableViewCell.identifire, for: indexPath) as! KQContactTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: KQUsersTableViewCell.identifire, for: indexPath) as! KQUsersTableViewCell
         
         cell.selectedUser = displayUsers?[indexPath.row]
         return cell
@@ -218,4 +218,5 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
         //        }
     }
 }
+
 

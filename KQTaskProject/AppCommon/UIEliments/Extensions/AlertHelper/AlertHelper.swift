@@ -41,15 +41,9 @@ class AlertHelper {
         if let target = target {
             target.present(alertController, animated: true, completion: nil)
         } else {
-            TopMostVC.topMostViewController().present(alertController, animated: true, completion: nil)
+            TopMostController.topMostViewController().present(alertController, animated: true, completion: nil)
         }
-        
-        
     }
 }
 
-extension DispatchQueue {
-    static func delay(_ delay: DispatchTimeInterval, closure: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: closure)
-    }
-}
+

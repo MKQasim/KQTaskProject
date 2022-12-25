@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class KQContactTableViewCell: UITableViewCell {
+public class KQUsersTableViewCell: UITableViewCell {
     
     static let identifire: String =  "KQContactTableViewCell"
     

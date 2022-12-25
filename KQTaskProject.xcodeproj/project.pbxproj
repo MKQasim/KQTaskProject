@@ -20,7 +20,7 @@
 		5D4349F0295687500046A924 /* KQHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349ED295687500046A924 /* KQHomeViewControllerTests.swift */; };
 		5D4349F1295687500046A924 /* KQHomeWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EE295687500046A924 /* KQHomeWorkerTests.swift */; };
 		5D4349F2295687500046A924 /* KQHomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EF295687500046A924 /* KQHomePresenterTests.swift */; };
-		5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */; };
+		5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */; };
 		5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */; };
 		5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */; };
 		5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */; };
@@ -28,6 +28,7 @@
 		5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */; };
 		5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */; };
 		5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */; };
+		5D6609E42957E254002AA837 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6609E32957E254002AA837 /* DispatchQueue.swift */; };
 		5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
 		5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */; };
 		5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */; };
@@ -63,8 +64,8 @@
 		5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
 		5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BDE2953D06500087A66 /* HomeService.swift */; };
 		5D9074622954E7760086F045 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074612954E7760086F045 /* AppTheme.swift */; };
-		5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074632955043A0086F045 /* UniversalLoader.swift */; };
-		5D907466295531540086F045 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907465295531540086F045 /* CustomAlert.swift */; };
+		5D9074642955043A0086F045 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9074632955043A0086F045 /* LoadingOverlay.swift */; };
+		5D907466295531540086F045 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907465295531540086F045 /* AlertHelper.swift */; };
 		5D907468295537960086F045 /* TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907467295537960086F045 /* TopMostController.swift */; };
 		5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746A295542DC0086F045 /* UserBusiness.swift */; };
 		5D90746E295543180086F045 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746D295543180086F045 /* UserServices.swift */; };
@@ -107,7 +108,7 @@
 		5D4349ED295687500046A924 /* KQHomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeViewControllerTests.swift; sourceTree = "<group>"; };
 		5D4349EE295687500046A924 /* KQHomeWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeWorkerTests.swift; sourceTree = "<group>"; };
 		5D4349EF295687500046A924 /* KQHomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomePresenterTests.swift; sourceTree = "<group>"; };
-		5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQContactTableViewCell.swift; sourceTree = "<group>"; };
+		5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserTableViewCell.swift; sourceTree = "<group>"; };
 		5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsPresenter.swift; sourceTree = "<group>"; };
 		5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsWorker.swift; sourceTree = "<group>"; };
 		5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsRouter.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsViewController.swift; sourceTree = "<group>"; };
 		5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsInteractor.swift; sourceTree = "<group>"; };
 		5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		5D6609E32957E254002AA837 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomePresenter.swift; sourceTree = "<group>"; };
 		5D6D6B622953AB7000087A66 /* KQHomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeWorker.swift; sourceTree = "<group>"; };
 		5D6D6B632953AB7000087A66 /* KQHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeRouter.swift; sourceTree = "<group>"; };
@@ -138,8 +140,8 @@
 		5D6D6BD92953D04200087A66 /* HomeBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
 		5D6D6BDE2953D06500087A66 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		5D9074612954E7760086F045 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		5D9074632955043A0086F045 /* UniversalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLoader.swift; sourceTree = "<group>"; };
-		5D907465295531540086F045 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		5D9074632955043A0086F045 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		5D907465295531540086F045 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		5D907467295537960086F045 /* TopMostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMostController.swift; sourceTree = "<group>"; };
 		5D90746A295542DC0086F045 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		5D90746D295543180086F045 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				5D1A7C3A2952660400270CD2 /* KQSuperVC.swift */,
+				5D1A7C44295386DB00270CD2 /* TableViewCells */,
 				5D6528ED2953E5810056DAD4 /* UserDetailsVC */,
 				5D6D6B792953ACE800087A66 /* HomeVC */,
 			);
@@ -269,11 +272,8 @@
 		5D1A7C372952657600270CD2 /* UIEliments */ = {
 			isa = PBXGroup;
 			children = (
-				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
-				5D9074632955043A0086F045 /* UniversalLoader.swift */,
-				5D1A7C44295386DB00270CD2 /* TableViewCells */,
-				5D907465295531540086F045 /* CustomAlert.swift */,
-				5D907467295537960086F045 /* TopMostController.swift */,
+				5D6609DD2957DE72002AA837 /* Extensions */,
+				5D6609DE2957DE95002AA837 /* LoadingOverlay */,
 			);
 			path = UIEliments;
 			sourceTree = "<group>";
@@ -307,17 +307,17 @@
 		5D1A7C44295386DB00270CD2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				5D1A7C45295386E800270CD2 /* ContactTableViewCell */,
+				5D1A7C45295386E800270CD2 /* UserTableViewCell */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		5D1A7C45295386E800270CD2 /* ContactTableViewCell */ = {
+		5D1A7C45295386E800270CD2 /* UserTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5D54C067295388EE0003A0B7 /* KQContactTableViewCell.swift */,
+				5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */,
 			);
-			path = ContactTableViewCell;
+			path = UserTableViewCell;
 			sourceTree = "<group>";
 		};
 		5D415F7929563A9300C33DD3 /* KQTaskProjectUITests */ = {
@@ -340,6 +340,57 @@
 				5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */,
 			);
 			path = UserDetailsVC;
+			sourceTree = "<group>";
+		};
+		5D6609DD2957DE72002AA837 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D6609E22957E237002AA837 /* DispatchQueue */,
+				5D6609DF2957DEC7002AA837 /* ImageViewExtension */,
+				5D6609E02957DEDD002AA837 /* AlertHelper */,
+				5D6609E12957DEF6002AA837 /* TopMostController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D6609DE2957DE95002AA837 /* LoadingOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				5D9074632955043A0086F045 /* LoadingOverlay.swift */,
+			);
+			path = LoadingOverlay;
+			sourceTree = "<group>";
+		};
+		5D6609DF2957DEC7002AA837 /* ImageViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
+			);
+			path = ImageViewExtension;
+			sourceTree = "<group>";
+		};
+		5D6609E02957DEDD002AA837 /* AlertHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5D907465295531540086F045 /* AlertHelper.swift */,
+			);
+			path = AlertHelper;
+			sourceTree = "<group>";
+		};
+		5D6609E12957DEF6002AA837 /* TopMostController */ = {
+			isa = PBXGroup;
+			children = (
+				5D907467295537960086F045 /* TopMostController.swift */,
+			);
+			path = TopMostController;
+			sourceTree = "<group>";
+		};
+		5D6609E22957E237002AA837 /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				5D6609E32957E254002AA837 /* DispatchQueue.swift */,
+			);
+			path = DispatchQueue;
 			sourceTree = "<group>";
 		};
 		5D6D6B792953ACE800087A66 /* HomeVC */ = {
@@ -660,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */,
+				5D6609E42957E254002AA837 /* DispatchQueue.swift in Sources */,
 				5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */,
 				5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */,
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
@@ -667,7 +719,7 @@
 				5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */,
 				5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */,
 				5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */,
-				5D54C068295388EE0003A0B7 /* KQContactTableViewCell.swift in Sources */,
+				5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */,
 				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
 				5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */,
@@ -682,9 +734,9 @@
 				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
 				5D9074622954E7760086F045 /* AppTheme.swift in Sources */,
-				5D9074642955043A0086F045 /* UniversalLoader.swift in Sources */,
+				5D9074642955043A0086F045 /* LoadingOverlay.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
-				5D907466295531540086F045 /* CustomAlert.swift in Sources */,
+				5D907466295531540086F045 /* AlertHelper.swift in Sources */,
 				5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
 				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,

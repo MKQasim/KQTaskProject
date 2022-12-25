@@ -6,8 +6,12 @@
 //
 
 import Foundation
+protocol UserApiHandlerProtocole {
+    func makeRequest(from parameters: [String: Any]) -> Request
+    func parseResponse(data: Data) throws -> UserDetails?
+}
 
-struct UserApiHandler: APIHandler {
+struct UserApiHandler: APIHandler , UserApiHandlerProtocole {
     
     func makeRequest(from parameters: [String: Any]) -> Request {
         let loginId : String = parameters["loginId"] as? String ?? ""
@@ -21,26 +25,14 @@ struct UserApiHandler: APIHandler {
         } catch let error {
             print(error.localizedDescription)
         }
-        //HTTP Headers
+        // HTTP Headers
         // set body params
         set(parameters, urlRequest: &urlRequest)
         // prepares request (sets header params, any additional configurations)
         let request = Request(urlRequest: urlRequest, requestBuilder: DefaultRequest())
-        
         return request
     }
-    
-    enum NullDecodingStrategy {
-            // Default, today's behavior
-            case implicit
-
-            // If struct contains "var anInt: Int?", valid JSON payloads must explicitly contain either {'anInt': <integer>} or {'anInt': null}.  Not containing 'anInt' results in a decoding error.
-            // If struct contains "var anInt: Int??", {'anInt': <integer>} decodes as .some(.some(<integer>)), {'anInt': null} decodes as .some(.none), and the field being omitted results decodes as .none.
-            case explicit
-        }
-    
-    
-   
+ 
     func parseResponse(data: Data) throws -> UserDetails? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -49,24 +41,15 @@ struct UserApiHandler: APIHandler {
             decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
                 let container = try decoder.singleValueContainer()
                 let dateStr = try container.decode(String.self)
-                // possible date strings: "2016-05-01",  "2016-07-04T17:37:21.119229Z", "2018-05-20T15:00:00Z"
-                let len = dateStr.count
                 var date: Date? = nil
                 date = formatter.date(from: dateStr)
                 guard let date_ = date else {
                     throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateStr)")
                 }
-                print("DATE DECODER \(dateStr) to \(date_)")
-                
-       
-                
                 return date_
             })
             return decoder
         }()
-        
-  
-    
         return try jsonDecoder.decode(UserDetails.self, from: data)
     }
 }

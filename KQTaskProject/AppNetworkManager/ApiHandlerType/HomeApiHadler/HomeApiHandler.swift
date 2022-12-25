@@ -7,9 +7,12 @@
 
 import Foundation
 
+protocol HomeApiHandlerProtocol {
+    func makeRequest(from parameters: [String: Any]) -> Request
+    func parseResponse(data: Data) throws -> Users?
+}
 
-
-struct HomeApiHandler: APIHandler {
+struct HomeApiHandler: APIHandler , HomeApiHandlerProtocol {
     
     func makeRequest(from parameters: [String: Any]) -> Request {
         // prepare url
