@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsPresenter.swift
+//  KQUserDetailsPresenter.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,23 +12,23 @@
 
 import UIKit
 
-protocol KQItemDetailsPresentationLogic
+protocol KQUserDetailsPresentationLogic
 {
-    func presentUserDetails(response: KQItemDetails.Model.Response)
+    func presentUserDetails(response: KQUserDetailsModels.Model.Response)
     func presentRequestValidationError(isValidated:Bool)
     func stopApiCallSuccess(isCanceled: Bool)
 }
 
-class KQItemDetailsPresenter: KQItemDetailsPresentationLogic
+class KQUserDetailsPresenter: KQUserDetailsPresentationLogic
 {
     
-    weak var viewController: KQItemDetailsDisplayLogic?
+    weak var viewController: KQUserDetailsDisplayLogic?
     
     // MARK: present User Details
     
-    func presentUserDetails(response: KQItemDetails.Model.Response)
+    func presentUserDetails(response: KQUserDetailsModels.Model.Response)
     {
-        let viewModel = KQItemDetails.Model.ViewModel(selectedUser : response.selectedUser , userDetails: response.userDetails)
+        let viewModel = KQUserDetailsModels.Model.ViewModel(selectedUser : response.selectedUser , userDetails: response.userDetails)
         viewController?.displayUserDetails(viewModel: viewModel)
     }
     

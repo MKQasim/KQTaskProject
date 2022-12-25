@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsRouter.swift
+//  KQUserDetailsRouter.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol KQItemDetailsRoutingLogic
+@objc protocol KQUserDetailsRoutingLogic
 {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol KQItemDetailsDataPassing
+protocol KQUserDetailsDataPassing
 {
-    var dataStore: KQItemDetailsDataStore? { get }
+    var dataStore: KQUserDetailsDataStore? { get }
 }
 
-class KQItemDetailsRouter: NSObject, KQItemDetailsRoutingLogic, KQItemDetailsDataPassing
+class KQUsreDetailsRouter: NSObject, KQUserDetailsRoutingLogic, KQUserDetailsDataPassing
 {
-    weak var viewController: KQItemDetailsViewController?
-    var dataStore: KQItemDetailsDataStore?
+    weak var viewController: KQUserDetailsViewController?
+    var dataStore: KQUserDetailsDataStore?
     
     // MARK: Routing
     
@@ -46,15 +46,15 @@ class KQItemDetailsRouter: NSObject, KQItemDetailsRoutingLogic, KQItemDetailsDat
     
     // MARK: Navigation
     
-    //func navigateToSomewhere(source: KQItemDetailsViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+//    func navigateToSomewhere(source: KQUsrDetailsViewController, destination: SomewhereViewController)
+//    {
+//      source.show(destination, sender: nil)
+//    }
     
     // MARK: Passing data
     
-    //func passDataToSomewhere(source: KQItemDetailsDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+//    func passDataToSomewhere(source: KQUserDetailsDataStore, destination: inout SomewhereDataStore)
+//    {
+//      destination.name = source.name
+//    }
 }

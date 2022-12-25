@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsWorker.swift
+//  KQUserDetailsWorker.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,9 +12,9 @@
 
 import UIKit
 
-class KQItemDetailsWorker
+class KQUserDetailsWorker
 {
-    func validateRequest(request:KQItemDetails.Model.Request,completion:@escaping((_ isValidate:Bool) -> ()))
+    func validateRequest(request:KQUserDetailsModels.Model.Request,completion:@escaping((_ isValidate:Bool) -> ()))
     {
         if request.loginId != nil {
             completion(true)

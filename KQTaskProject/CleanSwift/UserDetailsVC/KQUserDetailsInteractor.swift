@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsInteractor.swift
+//  KQUserDetailsInteractor.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,29 +12,29 @@
 
 import UIKit
 
-protocol KQItemDetailsBusinessLogic
+protocol KQUserDetailsBusinessLogic
 {
     func displayUserData(userDetails:UserDetails?)
-    func getUserDetailsApi(request: KQItemDetails.Model.Request)
+    func getUserDetailsApi(request: KQUserDetailsModels.Model.Request)
     func userstopApiCallStart()
 }
 
-protocol KQItemDetailsDataStore
+protocol KQUserDetailsDataStore
 {
     var selectedUser: User? { get set }
 }
 
-class KQItemDetailsInteractor: KQItemDetailsBusinessLogic, KQItemDetailsDataStore
+class KQUserDetailsInteractor: KQUserDetailsBusinessLogic, KQUserDetailsDataStore
 {
     var selectedUser: User?
-    var presenter: KQItemDetailsPresentationLogic?
-    var worker: KQItemDetailsWorker?
+    var presenter: KQUserDetailsPresentationLogic?
+    var worker: KQUserDetailsWorker?
     var userBusiness = UserBusiness()
     
     // MARK: get User Details Api
     
-    func getUserDetailsApi(request: KQItemDetails.Model.Request){
-        worker = KQItemDetailsWorker()
+    func getUserDetailsApi(request: KQUserDetailsModels.Model.Request){
+        worker = KQUserDetailsWorker()
         worker?.validateRequest(request: request, completion: { isValidate in
             if isValidate{
                 self.userBusiness.userDetailsApiCall(parameters: ["loginId":(request.loginId ?? "") as String]) { userDetails, error in
@@ -50,7 +50,7 @@ class KQItemDetailsInteractor: KQItemDetailsBusinessLogic, KQItemDetailsDataStor
     
     func displayUserData(userDetails:UserDetails?)
     {
-        let response = KQItemDetails.Model.Response(selectedUser: selectedUser , userDetails: userDetails)
+        let response = KQUserDetailsModels.Model.Response(selectedUser: selectedUser , userDetails: userDetails)
         presenter?.presentUserDetails(response: response)
     }
     

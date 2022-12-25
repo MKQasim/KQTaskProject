@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsModels.swift
+//  KQUserDetailsModels.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,7 +12,7 @@
 
 import UIKit
 
-enum KQItemDetails
+enum KQUserDetailsModels
 {
     // MARK: Use cases
     

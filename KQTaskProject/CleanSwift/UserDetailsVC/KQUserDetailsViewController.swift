@@ -1,5 +1,5 @@
 //
-//  KQItemDetailsViewController.swift
+//  KQUserDetailsViewController.swift
 //  KQTaskProject
 //
 //  Created by KamsQue on 22/12/2022.
@@ -12,17 +12,17 @@
 
 import UIKit
 
-protocol KQItemDetailsDisplayLogic: AnyObject
+protocol KQUserDetailsDisplayLogic: AnyObject
 {
-    func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
+    func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     func displayValidationError(isValidated:Bool)
     func stopApiCallSuccess(isCanceled:Bool)
 }
 
-class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
+class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
 {
-    var interactor: KQItemDetailsBusinessLogic?
-    var router: (NSObjectProtocol & KQItemDetailsRoutingLogic & KQItemDetailsDataPassing)?
+    var interactor: KQUserDetailsBusinessLogic?
+    var router: (NSObjectProtocol & KQUserDetailsRoutingLogic & KQUserDetailsDataPassing)?
     var selectedUser : User?
     // MARK: Object lifecycle
     
@@ -43,9 +43,9 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     private func setup()
     {
         let viewController = self
-        let presenter = KQItemDetailsPresenter()
-        let interactor = KQItemDetailsInteractor()
-        let router = KQItemDetailsRouter()
+        let presenter = KQUserDetailsPresenter()
+        let interactor = KQUserDetailsInteractor()
+        let router = KQUsreDetailsRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -164,7 +164,7 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     
     func getUserDetailsApiCall(){
         selectedUser = router?.dataStore?.selectedUser
-        let request = KQItemDetails.Model.Request(loginId: selectedUser?.login)
+        let request = KQUserDetailsModels.Model.Request(loginId: selectedUser?.login)
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
         self.view.isUserInteractionEnabled = false
@@ -178,7 +178,7 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
         }
     }
     
-    func displayUserDetails(viewModel: KQItemDetails.Model.ViewModel)
+    func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     {
         userDetails = viewModel.userDetails
     }
@@ -201,7 +201,7 @@ class KQItemDetailsViewController: KQSuperVC, KQItemDetailsDisplayLogic
     }
 }
 
-extension KQItemDetailsViewController{
+extension KQUserDetailsViewController{
     
     // MARK: - Add Views
     private func addViews(){

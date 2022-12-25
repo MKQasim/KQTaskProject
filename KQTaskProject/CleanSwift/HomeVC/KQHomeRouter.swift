@@ -32,7 +32,7 @@ class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
     
     func routeToDetails(segue: UIStoryboardSegue?)
     {
-        let destinationVC = KQItemDetailsViewController()
+        let destinationVC = KQUserDetailsViewController()
         guard let viewController = self.viewController else{return}
         guard let destinationRouter = destinationVC.router else {return}
         guard var destinationDS = destinationRouter.dataStore else {return}
@@ -43,14 +43,14 @@ class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
     
     // MARK: Navigation
     
-    func navigateToItemDetails(source: KQHomeViewController, destination: KQItemDetailsViewController)
+    func navigateToItemDetails(source: KQHomeViewController, destination: KQUserDetailsViewController)
     {
         source.show(destination, sender: nil)
     }
     
     //   MARK: Passing data
     
-    func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQItemDetailsDataStore)
+    func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQUserDetailsDataStore)
     {
         destination.selectedUser = source.selectedUser
     }

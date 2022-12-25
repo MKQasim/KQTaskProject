@@ -21,12 +21,12 @@
 		5D4349F1295687500046A924 /* KQHomeWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EE295687500046A924 /* KQHomeWorkerTests.swift */; };
 		5D4349F2295687500046A924 /* KQHomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EF295687500046A924 /* KQHomePresenterTests.swift */; };
 		5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */; };
-		5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */; };
-		5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */; };
-		5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */; };
-		5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */; };
-		5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */; };
-		5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */; };
+		5D6528F52953E5B10056DAD4 /* KQUserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQUserDetailsPresenter.swift */; };
+		5D6528F62953E5B10056DAD4 /* KQUserDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQUserDetailsWorker.swift */; };
+		5D6528F72953E5B10056DAD4 /* KQUsreDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F12953E5B10056DAD4 /* KQUsreDetailsRouter.swift */; };
+		5D6528F82953E5B10056DAD4 /* KQUserDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F22953E5B10056DAD4 /* KQUserDetailsModels.swift */; };
+		5D6528F92953E5B10056DAD4 /* KQUserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F32953E5B10056DAD4 /* KQUserDetailsViewController.swift */; };
+		5D6528FA2953E5B10056DAD4 /* KQUserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F42953E5B10056DAD4 /* KQUserDetailsInteractor.swift */; };
 		5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */; };
 		5D6609E42957E254002AA837 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6609E32957E254002AA837 /* DispatchQueue.swift */; };
 		5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */; };
@@ -109,12 +109,12 @@
 		5D4349EE295687500046A924 /* KQHomeWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeWorkerTests.swift; sourceTree = "<group>"; };
 		5D4349EF295687500046A924 /* KQHomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomePresenterTests.swift; sourceTree = "<group>"; };
 		5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserTableViewCell.swift; sourceTree = "<group>"; };
-		5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsPresenter.swift; sourceTree = "<group>"; };
-		5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsWorker.swift; sourceTree = "<group>"; };
-		5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsRouter.swift; sourceTree = "<group>"; };
-		5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsModels.swift; sourceTree = "<group>"; };
-		5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsViewController.swift; sourceTree = "<group>"; };
-		5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQItemDetailsInteractor.swift; sourceTree = "<group>"; };
+		5D6528EF2953E5B10056DAD4 /* KQUserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsPresenter.swift; sourceTree = "<group>"; };
+		5D6528F02953E5B10056DAD4 /* KQUserDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsWorker.swift; sourceTree = "<group>"; };
+		5D6528F12953E5B10056DAD4 /* KQUsreDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUsreDetailsRouter.swift; sourceTree = "<group>"; };
+		5D6528F22953E5B10056DAD4 /* KQUserDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsModels.swift; sourceTree = "<group>"; };
+		5D6528F32953E5B10056DAD4 /* KQUserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsViewController.swift; sourceTree = "<group>"; };
+		5D6528F42953E5B10056DAD4 /* KQUserDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsInteractor.swift; sourceTree = "<group>"; };
 		5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		5D6609E32957E254002AA837 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		5D6D6B612953AB7000087A66 /* KQHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomePresenter.swift; sourceTree = "<group>"; };
@@ -332,12 +332,12 @@
 		5D6528ED2953E5810056DAD4 /* UserDetailsVC */ = {
 			isa = PBXGroup;
 			children = (
-				5D6528EF2953E5B10056DAD4 /* KQItemDetailsPresenter.swift */,
-				5D6528F02953E5B10056DAD4 /* KQItemDetailsWorker.swift */,
-				5D6528F12953E5B10056DAD4 /* KQItemDetailsRouter.swift */,
-				5D6528F22953E5B10056DAD4 /* KQItemDetailsModels.swift */,
-				5D6528F32953E5B10056DAD4 /* KQItemDetailsViewController.swift */,
-				5D6528F42953E5B10056DAD4 /* KQItemDetailsInteractor.swift */,
+				5D6528EF2953E5B10056DAD4 /* KQUserDetailsPresenter.swift */,
+				5D6528F02953E5B10056DAD4 /* KQUserDetailsWorker.swift */,
+				5D6528F12953E5B10056DAD4 /* KQUsreDetailsRouter.swift */,
+				5D6528F22953E5B10056DAD4 /* KQUserDetailsModels.swift */,
+				5D6528F32953E5B10056DAD4 /* KQUserDetailsViewController.swift */,
+				5D6528F42953E5B10056DAD4 /* KQUserDetailsInteractor.swift */,
 			);
 			path = UserDetailsVC;
 			sourceTree = "<group>";
@@ -717,7 +717,7 @@
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
 				5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */,
 				5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */,
-				5D6528F72953E5B10056DAD4 /* KQItemDetailsRouter.swift in Sources */,
+				5D6528F72953E5B10056DAD4 /* KQUsreDetailsRouter.swift in Sources */,
 				5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 				5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */,
 				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
@@ -738,16 +738,16 @@
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
 				5D907466295531540086F045 /* AlertHelper.swift in Sources */,
 				5D907471295549DA0086F045 /* UserDetailsModel.swift in Sources */,
-				5D6528F82953E5B10056DAD4 /* KQItemDetailsModels.swift in Sources */,
+				5D6528F82953E5B10056DAD4 /* KQUserDetailsModels.swift in Sources */,
 				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
 				5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */,
-				5D6528F62953E5B10056DAD4 /* KQItemDetailsWorker.swift in Sources */,
-				5D6528F92953E5B10056DAD4 /* KQItemDetailsViewController.swift in Sources */,
+				5D6528F62953E5B10056DAD4 /* KQUserDetailsWorker.swift in Sources */,
+				5D6528F92953E5B10056DAD4 /* KQUserDetailsViewController.swift in Sources */,
 				5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */,
-				5D6528F52953E5B10056DAD4 /* KQItemDetailsPresenter.swift in Sources */,
+				5D6528F52953E5B10056DAD4 /* KQUserDetailsPresenter.swift in Sources */,
 				5D42461129560F24005F4491 /* UserModel.swift in Sources */,
-				5D6528FA2953E5B10056DAD4 /* KQItemDetailsInteractor.swift in Sources */,
+				5D6528FA2953E5B10056DAD4 /* KQUserDetailsInteractor.swift in Sources */,
 				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,
 				5D907468295537960086F045 /* TopMostController.swift in Sources */,
 				5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
