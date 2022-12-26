@@ -17,7 +17,9 @@
 		5D42461129560F24005F4491 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C402953841F00270CD2 /* UserModel.swift */; };
 		5D4349F0295687500046A924 /* KQHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349ED295687500046A924 /* KQHomeViewControllerTests.swift */; };
 		5D4349F1295687500046A924 /* KQHomeWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EE295687500046A924 /* KQHomeWorkerTests.swift */; };
-		5D4349F2295687500046A924 /* KQHomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EF295687500046A924 /* KQHomePresenterTests.swift */; };
+		5D547510295A1E25004364DE /* KQUserDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B62958B54300013C01 /* KQUserDetailsPresenterTests.swift */; };
+		5D547511295A1E30004364DE /* KQHomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4349EF295687500046A924 /* KQHomePresenterTests.swift */; };
+		5D547512295A1E3D004364DE /* KQUserDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */; };
 		5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D54C067295388EE0003A0B7 /* KQUserTableViewCell.swift */; };
 		5D6528F52953E5B10056DAD4 /* KQUserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528EF2953E5B10056DAD4 /* KQUserDetailsPresenter.swift */; };
 		5D6528F62953E5B10056DAD4 /* KQUserDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6528F02953E5B10056DAD4 /* KQUserDetailsWorker.swift */; };
@@ -54,7 +56,6 @@
 		5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
 		5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
 		5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
-		5D6D6BB32953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
 		5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
 		5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
 		5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
@@ -69,12 +70,11 @@
 		5D90746E295543180086F045 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746D295543180086F045 /* UserServices.swift */; };
 		5D90747429554D450086F045 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
 		5D91822E2958D2B2000F3403 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
-		5DA65EE629567B36006CC0FF /* KQHomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */; };
 		5DAE18EF2959540E00AE0DE3 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */; };
+		5DAE18FE295A0F4300AE0DE3 /* AppGlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE18FD295A0F4300AE0DE3 /* AppGlobalSettings.swift */; };
+		5DAE1929295A1D1400AE0DE3 /* KQHomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */; };
 		5DCDC9B72958B54300013C01 /* KQUserDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B32958B54300013C01 /* KQUserDetailsViewControllerTests.swift */; };
-		5DCDC9B82958B54300013C01 /* KQUserDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */; };
 		5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */; };
-		5DCDC9BA2958B54300013C01 /* KQUserDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B62958B54300013C01 /* KQUserDetailsPresenterTests.swift */; };
 		5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +152,7 @@
 		5D90747329554D450086F045 /* UserApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiHandler.swift; sourceTree = "<group>"; };
 		5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeInteractorTests.swift; sourceTree = "<group>"; };
 		5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		5DAE18FD295A0F4300AE0DE3 /* AppGlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobalSettings.swift; sourceTree = "<group>"; };
 		5DCDC9B32958B54300013C01 /* KQUserDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsWorkerTests.swift; sourceTree = "<group>"; };
@@ -234,6 +235,7 @@
 		5D1A7C31295260AF00270CD2 /* AppCommon */ = {
 			isa = PBXGroup;
 			children = (
+				5DAE18FC295A0F2D00AE0DE3 /* AppGlobalSettings */,
 				5D1A7C372952657600270CD2 /* UIEliments */,
 			);
 			path = AppCommon;
@@ -595,6 +597,14 @@
 			path = UITableViewExtension;
 			sourceTree = "<group>";
 		};
+		5DAE18FC295A0F2D00AE0DE3 /* AppGlobalSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE18FD295A0F4300AE0DE3 /* AppGlobalSettings.swift */,
+			);
+			path = AppGlobalSettings;
+			sourceTree = "<group>";
+		};
 		5DD9E2D82958B09600E031CF /* KQHomeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +778,7 @@
 				5D6D6BA32953B16800087A66 /* Request.swift in Sources */,
 				5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */,
 				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
+				5DAE18FE295A0F4300AE0DE3 /* AppGlobalSettings.swift in Sources */,
 				5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */,
 				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
@@ -802,18 +813,17 @@
 				5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */,
 				5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */,
 				5D6D6BAD2953B16900087A66 /* ApiHandler.swift in Sources */,
-				5DA65EE629567B36006CC0FF /* KQHomeInteractorTests.swift in Sources */,
-				5D4349F2295687500046A924 /* KQHomePresenterTests.swift in Sources */,
+				5D547511295A1E30004364DE /* KQHomePresenterTests.swift in Sources */,
 				5D4349F0295687500046A924 /* KQHomeViewControllerTests.swift in Sources */,
 				5D6D6BA12953B16800087A66 /* RequestBuilder.swift in Sources */,
 				5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */,
-				5DCDC9B82958B54300013C01 /* KQUserDetailsInteractorTests.swift in Sources */,
-				5DCDC9BA2958B54300013C01 /* KQUserDetailsPresenterTests.swift in Sources */,
 				5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */,
+				5DAE1929295A1D1400AE0DE3 /* KQHomeInteractorTests.swift in Sources */,
 				5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */,
 				5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */,
+				5D547512295A1E3D004364DE /* KQUserDetailsInteractorTests.swift in Sources */,
 				5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */,
-				5D6D6BB32953B16900087A66 /* Enviroment.swift in Sources */,
+				5D547510295A1E25004364DE /* KQUserDetailsPresenterTests.swift in Sources */,
 				5D4349F1295687500046A924 /* KQHomeWorkerTests.swift in Sources */,
 				5DCDC9B72958B54300013C01 /* KQUserDetailsViewControllerTests.swift in Sources */,
 				5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */,
@@ -909,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -965,7 +975,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -990,13 +1000,14 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProject;
+				OTHER_SWIFT_FLAGS = "-DDebug";
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.kqtaskproject.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1018,13 +1029,14 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProject;
+				OTHER_SWIFT_FLAGS = "-DRelease";
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.kqtaskproject.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1090,7 +1102,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1109,7 +1121,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1120,6 +1132,405 @@
 			};
 			name = Release;
 		};
+		5DAE18F02959FF0F00AE0DE3 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Testing;
+		};
+		5DAE18F12959FF0F00AE0DE3 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KQTaskProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DTesting";
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.kqtaskproject.testing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Testing;
+		};
+		5DAE18F22959FF0F00AE0DE3 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT7H96YF74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KQTaskProject.app/KQTaskProject";
+			};
+			name = Testing;
+		};
+		5DAE18F32959FF0F00AE0DE3 /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KQTaskProject;
+			};
+			name = Testing;
+		};
+		5DAE18F42959FF2400AE0DE3 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Staging;
+		};
+		5DAE18F52959FF2400AE0DE3 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KQTaskProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DStaging";
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.kqtaskproject.staging;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		5DAE18F62959FF2400AE0DE3 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT7H96YF74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KQTaskProject.app/KQTaskProject";
+			};
+			name = Staging;
+		};
+		5DAE18F72959FF2400AE0DE3 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KQTaskProject;
+			};
+			name = Staging;
+		};
+		5DAE18F82959FF6200AE0DE3 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		5DAE18F92959FF6200AE0DE3 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KQTaskProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DProduction";
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.kqtaskproject.production;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Production;
+		};
+		5DAE18FA2959FF6200AE0DE3 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT7H96YF74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KQTaskProject.app/KQTaskProject";
+			};
+			name = Production;
+		};
+		5DAE18FB2959FF6200AE0DE3 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8BTGQVAR5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KQTaskProject;
+			};
+			name = Production;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1127,7 +1538,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D1A7C2629525ECD00270CD2 /* Debug */,
+				5DAE18F42959FF2400AE0DE3 /* Staging */,
+				5DAE18F02959FF0F00AE0DE3 /* Testing */,
 				5D1A7C2729525ECD00270CD2 /* Release */,
+				5DAE18F82959FF6200AE0DE3 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1136,7 +1550,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D1A7C2929525ECD00270CD2 /* Debug */,
+				5DAE18F52959FF2400AE0DE3 /* Staging */,
+				5DAE18F12959FF0F00AE0DE3 /* Testing */,
 				5D1A7C2A29525ECD00270CD2 /* Release */,
+				5DAE18F92959FF6200AE0DE3 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1145,7 +1562,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D1A7C2C29525ECD00270CD2 /* Debug */,
+				5DAE18F62959FF2400AE0DE3 /* Staging */,
+				5DAE18F22959FF0F00AE0DE3 /* Testing */,
 				5D1A7C2D29525ECD00270CD2 /* Release */,
+				5DAE18FA2959FF6200AE0DE3 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1154,7 +1574,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D415F8129563A9300C33DD3 /* Debug */,
+				5DAE18F72959FF2400AE0DE3 /* Staging */,
+				5DAE18F32959FF0F00AE0DE3 /* Testing */,
 				5D415F8229563A9300C33DD3 /* Release */,
+				5DAE18FB2959FF6200AE0DE3 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

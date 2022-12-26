@@ -47,7 +47,7 @@ class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
                 let response = KQHome.HomeUsers.Response(homeUsers: users)
                 self.presenter?.presentUsers(response: response)
             }else{
-                self.presenter?.presenApiNetworkError(message: error?.localizedDescription)
+                self.presenter?.presenApiNetworkError(message: error.debugDescription )
             }
         })
     }

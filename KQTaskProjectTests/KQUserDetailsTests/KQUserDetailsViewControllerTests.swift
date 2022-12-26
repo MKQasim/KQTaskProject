@@ -57,8 +57,6 @@ class KQUserDetailsViewControllerTests: XCTestCase
     
     class KQUserDetailsBusinessLogicSpy: KQUserDetailsBusinessLogic
     {
-       
-        
         var users: [User]?
         
         // MARK: Method call expectations

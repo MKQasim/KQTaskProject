@@ -43,6 +43,8 @@ class KQHomePresenterTests: XCTestCase
     
     class KQHomeDisplayLogicSpy: KQHomeDisplayLogic
     {
+        
+        
       
         
         // MARK: Method call expectations
@@ -50,7 +52,7 @@ class KQHomePresenterTests: XCTestCase
         var displayFetchedUsersCalled = false
         var urlSessionisValid = false
         var urlSessionInvalidated = false
-        
+        var presenApiNetworkError = false
         // MARK: Argument expectations
         
         var viewModel: KQHome.HomeUsers.ViewModel!
@@ -68,6 +70,10 @@ class KQHomePresenterTests: XCTestCase
             }else{
                 urlSessionisValid = false
             }
+        }
+        
+        func presenApiNetworkError(message: String?) {
+            presenApiNetworkError = true
         }
         
     }
@@ -113,5 +119,18 @@ class KQHomePresenterTests: XCTestCase
         sut.checkApiUrlSerssion(isCanceled: isInvalidate)
         // Then
         XCTAssertFalse(listKQHomeDisplayLogicSpy.urlSessionisValid, "Presenting fetched users should ask view controller to check urlSession Validation Success")
+    }
+    
+    
+    func testshowApiNetworkError()
+    {
+        // Given
+        let listKQHomeDisplayLogicSpy = KQHomeDisplayLogicSpy()
+        sut.viewController = listKQHomeDisplayLogicSpy
+        let message = "Error Message"
+        // When
+        sut.presenApiNetworkError(message: message)
+        // Then
+        XCTAssertFalse(listKQHomeDisplayLogicSpy.urlSessionisValid, "Show Error Message to ViewController")
     }
 }

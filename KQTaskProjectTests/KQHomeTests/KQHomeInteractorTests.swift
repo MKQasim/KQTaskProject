@@ -51,11 +51,14 @@ class KQHomeInteractorTests: XCTestCase
     // MARK: Test doubles
     
     class KQHomePresentationLogicSpy: KQHomePresentationLogic {
+        
+        
        
         var users : [User]?
         var presentFetchedUsersCalled = false
         var urlSessionisValid = false
         var urlSessionInvalidated = false
+        var presenApiNetworkError = false
         
         func presentUsers(response: KQTaskProject.KQHome.HomeUsers.Response) {
             presentFetchedUsersCalled = true
@@ -69,6 +72,10 @@ class KQHomeInteractorTests: XCTestCase
             }else{
                 urlSessionisValid = false
             }
+        }
+        
+        func presenApiNetworkError(message: String?) {
+            presenApiNetworkError = true
         }
     }
     

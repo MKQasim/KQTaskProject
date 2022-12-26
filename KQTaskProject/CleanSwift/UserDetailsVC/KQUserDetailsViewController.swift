@@ -148,7 +148,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     
     var userDetails:UserDetails? {
         didSet {
-            DispatchQueue.main.async {
+//            DispatchQueue.main.async {
                 guard let user = self.userDetails else {return}
                 if let name = user.name {
                     self.nameLabel.text = "\(name)"
@@ -167,7 +167,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
                     LoadingOverlay.shared.hideOverlayView()
                 }
                 self.view.isUserInteractionEnabled = false
-            }
+//            }
         }
     }
     

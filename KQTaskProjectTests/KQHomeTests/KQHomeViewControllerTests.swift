@@ -19,7 +19,7 @@ class KQHomeViewControllerTests: XCTestCase
     
     var sut: KQHomeViewController!
     var window: UIWindow!
-    
+    var kqHomeListUsersBusinessLogicSpy = KQHomeListUsersBusinessLogicSpy()
     // MARK: Test lifecycle
     
     override func setUp()
@@ -56,20 +56,24 @@ class KQHomeViewControllerTests: XCTestCase
     
     class KQHomeListUsersBusinessLogicSpy: KQHomeBusinessLogic
     {
+       
+        
         var userDetails:UserDetails?
         
         // MARK: Method call expectations
         
         var fetchUsersCalled = false
-        
+        var checkUrlSession = false
         // MARK: Spied methods
         
         func fetchUsers(request: KQTaskProject.KQHome.HomeUsers.Request) {
             fetchUsersCalled = true
         }
         
-        func homestopApiCallStart() {}
-        func checkApiUrlSerssion() {}
+        func checkApiUrlSerssion() {
+            checkUrlSession  = true
+        }
+    
     }
     
     class TableViewSpy: UITableView
@@ -91,7 +95,6 @@ class KQHomeViewControllerTests: XCTestCase
     func testShouldFetchUsersWhenViewWillAppear()
     {
         // Given
-        let kqHomeListUsersBusinessLogicSpy = KQHomeListUsersBusinessLogicSpy()
         sut.interactor = kqHomeListUsersBusinessLogicSpy
         loadView()
         
@@ -115,6 +118,15 @@ class KQHomeViewControllerTests: XCTestCase
         
         // Then
         XCTAssertTrue(sut.displayUsers!.first!.login == "Login")
+    }
+    
+    func testcheckApiUrlSerssionIfAnySessionIsThereToInvalidate()
+    {
+        sut.interactor = kqHomeListUsersBusinessLogicSpy
+      // When
+        kqHomeListUsersBusinessLogicSpy.checkApiUrlSerssion()
+      // Then
+        XCTAssertTrue(kqHomeListUsersBusinessLogicSpy.checkUrlSession, "checkApiUrlSerssion() should check Api UrlSerssion If AnySession Is There To Invalidate before Moving next Screen")
     }
     
     func testNumberOfSectionsInTableViewShouldAlwaysBeOne()

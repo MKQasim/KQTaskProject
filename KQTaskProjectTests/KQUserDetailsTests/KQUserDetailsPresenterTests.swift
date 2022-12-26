@@ -43,6 +43,8 @@ class KQUserDetailsPresenterTests: XCTestCase
     
     class KQUserDetailsDisplayLogicSpy: KQUserDetailsDisplayLogic
     {
+        
+        
         // MARK: Method call expectations
         
         var displayUsersDetailsCalled = false
@@ -50,6 +52,7 @@ class KQUserDetailsPresenterTests: XCTestCase
         var displayValidationSuccess = false
         var urlSessionisValid = false
         var urlSessionInvalidated = false
+        var presenApiNetworkError = false
         
         // MARK: Spied methods
         
@@ -73,6 +76,9 @@ class KQUserDetailsPresenterTests: XCTestCase
             }
         }
         
+        func presenApiNetworkError(message: String?) {
+            presenApiNetworkError = true
+        }
     }
     
     // MARK: Tests

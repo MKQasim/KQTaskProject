@@ -27,6 +27,22 @@ final class AppShared {
   
     
     // MARK: - Properties
+    
+    func getEnviroment(){
+        var enviroment = ""
+        #if Debug
+        enviroment = AppGlobalSettings.AppEnvironment.Debug.rawValue
+        #elseif Testing
+        enviroment = AppGlobalSettings.AppEnvironment.Testing.rawValue
+        #elseif Staging
+        enviroment = AppGlobalSettings.AppEnvironment.Staging.rawValue
+        #elseif Production
+        enviroment = AppGlobalSettings.AppEnvironment.Production.rawValue
+        #elseif Release
+        enviroment = AppGlobalSettings.AppEnvironment.Release.rawValue
+        #endif
+        print(enviroment)
+    }
 
 }
 

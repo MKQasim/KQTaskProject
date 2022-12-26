@@ -10,9 +10,27 @@ import Foundation
 
 enum Environment {
 
-    case development
+    case debug
+    case release
+    case testing
     case staging
     case production
+    
+    
+    
+    
+#if Debug
+
+#elseif Testing
+
+#elseif Staging
+
+#elseif Production
+
+#elseif release
+
+#endif
+    
     
     func baseURL() -> String {
         return "\(urlProtocol())://\(subdomain()).\(domain())\(route())"
@@ -29,19 +47,25 @@ enum Environment {
     
     func subdomain() -> String {
         switch self {
-        case .development:
+        case .debug:
             return "api"
         case .staging:
-            return "test.subdomain"
+            return "stag.subdomain"
         case .production:
-            return "prod.subdomain"
+            return "api"
+        case .release:
+            return "api"
+        case .testing:
+            return "api"
         }
     }
     
     func domain() -> String {
         switch self {
-        case .development, .staging, .production:
+        case .debug, .staging, .production , .release  :
             return "github.com"
+        case .testing:
+            return "new/github.com"
         }
     }
 
@@ -59,10 +83,23 @@ extension Environment {
 
 // MARK:- APIs
 
-#if DEBUG
-let environment: Environment = Environment.development
-#else
-let environment: Environment = Environment.staging
+//#if DEBUG
+//let environment: Environment = Environment.debug
+//#else
+//let environment: Environment = Environment.staging
+//#endif
+
+
+#if Debug
+var environment: Environment = Environment.debug
+#elseif Testing
+var environment: Environment = Environment.testing
+#elseif Staging
+var environment: Environment = Environment.staging
+#elseif Production
+var environment: Environment = Environment.production
+#elseif Release
+var environment: Environment = Environment.staging
 #endif
 
 let baseUrl = environment.baseURL()

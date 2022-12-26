@@ -75,7 +75,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     // MARK: - Private Actions
     private func configureUI() {
         setTableViewConstraint()
-        self.tableView.isHidden = true
+        
         tableView.delegate = self
     }
     
@@ -105,11 +105,12 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         self.view.isAccessibilityElement = true
         self.view.accessibilityLabel = "KQHomeViewController"
         tableView.isAccessibilityElement = true
-        tableView.accessibilityLabel = "tableView"
+        tableView.accessibilityLabel = "TableView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.isHidden = true
         self.view.isUserInteractionEnabled = true
         self.tableView.isUserInteractionEnabled = true
         fetchUsers()
@@ -131,26 +132,26 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     {
         self.displayUsers = viewModel.users
         DispatchQueue.main.async() {
-            
             self.tableView.reloadData()
-            if LoadingOverlay.shared.activityIndicator.isAnimating{
-                LoadingOverlay.shared.activityIndicator.stopAnimating()
-                LoadingOverlay.shared.hideOverlayView()
-            }
-            self.tableView.isHidden = false
-            self.tableView.isUserInteractionEnabled = true
+            self.stopAnimating()
         }
     }
     
+    private func stopAnimating(){
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+        }
+        self.tableView.isHidden = false
+        self.tableView.isUserInteractionEnabled = true
+    }
+    
     func moveToItemDetails(selectedUser:User?) {
-        //        DispatchQueue.main.asyncAfter(deadline: .now()) {  [weak self] in
-        //            // your code here
-        //
-        //        }
-        
-        if var rout = self.router{
-            rout.dataStore?.selectedUser = selectedUser
-            rout.routeToDetails(segue: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {  [weak self] in
+            if var rout = self?.router{
+                rout.dataStore?.selectedUser = selectedUser
+                rout.routeToDetails(segue: nil)
+            }
         }
     }
     
@@ -161,19 +162,15 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     func checkApiUrlSerssion(isCanceled: Bool) {
         self.tableView.isUserInteractionEnabled = false
-        if LoadingOverlay.shared.activityIndicator.isAnimating{
-            LoadingOverlay.shared.activityIndicator.stopAnimating()
-            LoadingOverlay.shared.hideOverlayView()
-        }
+        stopAnimating()
         moveToItemDetails(selectedUser: selectedUser)
     }
     
     func presenApiNetworkError(message: String?) {
-        if LoadingOverlay.shared.activityIndicator.isAnimating{
-            LoadingOverlay.shared.activityIndicator.stopAnimating()
-            LoadingOverlay.shared.hideOverlayView()
-        }
-        AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: ["Ok"],autoDismiss : true ,  dismissDuration: 10 ,showCancel: false  ) { action in
+        DispatchQueue.main.async {
+            self.stopAnimating()
+            AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: ["Ok"],autoDismiss : true ,  dismissDuration: 10 ,showCancel: false  ) { action in
+            }
         }
     }
 }
@@ -224,16 +221,12 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedUser = displayUsers?[indexPath.row]
-        if var rout = self.router{
-            rout.dataStore?.selectedUser = selectedUser
-            rout.routeToDetails(segue: nil)
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            checkApiUrlSerssion()
+        }else{
+            self.tableView.isUserInteractionEnabled = true
+            moveToItemDetails(selectedUser: selectedUser)
         }
-        //        if LoadingOverlay.shared.activityIndicator.isAnimating{
-        //            stopUrlSessionInit()
-        //        }else{
-        //            self.tableView.isUserInteractionEnabled = true
-        //            moveToItemDetails(selectedUser: selectedUser)
-        //        }
     }
 }
 

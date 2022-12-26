@@ -72,12 +72,15 @@ class KQUserDetailsInteractorTests: XCTestCase
     
     class KQUserDetailsPresentationLogicSpy: KQUserDetailsPresentationLogic
     {
+        
+        
         var userDetails : UserDetails?
         var presentFetchedUsersCalled = false
         var displayValidationError = false
         var displayValidationSuccess = false
         var urlSessionisValid = false
         var urlSessionInvalidated = false
+        var presenApiNetworkError = false
         
         func presentUserDetails(response: KQUserDetailsModels.Model.Response) {
             presentFetchedUsersCalled = true
@@ -101,6 +104,10 @@ class KQUserDetailsInteractorTests: XCTestCase
             }else{
                 urlSessionisValid = false
             }
+        }
+        
+        func presenApiNetworkError(message: String?) {
+            presenApiNetworkError = true
         }
     }
     

@@ -16,24 +16,12 @@ public class KQSuperVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = AppTheme.shared.navTintColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:AppTheme.shared.navTitleTextColor]
         view.isAccessibilityElement = true
+        self.navigationController?.navigationBar.isAccessibilityElement = true
+        self.navigationController?.navigationBar.accessibilityLabel = "navigationBar"
     }
     
    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-}
-
-public extension UIViewController {
-    func setStatusBar(color: UIColor) {
-        let tag = 12321
-        if let taggedView = self.view.viewWithTag(tag){
-            taggedView.removeFromSuperview()
-        }
-        let overView = UIView()
-        overView.frame = UIApplication.shared.statusBarFrame
-        overView.backgroundColor = color
-        overView.tag = tag
-        self.view.addSubview(overView)
-    }
 }
