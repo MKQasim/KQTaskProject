@@ -19,11 +19,7 @@ class HomeBusiness: HomeBusinessProtocol {
 
     func fetchUsers(parameters: [String : Any],completion:@escaping((_ usermodel:Users?,_ error:Error?) -> ())){
         homeServices.usersList(parameters:parameters) { userModel, error in
-            if error == nil{
-                completion(userModel,error)
-            }else{
-                print(error?.localizedDescription ?? "")
-            }
+            completion(userModel,error)
         }
     }
     

@@ -19,11 +19,7 @@ class UserBusiness : UserBusinessProtocol{
 
     func userDetailsApiCall(parameters: [String : Any],completion:@escaping((_ userDetails:UserDetails?,_ error:Error?) -> ())){
         userServices.usersDetails(parameters:parameters) { userDetails, error in
-            if error == nil{
-                completion(userDetails,error)
-            }else{
-                print(error?.localizedDescription ?? "")
-            }
+            completion(userDetails,error)
         }
     }
     

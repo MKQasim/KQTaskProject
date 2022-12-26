@@ -16,13 +16,11 @@ protocol KQHomeDisplayLogic: AnyObject
 {
     func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
     func checkApiUrlSerssion(isCanceled:Bool)
+    func presenApiNetworkError(message: String?)
 }
 
 class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
 {
-    
-    
-    
     
     var interactor: KQHomeBusinessLogic?
     var homeServices : HomeServices?
@@ -64,7 +62,6 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         let router = KQHomeRouter()
         viewController.interactor = interactor
         viewController.router = router
-        //        interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
@@ -77,8 +74,8 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     // MARK: - Private Actions
     private func configureUI() {
-        // The .xib files should have the same name as the class file
         setTableViewConstraint()
+        self.tableView.isHidden = true
         tableView.delegate = self
     }
     
@@ -99,7 +96,6 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         setUpNavigation()
         configureUI()
         accessibility()
@@ -135,9 +131,13 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     {
         self.displayUsers = viewModel.users
         DispatchQueue.main.async() {
+            
             self.tableView.reloadData()
-            LoadingOverlay.shared.activityIndicator.stopAnimating()
-            LoadingOverlay.shared.hideOverlayView()
+            if LoadingOverlay.shared.activityIndicator.isAnimating{
+                LoadingOverlay.shared.activityIndicator.stopAnimating()
+                LoadingOverlay.shared.hideOverlayView()
+            }
+            self.tableView.isHidden = false
             self.tableView.isUserInteractionEnabled = true
         }
     }
@@ -161,9 +161,20 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     
     func checkApiUrlSerssion(isCanceled: Bool) {
         self.tableView.isUserInteractionEnabled = false
-        LoadingOverlay.shared.activityIndicator.stopAnimating()
-        LoadingOverlay.shared.hideOverlayView()
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+        }
         moveToItemDetails(selectedUser: selectedUser)
+    }
+    
+    func presenApiNetworkError(message: String?) {
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+        }
+        AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: ["Ok"],autoDismiss : true ,  dismissDuration: 10 ,showCancel: false  ) { action in
+        }
     }
 }
 
@@ -186,7 +197,12 @@ extension KQHomeViewController{
 // MARK: - UITableViewDataSource and UITableViewDelegate
 extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayUsers?.count ?? 0
+        if displayUsers?.count == 0  || displayUsers == nil{
+            self.tableView.setEmptyMessage("You currently don't have any users, but you can create up to 10.")
+            return 0
+        } else {
+            return displayUsers?.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -220,5 +236,6 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
         //        }
     }
 }
+
 
 

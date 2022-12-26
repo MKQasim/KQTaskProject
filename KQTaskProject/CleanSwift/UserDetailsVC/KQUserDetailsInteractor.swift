@@ -46,8 +46,12 @@ class KQUserDetailsInteractor: KQUserDetailsBusinessLogic, KQUserDetailsDataStor
         worker?.validateRequest(request: request, completion: { isValidate in
             if isValidate{
                 self.userBusiness.userDetailsApiCall(parameters: ["loginId":(request.loginId ?? "") as String]) { userDetails, error in
-                    let response = KQUserDetailsModels.Model.Response(selectedUser: self.selectedUser, userDetails: userDetails)
-                    self.displayUserData(response: response)
+                    if userDetails != nil{
+                        let response = KQUserDetailsModels.Model.Response(selectedUser: self.selectedUser, userDetails: userDetails)
+                        self.displayUserData(response: response)
+                    }else{
+                        self.presenter?.presenApiNetworkError(message: error?.localizedDescription)
+                    }
                 }
             }else{
                 self.presenter?.presentRequestValidationError(isValidated: isValidate)

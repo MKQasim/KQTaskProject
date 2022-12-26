@@ -17,10 +17,12 @@ protocol KQUserDetailsDisplayLogic: AnyObject
     func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     func displayValidationError(isValidated:Bool)
     func checkApiUrlSerssion(isCanceled:Bool)
+    func presenApiNetworkError(message: String?)
 }
 
 class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
 {
+   
     var interactor: KQUserDetailsBusinessLogic?
     var router: (NSObjectProtocol & KQUserDetailsRoutingLogic & KQUserDetailsDataPassing)?
     var selectedUser : User?
@@ -160,8 +162,10 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
                 if let image = user.avatarURL , let url = URL(string:(image)) {
                     self.countryImageView.load(url: url)
                 }
-                LoadingOverlay.shared.activityIndicator.stopAnimating()
-                LoadingOverlay.shared.hideOverlayView()
+                if LoadingOverlay.shared.activityIndicator.isAnimating{
+                    LoadingOverlay.shared.activityIndicator.stopAnimating()
+                    LoadingOverlay.shared.hideOverlayView()
+                }
                 self.view.isUserInteractionEnabled = false
             }
         }
@@ -171,7 +175,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     // MARK: Fetch User Details
     
     func getUserDetailsApiCall(selectedUser:User?){
-        let request = KQUserDetailsModels.Model.Request(loginId: selectedUser?.login)
+        let request = KQUserDetailsModels.Model.Request(loginId: selectedUser?.login ?? "")
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
         self.view.isUserInteractionEnabled = false
@@ -179,8 +183,12 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     }
     
     func displayValidationError(isValidated: Bool) {
-        if !isValidated{
-            AlertHelper.showAlert("Warning",message: "Request Validation Error", style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
+        if !isValidated {
+            if LoadingOverlay.shared.activityIndicator.isAnimating{
+                LoadingOverlay.shared.activityIndicator.stopAnimating()
+                LoadingOverlay.shared.hideOverlayView()
+            }
+            AlertHelper.showAlert("Alert",message: "Request Validation Error", style: .alert, actionTitles: ["Ok"],autoDismiss : true ,  dismissDuration: 10 ,showCancel: false  ) { action in
             }
         }
     }
@@ -189,6 +197,16 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     {
         userDetails = viewModel.userDetails
     }
+    
+    func presenApiNetworkError(message: String?) {
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+        }
+        AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
+        }
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -202,8 +220,10 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     }
     
     func checkApiUrlSerssion(isCanceled: Bool) {
-        LoadingOverlay.shared.activityIndicator.stopAnimating()
-        LoadingOverlay.shared.hideOverlayView()
+        if LoadingOverlay.shared.activityIndicator.isAnimating{
+            LoadingOverlay.shared.activityIndicator.stopAnimating()
+            LoadingOverlay.shared.hideOverlayView()
+        }
         self.view.isUserInteractionEnabled = false
     }
 }

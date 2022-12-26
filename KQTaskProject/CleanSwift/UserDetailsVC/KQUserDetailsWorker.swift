@@ -16,7 +16,7 @@ class KQUserDetailsWorker
 {
     func validateRequest(request:KQUserDetailsModels.Model.Request,completion:@escaping((_ isValidate:Bool) -> ()))
     {
-        if request.loginId != nil {
+        if request.loginId != nil && request.loginId != "" {
             completion(true)
         }else{
             completion(false)

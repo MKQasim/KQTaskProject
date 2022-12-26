@@ -70,6 +70,7 @@
 		5D90747429554D450086F045 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
 		5D91822E2958D2B2000F3403 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
 		5DA65EE629567B36006CC0FF /* KQHomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */; };
+		5DAE18EF2959540E00AE0DE3 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */; };
 		5DCDC9B72958B54300013C01 /* KQUserDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B32958B54300013C01 /* KQUserDetailsViewControllerTests.swift */; };
 		5DCDC9B82958B54300013C01 /* KQUserDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */; };
 		5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */; };
@@ -150,6 +151,7 @@
 		5D907470295549DA0086F045 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
 		5D90747329554D450086F045 /* UserApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiHandler.swift; sourceTree = "<group>"; };
 		5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeInteractorTests.swift; sourceTree = "<group>"; };
+		5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		5DCDC9B32958B54300013C01 /* KQUserDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsWorkerTests.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		5D6609DD2957DE72002AA837 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5DAE18ED295953E900AE0DE3 /* UITableViewExtension */,
 				5D6609E22957E237002AA837 /* DispatchQueue */,
 				5D6609DF2957DEC7002AA837 /* ImageViewExtension */,
 				5D6609E02957DEDD002AA837 /* AlertHelper */,
@@ -584,6 +587,14 @@
 			path = UserApiHandler;
 			sourceTree = "<group>";
 		};
+		5DAE18ED295953E900AE0DE3 /* UITableViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */,
+			);
+			path = UITableViewExtension;
+			sourceTree = "<group>";
+		};
 		5DD9E2D82958B09600E031CF /* KQHomeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -763,6 +774,7 @@
 				5D9074622954E7760086F045 /* AppTheme.swift in Sources */,
 				5D9074642955043A0086F045 /* LoadingOverlay.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
+				5DAE18EF2959540E00AE0DE3 /* UITableViewExtension.swift in Sources */,
 				5D907466295531540086F045 /* AlertHelper.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQUserDetailsModels.swift in Sources */,
 				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
@@ -897,7 +909,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -953,7 +965,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1078,7 +1090,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,7 +1109,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K8BTGQVAR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kamsque.KQTaskProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -43,8 +43,12 @@ class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
     func fetchUsers(request: KQHome.HomeUsers.Request) {
         let parameters = ["": ""]
         self.homeBusiness.fetchUsers(parameters: parameters, completion: {(users, error) in
-            let response = KQHome.HomeUsers.Response(homeUsers: users)
-            self.presenter?.presentUsers(response: response)
+            if users != nil{
+                let response = KQHome.HomeUsers.Response(homeUsers: users)
+                self.presenter?.presentUsers(response: response)
+            }else{
+                self.presenter?.presenApiNetworkError(message: error?.localizedDescription)
+            }
         })
     }
     

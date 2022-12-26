@@ -16,6 +16,7 @@ protocol KQHomePresentationLogic
 {
     func presentUsers(response: KQHome.HomeUsers.Response)
     func checkApiUrlSerssion(isCanceled: Bool)
+    func presenApiNetworkError(message: String?)
     
 }
 
@@ -34,5 +35,9 @@ class KQHomePresenter: KQHomePresentationLogic
     
     func checkApiUrlSerssion(isCanceled:Bool){
         viewController?.checkApiUrlSerssion(isCanceled: isCanceled)
+    }
+    
+    func presenApiNetworkError(message: String?) {
+        viewController?.presenApiNetworkError(message: message)
     }
 }

@@ -16,6 +16,7 @@ protocol KQUserDetailsPresentationLogic
 {
     func presentUserDetails(response: KQUserDetailsModels.Model.Response)
     func presentRequestValidationError(isValidated:Bool)
+    func presenApiNetworkError(message: String?)
     func checkApiUrlSerssion(isCanceled: Bool)
 }
 
@@ -38,5 +39,9 @@ class KQUserDetailsPresenter: KQUserDetailsPresentationLogic
     
     func checkApiUrlSerssion(isCanceled:Bool){
         viewController?.checkApiUrlSerssion(isCanceled: isCanceled)
+    }
+    
+    func presenApiNetworkError(message: String?) {
+        viewController?.presenApiNetworkError(message: message)
     }
 }
