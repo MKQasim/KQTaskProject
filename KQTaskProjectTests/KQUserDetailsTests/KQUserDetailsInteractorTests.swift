@@ -21,6 +21,7 @@ class KQUserDetailsInteractorTests: XCTestCase
     let presentationSpy = KQUserDetailsPresentationLogicSpy()
     let userBusiness = UserBusiness()
     let worker = KQUserDetailsWorker()
+    let userDetailsBusinessLogicSpy = KQUserDetailsBusinessLogicSpy()
     // MARK: Test lifecycle
     
     override func setUp()
@@ -42,22 +43,32 @@ class KQUserDetailsInteractorTests: XCTestCase
         
     }
     
-    class TableViewSpy: UITableView
-    {
-        // MARK: Method call expectations
-        
-        var reloadDataCalled = false
-        
-        // MARK: Spied methods
-        
-        override func reloadData()
-        {
-            reloadDataCalled = true
-        }
-    }
-    
     
     // MARK: Test doubles
+    
+    
+    class KQUserDetailsBusinessLogicSpy: KQUserDetailsBusinessLogic {
+      
+        var userDetails : UserDetails?
+        var isGetUserDetailsApiCalled = false
+        var isdisplayUserDataCalled = false
+        var checkIsUrlSessionisCalled = false
+        
+        
+        func displayUserData(response: KQUserDetailsModels.Model.Response) {
+            userDetails = response.userDetails
+            isdisplayUserDataCalled = true
+        }
+        
+        func getUserDetailsApi(request: KQUserDetailsModels.Model.Request) {
+            isGetUserDetailsApiCalled = true
+        }
+        
+        func checkApiUrlSerssion() {
+            checkIsUrlSessionisCalled = true
+        }
+        
+    }
     
     class KQUserDetailsPresentationLogicSpy: KQUserDetailsPresentationLogic
     {
@@ -94,6 +105,43 @@ class KQUserDetailsInteractorTests: XCTestCase
     }
     
     // MARK: Tests
+    
+    
+    func testFetchUserDetailsShouldAskToFetchUserDetails()
+    {
+      // Given
+        let loginId = "mojombo"
+        let request = KQUserDetailsModels.Model.Request(loginId: loginId)
+      // When
+        userDetailsBusinessLogicSpy.getUserDetailsApi(request: request)
+      
+      // Then
+        XCTAssertTrue(userDetailsBusinessLogicSpy.isGetUserDetailsApiCalled, "getUserDetailsApi() should ask to get User Details")
+    }
+    
+    func testDisplayUserData()
+    {
+      // Given
+        let response = KQUserDetailsModels.Model.Response(selectedUser: User(login: "Login",url: "www.google.com"), userDetails: UserDetails(name: "MyName",twitterUsername: "Twitter Name"))
+      // When
+        userDetailsBusinessLogicSpy.displayUserData(response: response)
+          
+      // Then
+        XCTAssertEqual(userDetailsBusinessLogicSpy.userDetails?.name, "MyName", "A properly configured TitleName should display the Users Twitter Name ")
+        XCTAssertEqual(userDetailsBusinessLogicSpy.userDetails?.twitterUsername, "Twitter Name", "A properly configured TitleName should display the Users Twitter Name ")
+        XCTAssertTrue(((userDetailsBusinessLogicSpy.userDetails?.twitterUsername) != nil), "Twitter Name")
+    }
+    
+    func testCheckApiUrlSerssion()
+    {
+        // Given
+        // When
+        userDetailsBusinessLogicSpy.checkApiUrlSerssion()
+      // When
+      
+      // Then
+        XCTAssertTrue(userDetailsBusinessLogicSpy.checkIsUrlSessionisCalled, "getUserDetailsApi() should ask to get User Details")
+    }
     
     
     func testPresentFetchedUsersValidationSuccessShouldAskViewControllerToDisplayFetchedUsers()
@@ -133,6 +181,7 @@ class KQUserDetailsInteractorTests: XCTestCase
         // Then
         XCTAssertTrue(presentationSpy.urlSessionInvalidated, "Presenting fetched users should ask view controller to check url Session Validation Success")
     }
+    
     
     func testValidateErrorUrlSessionIfStartedBeforeMovingNextScreenDuringIfPaginationImplimented()
     {

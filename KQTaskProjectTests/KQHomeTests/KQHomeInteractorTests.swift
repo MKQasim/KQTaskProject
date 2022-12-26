@@ -8,6 +8,17 @@
 import XCTest
 @testable import KQTaskProject
 
+//class FakeSuccessHomeBusiness: HomeBsnessProtocol {
+//    func fetchUsers(parameters: [String : Any], completion: @escaping ((KQTaskProject.Users?, Error?) -> ())) {
+//        let user = KQTaskProject.User(login: "Qasim")
+//        completion([KQHomeTestModel.Users.qasim],nil)
+//    }
+//
+//    func homestopApiCallStart(completion: @escaping ((Bool) -> ())) {
+//        completion(true)
+//    }
+//}
+
 class KQHomeInteractorTests: XCTestCase
 {
     // MARK: Subject under test
@@ -15,7 +26,8 @@ class KQHomeInteractorTests: XCTestCase
     var sut: KQHomeInteractor!
     let presentationSpy = KQHomePresentationLogicSpy()
     let homeBusiness = HomeBusiness()
-    
+    let worker = KQHomeWorker()
+    let homeBussinessLogicSpy = KQHomeBusinessLogicSpy()
     // MARK: Test lifecycle
     
     override func setUp()
@@ -40,7 +52,6 @@ class KQHomeInteractorTests: XCTestCase
     
     class KQHomePresentationLogicSpy: KQHomePresentationLogic {
        
-        
         var users : [User]?
         var presentFetchedUsersCalled = false
         var urlSessionisValid = false
@@ -61,7 +72,46 @@ class KQHomeInteractorTests: XCTestCase
         }
     }
     
+    class KQHomeBusinessLogicSpy: KQHomeBusinessLogic {
+        
+       
+        var users : [User]?
+        var homeFetchedUsersCalled = false
+        var checkUrlSessionisCalled = false
+        
+        func fetchUsers(request: KQHome.HomeUsers.Request) {
+            homeFetchedUsersCalled = true
+        }
+        
+        func checkApiUrlSerssion() {
+            checkUrlSessionisCalled = true
+        }
+        
+    }
+    
     // MARK: Tests
+    
+    func testFetchUsersShouldAskToFetchUsers()
+    {
+      // Given
+        let request = KQHome.HomeUsers.Request()
+      // When
+        homeBussinessLogicSpy.fetchUsers(request: request)
+      
+      // Then
+        XCTAssertTrue(homeBussinessLogicSpy.homeFetchedUsersCalled, "FetchOrders() should ask to fetch Users List")
+    }
+    
+    func testcheckApiUrlSerssionIfAnySessionIsThereToInvalidate()
+    {
+      
+      // When
+        homeBussinessLogicSpy.checkApiUrlSerssion()
+      
+      // Then
+        XCTAssertTrue(homeBussinessLogicSpy.checkUrlSessionisCalled, "checkApiUrlSerssion() should check Api UrlSerssion If AnySession Is There To Invalidate before Moving next Screen")
+    }
+    
     
     func testResultShouldFormatedByPresenter()
     {

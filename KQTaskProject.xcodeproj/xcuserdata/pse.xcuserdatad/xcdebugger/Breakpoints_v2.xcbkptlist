@@ -874,6 +874,21 @@
                   endingLineNumber = "71"
                   offsetFromSymbolStart = "77">
                </Location>
+               <Location
+                  uuid = "B71E4397-3591-4B7C-8642-3CDADB99710F - 7191cf54971e7b95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsPresenterTests.KQUserDetailsDisplayLogicSpy.checkApiUrlSerssion(isCanceled: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsPresenterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "77">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -922,6 +937,21 @@
                   endingLineNumber = "73"
                   offsetFromSymbolStart = "100">
                </Location>
+               <Location
+                  uuid = "973FF805-BBFF-46D3-A511-EB3D87A48865 - 7191cf54971e7bd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsPresenterTests.KQUserDetailsDisplayLogicSpy.checkApiUrlSerssion(isCanceled: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsPresenterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "100">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -951,8 +981,8 @@
             filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "checkApiUrlSerssion(isCanceled:)"
             landmarkType = "7">
             <Locations>
@@ -1001,6 +1031,36 @@
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "75">
                </Location>
+               <Location
+                  uuid = "5A8BFEC6-1CFA-452B-B8EF-9482D5F962AA - cdb42a1ebefc5805"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.checkApiUrlSerssion(isCanceled: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "5A8BFEC6-1CFA-452B-B8EF-9482D5F962AA - cdb42a1ebefc59e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.checkApiUrlSerssion(isCanceled: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "75">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1014,8 +1074,8 @@
             filePath = "KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "presentUsers(response:)"
             landmarkType = "7">
             <Locations>
@@ -1071,54 +1131,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C691EE3-F488-41CD-A9E4-009D351E7AAF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "testResultShouldFormatedByPresenter()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0C691EE3-F488-41CD-A9E4-009D351E7AAF - 1b2e2e933aba51d9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.testResultShouldFormatedByPresenter() -&gt; ()"
-                  moduleName = "KQTaskProjectTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "163"
-                  endingLineNumber = "163"
-                  offsetFromSymbolStart = "3367">
-               </Location>
-               <Location
-                  uuid = "0C691EE3-F488-41CD-A9E4-009D351E7AAF - 1b2e2e933aba51be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.testResultShouldFormatedByPresenter() -&gt; ()"
-                  moduleName = "KQTaskProjectTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "160"
-                  endingLineNumber = "160"
-                  offsetFromSymbolStart = "3367">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C05A26D2-30ED-4B7D-B98C-90B28D1EECE5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1126,8 +1138,8 @@
             filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "presentUserDetails(response:)"
             landmarkType = "7">
             <Locations>
@@ -1176,6 +1188,36 @@
                   endingLineNumber = "72"
                   offsetFromSymbolStart = "132">
                </Location>
+               <Location
+                  uuid = "C05A26D2-30ED-4B7D-B98C-90B28D1EECE5 - bcfb59c918f3d6c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentUserDetails(response: KQTaskProject.KQUserDetailsModels.Model.Response) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "C05A26D2-30ED-4B7D-B98C-90B28D1EECE5 - bcfb59c918f3d720"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentUserDetails(response: KQTaskProject.KQUserDetailsModels.Model.Response) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "132">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1189,8 +1231,8 @@
             filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "presentRequestValidationError(isValidated:)"
             landmarkType = "7">
             <Locations>
@@ -1239,6 +1281,36 @@
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "77">
                </Location>
+               <Location
+                  uuid = "F53E7891-ABCE-42E2-BFCE-99C691C2B09E - b2998593560f463a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentRequestValidationError(isValidated: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "F53E7891-ABCE-42E2-BFCE-99C691C2B09E - b2998593560f461b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentRequestValidationError(isValidated: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "80">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1252,8 +1324,8 @@
             filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "presentRequestValidationError(isValidated:)"
             landmarkType = "7">
             <Locations>
@@ -1302,6 +1374,36 @@
                   endingLineNumber = "82"
                   offsetFromSymbolStart = "100">
                </Location>
+               <Location
+                  uuid = "5C9E72EC-5EA1-46B6-9948-564551E31A47 - b2998593560f4678"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentRequestValidationError(isValidated: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "105">
+               </Location>
+               <Location
+                  uuid = "5C9E72EC-5EA1-46B6-9948-564551E31A47 - b2998593560f4659"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.KQUserDetailsPresentationLogicSpy.presentRequestValidationError(isValidated: Swift.Bool) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "105">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1315,8 +1417,8 @@
             filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "testPresentFetchedUsersValidationErrorShouldAskViewControllerToDisplayFetchedUsers()"
             landmarkType = "7">
             <Locations>
@@ -1350,6 +1452,36 @@
                   endingLineNumber = "123"
                   offsetFromSymbolStart = "659">
                </Location>
+               <Location
+                  uuid = "9517CEC4-9C25-4A12-AA01-DCC5300725FC - c78f5db9cb8b0704"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.testPresentFetchedUsersValidationErrorShouldAskViewControllerToDisplayFetchedUsers() -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "659">
+               </Location>
+               <Location
+                  uuid = "9517CEC4-9C25-4A12-AA01-DCC5300725FC - c78f5db9cb8b0725"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQUserDetailsInteractorTests.testPresentFetchedUsersValidationErrorShouldAskViewControllerToDisplayFetchedUsers() -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "659">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1366,6 +1498,150 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "checkApiUrlSerssion()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0CA8C37-C06E-4EF1-80D5-EBE7156F9C00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "KQHomeBusinessLogicSpy"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B0CA8C37-C06E-4EF1-80D5-EBE7156F9C00 - 837d37391553dae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQHomeInteractorTests.KQHomeBusinessLogicSpy.fetchUsers(request: KQTaskProject.KQHome.HomeUsers.Request) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "B0CA8C37-C06E-4EF1-80D5-EBE7156F9C00 - 9f2becaba0404c4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQHomeInteractorTests.KQHomeBusinessLogicSpy.init() -&gt; KQTaskProjectTests.KQHomeInteractorTests.KQHomeBusinessLogicSpy"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C1920A1-F67C-439A-9D64-173F82C5B457"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "fetchUsers(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C1920A1-F67C-439A-9D64-173F82C5B457 - 837d37391553dae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQHomeInteractorTests.KQHomeBusinessLogicSpy.fetchUsers(request: KQTaskProject.KQHome.HomeUsers.Request) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "4C1920A1-F67C-439A-9D64-173F82C5B457 - 837d37391553dac2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KQTaskProjectTests.KQHomeInteractorTests.KQHomeBusinessLogicSpy.fetchUsers(request: KQTaskProject.KQHome.HomeUsers.Request) -&gt; ()"
+                  moduleName = "KQTaskProjectTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProjectTests/KQHomeTests/KQHomeInteractorTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC372C26-720F-49D7-BDFD-F99175099FBD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getUserDetailsApi(request:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C8F41C0-1CA5-4026-B215-897EDD7C791D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "checkApiUrlSerssion()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27BBB51D-8506-41DD-8671-1D119130CB78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KQTaskProjectTests/KQUserDetailsTests/KQUserDetailsInteractorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "displayUserData(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
