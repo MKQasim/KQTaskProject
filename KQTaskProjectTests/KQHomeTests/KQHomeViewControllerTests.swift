@@ -56,7 +56,7 @@ class KQHomeViewControllerTests: XCTestCase
     
     class KQHomeListUsersBusinessLogicSpy: KQHomeBusinessLogic
     {
-        var users: [User]?
+        var userDetails:UserDetails?
         
         // MARK: Method call expectations
         
@@ -69,8 +69,9 @@ class KQHomeViewControllerTests: XCTestCase
         }
         
         func homestopApiCallStart() {}
-        func stopUrlSessionInit() {}
+        func checkApiUrlSerssion() {}
     }
+    
     class TableViewSpy: UITableView
     {
         // MARK: Method call expectations

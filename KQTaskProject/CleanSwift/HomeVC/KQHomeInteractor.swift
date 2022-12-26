@@ -15,7 +15,7 @@ import UIKit
 protocol KQHomeBusinessLogic
 {
     func fetchUsers(request: KQHome.HomeUsers.Request)
-    func stopUrlSessionInit()
+    func checkApiUrlSerssion()
 }
 
 protocol KQHomeDataStore
@@ -48,9 +48,9 @@ class KQHomeInteractor: KQHomeBusinessLogic, KQHomeDataStore
         })
     }
     
-    func stopUrlSessionInit(){
+    func checkApiUrlSerssion(){
         self.homeBusiness.homestopApiCallStart { isCanceled in
-            self.presenter?.stopUrlSession(isCanceled: isCanceled)
+            self.presenter?.checkApiUrlSerssion(isCanceled: isCanceled)
         }
     }
 }

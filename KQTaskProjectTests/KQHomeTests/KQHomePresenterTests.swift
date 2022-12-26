@@ -43,9 +43,13 @@ class KQHomePresenterTests: XCTestCase
     
     class KQHomeDisplayLogicSpy: KQHomeDisplayLogic
     {
+      
+        
         // MARK: Method call expectations
         
         var displayFetchedUsersCalled = false
+        var urlSessionisValid = false
+        var urlSessionInvalidated = false
         
         // MARK: Argument expectations
         
@@ -58,9 +62,14 @@ class KQHomePresenterTests: XCTestCase
             self.viewModel = viewModel
         }
         
-        func stopUrlSession(isCanceled: Bool) {
-            print(isCanceled)
+        func checkApiUrlSerssion(isCanceled: Bool) {
+            if isCanceled{
+                urlSessionInvalidated = true
+            }else{
+                urlSessionisValid = false
+            }
         }
+        
     }
     
     // MARK: Tests
@@ -78,5 +87,31 @@ class KQHomePresenterTests: XCTestCase
         
         // Then
         XCTAssert(listKQHomeDisplayLogicSpy.displayFetchedUsersCalled, "Presenting fetched users should ask view controller to display them")
+    }
+    
+    func testValidateSuccessUrlSessionIfStartedBeforeMovingNextScreenDuringIfPaginationImplimented()
+    {
+        // Given
+        let listKQHomeDisplayLogicSpy = KQHomeDisplayLogicSpy()
+        sut.viewController = listKQHomeDisplayLogicSpy
+        let isInvalidate = true
+        // When
+        
+        sut.checkApiUrlSerssion(isCanceled: isInvalidate)
+        // Then
+        XCTAssertTrue(listKQHomeDisplayLogicSpy.urlSessionInvalidated, "Presenting fetched users should ask view controller to check url Session Validation Success")
+    }
+    
+    
+    func testValidateErrorUrlSessionIfStartedBeforeMovingNextScreenDuringIfPaginationImplimented()
+    {
+        // Given
+        let listKQHomeDisplayLogicSpy = KQHomeDisplayLogicSpy()
+        sut.viewController = listKQHomeDisplayLogicSpy
+        let isInvalidate = false
+        // When
+        sut.checkApiUrlSerssion(isCanceled: isInvalidate)
+        // Then
+        XCTAssertFalse(listKQHomeDisplayLogicSpy.urlSessionisValid, "Presenting fetched users should ask view controller to check urlSession Validation Success")
     }
 }

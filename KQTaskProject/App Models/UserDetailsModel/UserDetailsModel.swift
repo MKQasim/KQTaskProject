@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - UserDetails
-struct UserDetails: Codable {
+public struct UserDetails: Codable {
     var login: String?
     var id: Int?
     var nodeID: String?

@@ -16,7 +16,7 @@ protocol KQUserDetailsDisplayLogic: AnyObject
 {
     func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     func displayValidationError(isValidated:Bool)
-    func stopApiCallSuccess(isCanceled:Bool)
+    func checkApiUrlSerssion(isCanceled:Bool)
 }
 
 class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
@@ -44,7 +44,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     {
         let viewController = self
         let presenter = KQUserDetailsPresenter()
-        let interactor = KQUserDetailsInteractor()
+        let interactor = KQUserDetailsInteractor(presenter: presenter)
         let router = KQUsreDetailsRouter()
         viewController.interactor = interactor
         viewController.router = router
@@ -74,7 +74,12 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         setUpNavigation()
         addViews()
         addConstraints()
-        getUserDetailsApiCall()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.isUserInteractionEnabled = true
+        getUserDetailsApiCall(selectedUser: router?.dataStore?.selectedUser)
     }
     
     // MARK: - SetUp Navigation
@@ -101,7 +106,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         return img
     }()
     
-    private lazy var nameLabel:UILabel = {
+    public lazy var nameLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.numberOfLines = 0
@@ -111,7 +116,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         return label
     }()
     
-    private lazy var jobTitleDetailedLabel:UILabel = {
+    public lazy var jobTitleDetailedLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = AppTheme.shared.subTitleTextColor
@@ -143,14 +148,14 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         didSet {
             DispatchQueue.main.async {
                 guard let user = self.userDetails else {return}
-                if let name = user.twitterUsername {
-                    self.nameLabel.text = "Name: \(name)"
+                if let name = user.name {
+                    self.nameLabel.text = "\(name)"
                 }
                 if let image = user.avatarURL , let url = URL(string:(image)) {
                     self.profileImageView.load(url: url)
                 }
-                if let updatedAt = user.updatedAt {
-                    self.jobTitleDetailedLabel.text = "Updated At: \(updatedAt)"
+                if let twitterName = user.twitterUsername {
+                    self.jobTitleDetailedLabel.text = "\(twitterName)"
                 }
                 if let image = user.avatarURL , let url = URL(string:(image)) {
                     self.countryImageView.load(url: url)
@@ -162,8 +167,10 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         }
     }
     
-    func getUserDetailsApiCall(){
-        selectedUser = router?.dataStore?.selectedUser
+    
+    // MARK: Fetch User Details
+    
+    func getUserDetailsApiCall(selectedUser:User?){
         let request = KQUserDetailsModels.Model.Request(loginId: selectedUser?.login)
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
@@ -186,15 +193,15 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if LoadingOverlay.shared.activityIndicator.isAnimating{
-            stopApiCallStart()
+            checkApiUrlSerssion()
         }
     }
     
-    func stopApiCallStart(){
-        interactor?.userstopApiCallStart()
+    func checkApiUrlSerssion(){
+        interactor?.checkApiUrlSerssion()
     }
     
-    func stopApiCallSuccess(isCanceled: Bool) {
+    func checkApiUrlSerssion(isCanceled: Bool) {
         LoadingOverlay.shared.activityIndicator.stopAnimating()
         LoadingOverlay.shared.hideOverlayView()
         self.view.isUserInteractionEnabled = false

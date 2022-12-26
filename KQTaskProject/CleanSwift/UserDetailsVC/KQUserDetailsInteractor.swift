@@ -14,9 +14,9 @@ import UIKit
 
 protocol KQUserDetailsBusinessLogic
 {
-    func displayUserData(userDetails:UserDetails?)
+    func displayUserData(response:KQUserDetailsModels.Model.Response)
     func getUserDetailsApi(request: KQUserDetailsModels.Model.Request)
-    func userstopApiCallStart()
+    func checkApiUrlSerssion()
 }
 
 protocol KQUserDetailsDataStore
@@ -26,19 +26,28 @@ protocol KQUserDetailsDataStore
 
 class KQUserDetailsInteractor: KQUserDetailsBusinessLogic, KQUserDetailsDataStore
 {
+    
     var selectedUser: User?
     var presenter: KQUserDetailsPresentationLogic?
     var worker: KQUserDetailsWorker?
-    var userBusiness = UserBusiness()
+    var userBusiness : UserBusinessProtocol
+    
+    
+    init(userBusiness: UserBusinessProtocol =  UserBusiness(),
+         presenter: KQUserDetailsPresentationLogic?, worker: KQUserDetailsWorker? = KQUserDetailsWorker()) {
+        self.userBusiness = userBusiness
+        self.presenter = presenter
+        self.worker = worker
+    }
     
     // MARK: get User Details Api
     
     func getUserDetailsApi(request: KQUserDetailsModels.Model.Request){
-        worker = KQUserDetailsWorker()
         worker?.validateRequest(request: request, completion: { isValidate in
             if isValidate{
                 self.userBusiness.userDetailsApiCall(parameters: ["loginId":(request.loginId ?? "") as String]) { userDetails, error in
-                    self.displayUserData(userDetails: userDetails)
+                    let response = KQUserDetailsModels.Model.Response(selectedUser: self.selectedUser, userDetails: userDetails)
+                    self.displayUserData(response: response)
                 }
             }else{
                 self.presenter?.presentRequestValidationError(isValidated: isValidate)
@@ -48,15 +57,14 @@ class KQUserDetailsInteractor: KQUserDetailsBusinessLogic, KQUserDetailsDataStor
     
     // MARK: display User Data
     
-    func displayUserData(userDetails:UserDetails?)
+    func displayUserData(response:KQUserDetailsModels.Model.Response)
     {
-        let response = KQUserDetailsModels.Model.Response(selectedUser: selectedUser , userDetails: userDetails)
         presenter?.presentUserDetails(response: response)
     }
     
-    func userstopApiCallStart(){
+    func checkApiUrlSerssion(){
         self.userBusiness.userstopApiCallStart { isCanceled in
-            self.presenter?.stopApiCallSuccess(isCanceled: isCanceled)
+            self.presenter?.checkApiUrlSerssion(isCanceled: isCanceled)
         }
     }
 }

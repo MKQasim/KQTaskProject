@@ -15,11 +15,13 @@ import UIKit
 protocol KQHomeDisplayLogic: AnyObject
 {
     func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
-    func stopUrlSession(isCanceled:Bool)
+    func checkApiUrlSerssion(isCanceled:Bool)
 }
 
 class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
 {
+    
+    
     
     
     var interactor: KQHomeBusinessLogic?
@@ -152,12 +154,12 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         }
     }
     
-    func stopUrlSessionInit(){
+    func checkApiUrlSerssion(){
         self.tableView.isUserInteractionEnabled = true
-        interactor?.stopUrlSessionInit()
+        interactor?.checkApiUrlSerssion()
     }
     
-    func stopUrlSession(isCanceled: Bool) {
+    func checkApiUrlSerssion(isCanceled: Bool) {
         self.tableView.isUserInteractionEnabled = false
         LoadingOverlay.shared.activityIndicator.stopAnimating()
         LoadingOverlay.shared.hideOverlayView()

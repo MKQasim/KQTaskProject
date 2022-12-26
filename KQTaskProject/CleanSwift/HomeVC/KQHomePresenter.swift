@@ -15,7 +15,7 @@ import UIKit
 protocol KQHomePresentationLogic
 {
     func presentUsers(response: KQHome.HomeUsers.Response)
-    func stopUrlSession(isCanceled: Bool)
+    func checkApiUrlSerssion(isCanceled: Bool)
     
 }
 
@@ -32,7 +32,7 @@ class KQHomePresenter: KQHomePresentationLogic
         viewController?.displayFetchedUsers(viewModel: viewModel)
     }
     
-    func stopUrlSession(isCanceled:Bool){
-        viewController?.stopUrlSession(isCanceled: isCanceled)
+    func checkApiUrlSerssion(isCanceled:Bool){
+        viewController?.checkApiUrlSerssion(isCanceled: isCanceled)
     }
 }
