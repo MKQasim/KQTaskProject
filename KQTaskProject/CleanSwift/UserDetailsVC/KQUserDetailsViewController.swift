@@ -171,7 +171,6 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         }
     }
     
-    
     // MARK: Fetch User Details
     
     func getUserDetailsApiCall(selectedUser:User?){

@@ -9,7 +9,7 @@ import UIKit
 
 public class KQUsersTableViewCell: UITableViewCell {
     
-    static let identifire: String =  "KQContactTableViewCell"
+    static let identifire: String =  "KQUsersTableViewCell"
     
     var selectedUser:User? {
         didSet {
