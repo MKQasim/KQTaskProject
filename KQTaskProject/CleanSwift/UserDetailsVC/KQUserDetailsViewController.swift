@@ -195,7 +195,13 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     
     func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     {
-        userDetails = viewModel.userDetails
+//        DispatchQueue.delay(.microseconds(0)) {
+//            self.userDetails = viewModel.userDetails
+//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.userDetails = viewModel.userDetails
+        })
+        
     }
     
     func presenApiNetworkError(message: String?) {

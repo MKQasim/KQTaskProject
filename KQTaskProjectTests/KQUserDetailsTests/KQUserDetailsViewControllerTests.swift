@@ -123,8 +123,18 @@ class KQUserDetailsViewControllerTests: XCTestCase
         // When
         sut.displayUserDetails(viewModel: viewModel)
         // Then
-        XCTAssertEqual(sut.nameLabel.text, "MyName", "Displaying an user should update the name label")
-        XCTAssertEqual(sut.jobTitleDetailedLabel.text, "Twitter Name", "Displaying an user should update the  jobTitleDetailedlabel")
+        
+           let expectation = expectation(description: "TextMatching")
+           
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+               //then
+               XCTAssertEqual(self.sut.nameLabel.text, "MyName", "Displaying an user should update the name label")
+               XCTAssertEqual(self.sut.jobTitleDetailedLabel.text, "Twitter Name", "Displaying an user should update the  jobTitleDetailedlabel")
+               
+               expectation.fulfill()
+           })
+           wait(for: [expectation], timeout: 2.0)
+        
     }
     
 }
