@@ -6,26 +6,43 @@
 //
 
 import UIKit
+import Combine
 
 public class KQUsersTableViewCell: UITableViewCell {
     
     static let identifire: String =  "KQUsersTableViewCell"
+    private var profileCancellable: AnyCancellable?
+    private var profileAnimator: UIViewPropertyAnimator?
+    private var countryCancellable: AnyCancellable?
+    private var countryAnimator: UIViewPropertyAnimator?
+    
+    override public func prepareForReuse() {
+        super.prepareForReuse()
+        profileImageView.image = nil
+        profileImageView.alpha = 0.0
+        profileAnimator?.stopAnimation(true)
+        countryAnimator?.stopAnimation(true)
+        profileCancellable?.cancel()
+        countryCancellable?.cancel()
+    }
+
+    public func configure(with selectedUser: User?) {
+        
+        guard let user = selectedUser else {return}
+        if let name = user.login {
+            nameLabel.text = "Login:\(name)"
+        }
+        if let jobTitle = user.url {
+            jobTitleDetailedLabel.text = "\(jobTitle)"
+        }
+
+        profileCancellable = ImageLoaderManager.shared.loadImage(for: user.avatarURL).sink { [self] image in ImageLoaderManager.shared.showImage(animator: self.profileAnimator, imageView: profileImageView, image: image) }
+        countryCancellable = ImageLoaderManager.shared.loadImage(for: user.avatarURL).sink { [self] image in ImageLoaderManager.shared.showImage(animator: self.countryAnimator, imageView: countryImageView, image: image) }
+    }
     
     var selectedUser:User? {
         didSet {
-            guard let user = selectedUser else {return}
-            if let name = user.login {
-                nameLabel.text = "Login:\(name)"
-            }
-            if let image = user.avatarURL , let url = URL(string:(image)) {
-                profileImageView.load(url: url)
-            }
-            if let jobTitle = user.url {
-                jobTitleDetailedLabel.text = "\(jobTitle)"
-            }
-            if let image = user.avatarURL , let url = URL(string:(image)) {
-                countryImageView.load(url: url)
-            }
+            self.configure(with: selectedUser)
         }
     }
     

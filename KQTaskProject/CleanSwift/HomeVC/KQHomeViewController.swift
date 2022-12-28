@@ -130,10 +130,12 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     // MARK: Display Users
     func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
     {
-        self.displayUsers = viewModel.users
-        DispatchQueue.main.async() {
-            self.tableView.reloadData()
-            self.stopAnimating()
+        if let users =  viewModel.users{
+            self.displayUsers = users
+            DispatchQueue.main.async() {
+                self.tableView.reloadData()
+                self.stopAnimating()
+            }
         }
     }
     
@@ -150,7 +152,7 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         DispatchQueue.main.asyncAfter(deadline: .now()) {  [weak self] in
             if var rout = self?.router{
                 rout.dataStore?.selectedUser = selectedUser
-                rout.routeToDetails(segue: nil)
+                rout.routeToDetails()
             }
         }
     }

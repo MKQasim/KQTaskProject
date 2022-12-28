@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol KQHomeRoutingLogic
 {
-    func routeToDetails(segue: UIStoryboardSegue?)
+    func routeToDetails()
 }
 
 protocol KQHomeDataPassing
@@ -30,7 +30,7 @@ class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
     
     // MARK: Routing
     
-    func routeToDetails(segue: UIStoryboardSegue?)
+    func routeToDetails()
     {
         let destinationVC = KQUserDetailsViewController()
         guard let viewController = self.viewController else{return}

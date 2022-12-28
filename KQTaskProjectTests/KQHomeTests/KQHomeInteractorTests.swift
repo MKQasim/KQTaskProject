@@ -8,17 +8,6 @@
 import XCTest
 @testable import KQTaskProject
 
-//class FakeSuccessHomeBusiness: HomeBsnessProtocol {
-//    func fetchUsers(parameters: [String : Any], completion: @escaping ((KQTaskProject.Users?, Error?) -> ())) {
-//        let user = KQTaskProject.User(login: "Qasim")
-//        completion([KQHomeTestModel.Users.qasim],nil)
-//    }
-//
-//    func homestopApiCallStart(completion: @escaping ((Bool) -> ())) {
-//        completion(true)
-//    }
-//}
-
 class KQHomeInteractorTests: XCTestCase
 {
     // MARK: Subject under test

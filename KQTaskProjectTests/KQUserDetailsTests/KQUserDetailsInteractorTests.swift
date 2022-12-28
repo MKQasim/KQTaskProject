@@ -40,7 +40,6 @@ class KQUserDetailsInteractorTests: XCTestCase
     func setupKQUserDetailsInteractor()
     {
         sut = KQUserDetailsInteractor(userBusiness: userBusiness, presenter: presentationSpy)
-        
     }
     
     

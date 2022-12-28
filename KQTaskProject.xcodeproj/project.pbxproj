@@ -75,6 +75,8 @@
 		5DAE1929295A1D1400AE0DE3 /* KQHomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */; };
 		5DCDC9B72958B54300013C01 /* KQUserDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B32958B54300013C01 /* KQUserDetailsViewControllerTests.swift */; };
 		5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */; };
+		5DD2385B295C116100D354BE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD2385A295C116100D354BE /* ImageLoader.swift */; };
+		5DD2385D295C11A000D354BE /* ImageLoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD2385C295C11A000D354BE /* ImageLoaderManager.swift */; };
 		5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +159,8 @@
 		5DCDC9B42958B54300013C01 /* KQUserDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsWorkerTests.swift; sourceTree = "<group>"; };
 		5DCDC9B62958B54300013C01 /* KQUserDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		5DD2385A295C116100D354BE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		5DD2385C295C11A000D354BE /* ImageLoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				5D6528FB2953F1280056DAD4 /* ImageViewExtension.swift */,
+				5DD2385A295C116100D354BE /* ImageLoader.swift */,
+				5DD2385C295C11A000D354BE /* ImageLoaderManager.swift */,
 			);
 			path = ImageViewExtension;
 			sourceTree = "<group>";
@@ -771,6 +777,7 @@
 				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
 				5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */,
+				5DD2385D295C11A000D354BE /* ImageLoaderManager.swift in Sources */,
 				5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */,
 				5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */,
 				5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
@@ -795,6 +802,7 @@
 				5D6528F92953E5B10056DAD4 /* KQUserDetailsViewController.swift in Sources */,
 				5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */,
 				5D6528F52953E5B10056DAD4 /* KQUserDetailsPresenter.swift in Sources */,
+				5DD2385B295C116100D354BE /* ImageLoader.swift in Sources */,
 				5D42461129560F24005F4491 /* UserModel.swift in Sources */,
 				5D6528FA2953E5B10056DAD4 /* KQUserDetailsInteractor.swift in Sources */,
 				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,

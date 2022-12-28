@@ -134,7 +134,6 @@ class KQUserDetailsViewControllerTests: XCTestCase
                expectation.fulfill()
            })
            wait(for: [expectation], timeout: 2.0)
-        
     }
     
 }

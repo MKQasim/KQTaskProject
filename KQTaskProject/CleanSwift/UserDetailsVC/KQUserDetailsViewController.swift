@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol KQUserDetailsDisplayLogic: AnyObject
 {
@@ -22,10 +23,14 @@ protocol KQUserDetailsDisplayLogic: AnyObject
 
 class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
 {
-   
+    
     var interactor: KQUserDetailsBusinessLogic?
     var router: (NSObjectProtocol & KQUserDetailsRoutingLogic & KQUserDetailsDataPassing)?
     var selectedUser : User?
+    private var profileCancellable: AnyCancellable?
+    private var profileAnimator: UIViewPropertyAnimator?
+    private var countryCancellable: AnyCancellable?
+    private var countryAnimator: UIViewPropertyAnimator?
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -73,6 +78,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         setUpNavigation()
         addViews()
         addConstraints()
@@ -81,6 +87,12 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.isUserInteractionEnabled = true
+        profileImageView.image = nil
+        profileImageView.alpha = 0.0
+        profileAnimator?.stopAnimation(true)
+        countryAnimator?.stopAnimation(true)
+        profileCancellable?.cancel()
+        countryCancellable?.cancel()
         getUserDetailsApiCall(selectedUser: router?.dataStore?.selectedUser)
     }
     
@@ -153,19 +165,15 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
                 if let name = user.name {
                     self.nameLabel.text = "\(name)"
                 }
-                if let image = user.avatarURL , let url = URL(string:(image)) {
-                    self.profileImageView.load(url: url)
-                }
                 if let twitterName = user.twitterUsername {
                     self.jobTitleDetailedLabel.text = "\(twitterName)"
-                }
-                if let image = user.avatarURL , let url = URL(string:(image)) {
-                    self.countryImageView.load(url: url)
                 }
                 if LoadingOverlay.shared.activityIndicator.isAnimating{
                     LoadingOverlay.shared.activityIndicator.stopAnimating()
                     LoadingOverlay.shared.hideOverlayView()
                 }
+                self.profileCancellable = ImageLoaderManager.shared.loadImage(for: user.avatarURL).sink { [self] image in ImageLoaderManager.shared.showImage(animator: self.profileAnimator, imageView: profileImageView, image: image) }
+                self.countryCancellable = ImageLoaderManager.shared.loadImage(for: user.avatarURL).sink { [self] image in ImageLoaderManager.shared.showImage(animator: self.countryAnimator, imageView: countryImageView, image: image) }
                 self.view.isUserInteractionEnabled = false
             }
         }
@@ -205,7 +213,6 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
         }
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
