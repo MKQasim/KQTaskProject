@@ -18,6 +18,7 @@ public class KQSuperVC: UIViewController {
         view.isAccessibilityElement = true
         self.navigationController?.navigationBar.isAccessibilityElement = true
         self.navigationController?.navigationBar.accessibilityLabel = "navigationBar"
+        
     }
     
    public override var preferredStatusBarStyle: UIStatusBarStyle {

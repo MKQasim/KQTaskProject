@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import KQTaskNetworkManager
 
 protocol HomeApiHandlerProtocol {
     func makeRequest(from parameters: [String: Any]) -> Request
@@ -13,8 +14,8 @@ protocol HomeApiHandlerProtocol {
 }
 
 struct HomeApiHandler: APIHandler , HomeApiHandlerProtocol {
-    
-    func makeRequest(from parameters: [String: Any]) -> Request {
+
+    public func makeRequest(from parameters: [String: Any]) -> Request {
         // prepare url
         let url = URL(string:Path.Users().getMostViewedUsers(""))
         var urlRequest = URLRequest(url: url!)
@@ -30,11 +31,10 @@ struct HomeApiHandler: APIHandler , HomeApiHandlerProtocol {
         set(parameters, urlRequest: &urlRequest)
         // prepares request (sets header params, any additional configurations)
         let request = Request(urlRequest: urlRequest, requestBuilder: DefaultRequest())
-        
         return request
     }
-   
-    func parseResponse(data: Data) throws -> Users? {
+
+   public func parseResponse(data: Data) throws -> Users? {
            let jsonDecoder = JSONDecoder()
             return try jsonDecoder.decode([User].self, from: data)
     }

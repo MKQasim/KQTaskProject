@@ -206,11 +206,13 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     }
     
     func presenApiNetworkError(message: String?) {
-        if LoadingOverlay.shared.activityIndicator.isAnimating{
-            LoadingOverlay.shared.activityIndicator.stopAnimating()
-            LoadingOverlay.shared.hideOverlayView()
-        }
-        AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
+        DispatchQueue.delay(.microseconds(50)) {
+            if LoadingOverlay.shared.activityIndicator.isAnimating{
+                LoadingOverlay.shared.activityIndicator.stopAnimating()
+                LoadingOverlay.shared.hideOverlayView()
+            }
+            AlertHelper.showAlert("Alert",message: message!, style: .alert, actionTitles: [],autoDismiss : true ,  dismissDuration: 2 ,showCancel: false  ) { action in
+            }
         }
     }
     

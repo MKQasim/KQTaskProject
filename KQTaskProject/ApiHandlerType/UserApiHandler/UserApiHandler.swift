@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import KQTaskNetworkManager
+
 protocol UserApiHandlerProtocole {
     func makeRequest(from parameters: [String: Any]) -> Request
     func parseResponse(data: Data) throws -> UserDetails?
@@ -13,10 +15,14 @@ protocol UserApiHandlerProtocole {
 
 struct UserApiHandler: APIHandler , UserApiHandlerProtocole {
     
-    func makeRequest(from parameters: [String: Any]) -> Request {
+    ///  UserDetails Request
+    /// - Parameter parameters: loginId
+    /// - Returns: UserDetails
+    public func makeRequest(from parameters: [String: Any]) -> Request {
         let loginId : String = parameters["loginId"] as? String ?? ""
         // prepare url
-        let url = URL(string:Path.Users().getUserDetails(loginId))
+
+        let url = URL(string: Path.Users().getUserDetails(loginId))
         var urlRequest = URLRequest(url: url!)
         // set http method type
         urlRequest.httpMethod = HTTPMethod.get.rawValue
@@ -33,7 +39,7 @@ struct UserApiHandler: APIHandler , UserApiHandlerProtocole {
         return request
     }
  
-    func parseResponse(data: Data) throws -> UserDetails? {
+    public func parseResponse(data: Data) throws -> UserDetails? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         lazy var jsonDecoder: JSONDecoder = {
@@ -55,7 +61,7 @@ struct UserApiHandler: APIHandler , UserApiHandlerProtocole {
 }
 
 extension JSONDecoder.DateDecodingStrategy {
-    static func custom(_ formatterForKey: @escaping (CodingKey) throws -> DateFormatter?) -> JSONDecoder.DateDecodingStrategy {
+    public static func custom(_ formatterForKey: @escaping (CodingKey) throws -> DateFormatter?) -> JSONDecoder.DateDecodingStrategy {
         return .custom({ (decoder) -> Date in
             guard let codingKey = decoder.codingPath.last else {
                 throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "No Coding Path Found"))
