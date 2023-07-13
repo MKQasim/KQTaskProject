@@ -1,0 +1,6 @@
+framework module Pods_KQTaskProject {
+  umbrella header "Pods-KQTaskProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

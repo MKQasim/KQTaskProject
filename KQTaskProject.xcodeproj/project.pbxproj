@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52FF79D1244F07CE6450795E /* Pods_KQTaskProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90412AE73DEEDE613985AFDD /* Pods_KQTaskProjectTests.framework */; };
 		5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */; };
 		5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */; };
 		5D1A7C0B29525ECD00270CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1A7C0A29525ECD00270CD2 /* Assets.xcassets */; };
@@ -35,29 +36,6 @@
 		5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B642953AB7000087A66 /* KQHomeModels.swift */; };
 		5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */; };
 		5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */; };
-		5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
-		5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7D2953B16800087A66 /* ApiLoader.swift */; };
-		5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */; };
-		5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */; };
-		5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B812953B16800087A66 /* AuthRequest.swift */; };
-		5D6D6B9B2953B16800087A66 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B812953B16800087A66 /* AuthRequest.swift */; };
-		5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B822953B16800087A66 /* DefaultRequest.swift */; };
-		5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B822953B16800087A66 /* DefaultRequest.swift */; };
-		5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B832953B16800087A66 /* RequestBuilder.swift */; };
-		5D6D6BA12953B16800087A66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B832953B16800087A66 /* RequestBuilder.swift */; };
-		5D6D6BA32953B16800087A66 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B842953B16800087A66 /* Request.swift */; };
-		5D6D6BA42953B16800087A66 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B842953B16800087A66 /* Request.swift */; };
-		5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */; };
-		5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */; };
-		5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */; };
-		5D6D6BAA2953B16900087A66 /* DefaultResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */; };
-		5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B882953B16800087A66 /* ApiHandler.swift */; };
-		5D6D6BAD2953B16900087A66 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B882953B16800087A66 /* ApiHandler.swift */; };
-		5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
-		5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8A2953B16800087A66 /* ServiceError.swift */; };
-		5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8C2953B16800087A66 /* Enviroment.swift */; };
-		5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
-		5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B8E2953B16800087A66 /* Reachability.swift */; };
 		5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
 		5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BBF2953B38A00087A66 /* AppShared.swift */; };
 		5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6BD92953D04200087A66 /* HomeBusiness.swift */; };
@@ -68,8 +46,9 @@
 		5D907468295537960086F045 /* TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907467295537960086F045 /* TopMostController.swift */; };
 		5D90746B295542DC0086F045 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746A295542DC0086F045 /* UserBusiness.swift */; };
 		5D90746E295543180086F045 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90746D295543180086F045 /* UserServices.swift */; };
-		5D90747429554D450086F045 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90747329554D450086F045 /* UserApiHandler.swift */; };
 		5D91822E2958D2B2000F3403 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D907470295549DA0086F045 /* UserDetailsModel.swift */; };
+		5D9A546029839739000495C8 /* UserApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A545D29839739000495C8 /* UserApiHandler.swift */; };
+		5D9A546129839739000495C8 /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A545F29839739000495C8 /* HomeApiHandler.swift */; };
 		5DAE18EF2959540E00AE0DE3 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */; };
 		5DAE18FE295A0F4300AE0DE3 /* AppGlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAE18FD295A0F4300AE0DE3 /* AppGlobalSettings.swift */; };
 		5DAE1929295A1D1400AE0DE3 /* KQHomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */; };
@@ -77,7 +56,8 @@
 		5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDC9B52958B54300013C01 /* KQUserDetailsWorkerTests.swift */; };
 		5DD2385B295C116100D354BE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD2385A295C116100D354BE /* ImageLoader.swift */; };
 		5DD2385D295C11A000D354BE /* ImageLoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD2385C295C11A000D354BE /* ImageLoaderManager.swift */; };
-		5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D6B932953B16800087A66 /* HomeApiHandler.swift */; };
+		A2813E4162B1A22E3FCDFFBD /* Pods_KQTaskProject_KQTaskProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480C95EDE5CBBF979810248 /* Pods_KQTaskProject_KQTaskProjectUITests.framework */; };
+		AFCD6FEF9BCEAD36FCD709BB /* Pods_KQTaskProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0A486C2390EBD370C1144D /* Pods_KQTaskProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +78,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182425B078F45DA243A2FBD4 /* Pods-KQTaskProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProjectTests.release.xcconfig"; path = "Target Support Files/Pods-KQTaskProjectTests/Pods-KQTaskProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A5B08BBC45766762F76CEAF /* Pods-KQTaskProject.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject.testing.xcconfig"; path = "Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject.testing.xcconfig"; sourceTree = "<group>"; };
+		26117B41F9102DB4602BF438 /* Pods-KQTaskProject-KQTaskProjectUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject-KQTaskProjectUITests.production.xcconfig"; path = "Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests.production.xcconfig"; sourceTree = "<group>"; };
+		27D9ED0AEAB330769137688B /* Pods-KQTaskProject-KQTaskProjectUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject-KQTaskProjectUITests.staging.xcconfig"; path = "Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests.staging.xcconfig"; sourceTree = "<group>"; };
+		2AA541A97CFA41565CE3176F /* Pods-KQTaskProject-KQTaskProjectUITests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject-KQTaskProjectUITests.testing.xcconfig"; path = "Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests.testing.xcconfig"; sourceTree = "<group>"; };
+		3480C95EDE5CBBF979810248 /* Pods_KQTaskProject_KQTaskProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KQTaskProject_KQTaskProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59477AA14661E2484CB5DB80 /* Pods-KQTaskProject.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject.staging.xcconfig"; path = "Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject.staging.xcconfig"; sourceTree = "<group>"; };
 		5D1A7BFE29525ECC00270CD2 /* KQTaskProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KQTaskProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1A7C0129525ECC00270CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1A7C0329525ECC00270CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,19 +115,6 @@
 		5D6D6B642953AB7000087A66 /* KQHomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeModels.swift; sourceTree = "<group>"; };
 		5D6D6B652953AB7000087A66 /* KQHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeViewController.swift; sourceTree = "<group>"; };
 		5D6D6B662953AB7000087A66 /* KQHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeInteractor.swift; sourceTree = "<group>"; };
-		5D6D6B7D2953B16800087A66 /* ApiLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiLoader.swift; sourceTree = "<group>"; };
-		5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
-		5D6D6B812953B16800087A66 /* AuthRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
-		5D6D6B822953B16800087A66 /* DefaultRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
-		5D6D6B832953B16800087A66 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
-		5D6D6B842953B16800087A66 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponseHandler.swift; sourceTree = "<group>"; };
-		5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultResponseParser.swift; sourceTree = "<group>"; };
-		5D6D6B882953B16800087A66 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
-		5D6D6B8A2953B16800087A66 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
-		5D6D6B8C2953B16800087A66 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
-		5D6D6B8E2953B16800087A66 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		5D6D6B932953B16800087A66 /* HomeApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeApiHandler.swift; sourceTree = "<group>"; };
 		5D6D6BBF2953B38A00087A66 /* AppShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		5D6D6BD92953D04200087A66 /* HomeBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
 		5D6D6BDE2953D06500087A66 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -151,7 +125,8 @@
 		5D90746A295542DC0086F045 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		5D90746D295543180086F045 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		5D907470295549DA0086F045 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
-		5D90747329554D450086F045 /* UserApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiHandler.swift; sourceTree = "<group>"; };
+		5D9A545D29839739000495C8 /* UserApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserApiHandler.swift; sourceTree = "<group>"; };
+		5D9A545F29839739000495C8 /* HomeApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeApiHandler.swift; sourceTree = "<group>"; };
 		5DA65EE529567B36006CC0FF /* KQHomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQHomeInteractorTests.swift; sourceTree = "<group>"; };
 		5DAE18EE2959540E00AE0DE3 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		5DAE18FD295A0F4300AE0DE3 /* AppGlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobalSettings.swift; sourceTree = "<group>"; };
@@ -161,6 +136,17 @@
 		5DCDC9B62958B54300013C01 /* KQUserDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KQUserDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		5DD2385A295C116100D354BE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		5DD2385C295C11A000D354BE /* ImageLoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderManager.swift; sourceTree = "<group>"; };
+		61CAD9483437D5564C803739 /* Pods-KQTaskProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-KQTaskProjectTests/Pods-KQTaskProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63661821DF5249BFE8DA9687 /* Pods-KQTaskProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject.release.xcconfig"; path = "Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject.release.xcconfig"; sourceTree = "<group>"; };
+		6B0A486C2390EBD370C1144D /* Pods_KQTaskProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KQTaskProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CE571280CDE221B1700D52D /* Pods-KQTaskProjectTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProjectTests.production.xcconfig"; path = "Target Support Files/Pods-KQTaskProjectTests/Pods-KQTaskProjectTests.production.xcconfig"; sourceTree = "<group>"; };
+		90412AE73DEEDE613985AFDD /* Pods_KQTaskProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KQTaskProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7F785092E997E41EEE8833 /* Pods-KQTaskProject-KQTaskProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject-KQTaskProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA32C40E0A79CC07A69B287F /* Pods-KQTaskProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject.debug.xcconfig"; path = "Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF61C59C7F970AFDB5B3A6B /* Pods-KQTaskProjectTests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProjectTests.testing.xcconfig"; path = "Target Support Files/Pods-KQTaskProjectTests/Pods-KQTaskProjectTests.testing.xcconfig"; sourceTree = "<group>"; };
+		DD6C84F29F6FC96C771EA543 /* Pods-KQTaskProjectTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProjectTests.staging.xcconfig"; path = "Target Support Files/Pods-KQTaskProjectTests/Pods-KQTaskProjectTests.staging.xcconfig"; sourceTree = "<group>"; };
+		FA888A7C73D8B7B8E0D46D7A /* Pods-KQTaskProject.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject.production.xcconfig"; path = "Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject.production.xcconfig"; sourceTree = "<group>"; };
+		FB1711BC2E6CBC82E7537B7B /* Pods-KQTaskProject-KQTaskProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KQTaskProject-KQTaskProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCD6FEF9BCEAD36FCD709BB /* Pods_KQTaskProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FF79D1244F07CE6450795E /* Pods_KQTaskProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2813E4162B1A22E3FCDFFBD /* Pods_KQTaskProject_KQTaskProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +184,8 @@
 				5D1A7C1729525ECD00270CD2 /* KQTaskProjectTests */,
 				5D415F7929563A9300C33DD3 /* KQTaskProjectUITests */,
 				5D1A7BFF29525ECC00270CD2 /* Products */,
+				7760F0C8D5B71F5E1D9E516F /* Pods */,
+				FB7ADB856285B828E22E3C0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,7 +204,6 @@
 			children = (
 				5D9074602954E7610086F045 /* App Theme */,
 				5D6D6BBE2953B38A00087A66 /* AppShared */,
-				5D6D6B7A2953B16800087A66 /* AppNetworkManager */,
 				5D6D6BC32953CDCE00087A66 /* AppBusiness */,
 				5D1A7C3E295383F300270CD2 /* App Services */,
 				5D1A7C3C295383A900270CD2 /* App Models */,
@@ -310,6 +300,7 @@
 		5D1A7C3E295383F300270CD2 /* App Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D9A545B29839739000495C8 /* ApiHandlerType */,
 				5D90746C295543080086F045 /* UserServices */,
 				5D6D6BDD2953D06500087A66 /* HomeServices */,
 			);
@@ -421,107 +412,6 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
-		5D6D6B7A2953B16800087A66 /* AppNetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B7B2953B16800087A66 /* ApiHandler */,
-				5D6D6B892953B16800087A66 /* ServiceError */,
-				5D6D6B8B2953B16800087A66 /* Enviroment */,
-				5D6D6B8D2953B16800087A66 /* Reachability */,
-				5D6D6B8F2953B16800087A66 /* ApiHandlerType */,
-			);
-			path = AppNetworkManager;
-			sourceTree = "<group>";
-		};
-		5D6D6B7B2953B16800087A66 /* ApiHandler */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B7C2953B16800087A66 /* ApiLoader */,
-				5D6D6B7E2953B16800087A66 /* ApiRequestHandler */,
-				5D6D6B802953B16800087A66 /* CreateRequests */,
-				5D6D6B852953B16800087A66 /* ApiResponseHandler */,
-				5D6D6B882953B16800087A66 /* ApiHandler.swift */,
-			);
-			path = ApiHandler;
-			sourceTree = "<group>";
-		};
-		5D6D6B7C2953B16800087A66 /* ApiLoader */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B7D2953B16800087A66 /* ApiLoader.swift */,
-			);
-			path = ApiLoader;
-			sourceTree = "<group>";
-		};
-		5D6D6B7E2953B16800087A66 /* ApiRequestHandler */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B7F2953B16800087A66 /* ApiRequestHandler.swift */,
-			);
-			path = ApiRequestHandler;
-			sourceTree = "<group>";
-		};
-		5D6D6B802953B16800087A66 /* CreateRequests */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B812953B16800087A66 /* AuthRequest.swift */,
-				5D6D6B822953B16800087A66 /* DefaultRequest.swift */,
-				5D6D6B832953B16800087A66 /* RequestBuilder.swift */,
-				5D6D6B842953B16800087A66 /* Request.swift */,
-			);
-			path = CreateRequests;
-			sourceTree = "<group>";
-		};
-		5D6D6B852953B16800087A66 /* ApiResponseHandler */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B862953B16800087A66 /* ApiResponseHandler.swift */,
-				5D6D6B872953B16800087A66 /* DefaultResponseParser.swift */,
-			);
-			path = ApiResponseHandler;
-			sourceTree = "<group>";
-		};
-		5D6D6B892953B16800087A66 /* ServiceError */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B8A2953B16800087A66 /* ServiceError.swift */,
-			);
-			path = ServiceError;
-			sourceTree = "<group>";
-		};
-		5D6D6B8B2953B16800087A66 /* Enviroment */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B8C2953B16800087A66 /* Enviroment.swift */,
-			);
-			path = Enviroment;
-			sourceTree = "<group>";
-		};
-		5D6D6B8D2953B16800087A66 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B8E2953B16800087A66 /* Reachability.swift */,
-			);
-			path = Reachability;
-			sourceTree = "<group>";
-		};
-		5D6D6B8F2953B16800087A66 /* ApiHandlerType */ = {
-			isa = PBXGroup;
-			children = (
-				5D90747229554D290086F045 /* UserApiHandler */,
-				5D6D6B922953B16800087A66 /* HomeApiHadler */,
-			);
-			path = ApiHandlerType;
-			sourceTree = "<group>";
-		};
-		5D6D6B922953B16800087A66 /* HomeApiHadler */ = {
-			isa = PBXGroup;
-			children = (
-				5D6D6B932953B16800087A66 /* HomeApiHandler.swift */,
-			);
-			path = HomeApiHadler;
-			sourceTree = "<group>";
-		};
 		5D6D6BBE2953B38A00087A66 /* AppShared */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,12 +477,29 @@
 			path = UserDetailsModel;
 			sourceTree = "<group>";
 		};
-		5D90747229554D290086F045 /* UserApiHandler */ = {
+		5D9A545B29839739000495C8 /* ApiHandlerType */ = {
 			isa = PBXGroup;
 			children = (
-				5D90747329554D450086F045 /* UserApiHandler.swift */,
+				5D9A545C29839739000495C8 /* UserApiHandler */,
+				5D9A545E29839739000495C8 /* HomeApiHadler */,
+			);
+			path = ApiHandlerType;
+			sourceTree = "<group>";
+		};
+		5D9A545C29839739000495C8 /* UserApiHandler */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A545D29839739000495C8 /* UserApiHandler.swift */,
 			);
 			path = UserApiHandler;
+			sourceTree = "<group>";
+		};
+		5D9A545E29839739000495C8 /* HomeApiHadler */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A545F29839739000495C8 /* HomeApiHandler.swift */,
+			);
+			path = HomeApiHadler;
 			sourceTree = "<group>";
 		};
 		5DAE18ED295953E900AE0DE3 /* UITableViewExtension */ = {
@@ -633,6 +540,38 @@
 			path = KQUserDetailsTests;
 			sourceTree = "<group>";
 		};
+		7760F0C8D5B71F5E1D9E516F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA32C40E0A79CC07A69B287F /* Pods-KQTaskProject.debug.xcconfig */,
+				59477AA14661E2484CB5DB80 /* Pods-KQTaskProject.staging.xcconfig */,
+				1A5B08BBC45766762F76CEAF /* Pods-KQTaskProject.testing.xcconfig */,
+				63661821DF5249BFE8DA9687 /* Pods-KQTaskProject.release.xcconfig */,
+				FA888A7C73D8B7B8E0D46D7A /* Pods-KQTaskProject.production.xcconfig */,
+				FB1711BC2E6CBC82E7537B7B /* Pods-KQTaskProject-KQTaskProjectUITests.debug.xcconfig */,
+				27D9ED0AEAB330769137688B /* Pods-KQTaskProject-KQTaskProjectUITests.staging.xcconfig */,
+				2AA541A97CFA41565CE3176F /* Pods-KQTaskProject-KQTaskProjectUITests.testing.xcconfig */,
+				AA7F785092E997E41EEE8833 /* Pods-KQTaskProject-KQTaskProjectUITests.release.xcconfig */,
+				26117B41F9102DB4602BF438 /* Pods-KQTaskProject-KQTaskProjectUITests.production.xcconfig */,
+				61CAD9483437D5564C803739 /* Pods-KQTaskProjectTests.debug.xcconfig */,
+				DD6C84F29F6FC96C771EA543 /* Pods-KQTaskProjectTests.staging.xcconfig */,
+				CFF61C59C7F970AFDB5B3A6B /* Pods-KQTaskProjectTests.testing.xcconfig */,
+				182425B078F45DA243A2FBD4 /* Pods-KQTaskProjectTests.release.xcconfig */,
+				6CE571280CDE221B1700D52D /* Pods-KQTaskProjectTests.production.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB7ADB856285B828E22E3C0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B0A486C2390EBD370C1144D /* Pods_KQTaskProject.framework */,
+				3480C95EDE5CBBF979810248 /* Pods_KQTaskProject_KQTaskProjectUITests.framework */,
+				90412AE73DEEDE613985AFDD /* Pods_KQTaskProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -640,9 +579,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1A7C2829525ECD00270CD2 /* Build configuration list for PBXNativeTarget "KQTaskProject" */;
 			buildPhases = (
+				2EBDE732FC154B1EDC14AB30 /* [CP] Check Pods Manifest.lock */,
 				5D1A7BFA29525ECC00270CD2 /* Sources */,
 				5D1A7BFB29525ECC00270CD2 /* Frameworks */,
 				5D1A7BFC29525ECC00270CD2 /* Resources */,
+				E3E73F903FE1178255EEB9D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -657,6 +598,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1A7C2B29525ECD00270CD2 /* Build configuration list for PBXNativeTarget "KQTaskProjectTests" */;
 			buildPhases = (
+				A57B0BDE120EB02B6E6E2E4B /* [CP] Check Pods Manifest.lock */,
 				5D1A7C1029525ECD00270CD2 /* Sources */,
 				5D1A7C1129525ECD00270CD2 /* Frameworks */,
 				5D1A7C1229525ECD00270CD2 /* Resources */,
@@ -675,9 +617,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D415F8029563A9300C33DD3 /* Build configuration list for PBXNativeTarget "KQTaskProjectUITests" */;
 			buildPhases = (
+				EFB0A606D8E588A7B7F56777 /* [CP] Check Pods Manifest.lock */,
 				5D415F7429563A9300C33DD3 /* Sources */,
 				5D415F7529563A9300C33DD3 /* Frameworks */,
 				5D415F7629563A9300C33DD3 /* Resources */,
+				E413FFE7E7BC1BD536D69EDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -758,6 +702,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EBDE732FC154B1EDC14AB30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KQTaskProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A57B0BDE120EB02B6E6E2E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KQTaskProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E73F903FE1178255EEB9D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject/Pods-KQTaskProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E413FFE7E7BC1BD536D69EDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KQTaskProject-KQTaskProjectUITests/Pods-KQTaskProject-KQTaskProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB0A606D8E588A7B7F56777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KQTaskProject-KQTaskProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D1A7BFA29525ECC00270CD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -765,37 +812,26 @@
 			files = (
 				5D6D6B732953AB7000087A66 /* KQHomeViewController.swift in Sources */,
 				5D6609E42957E254002AA837 /* DispatchQueue.swift in Sources */,
-				5D6D6B942953B16800087A66 /* ApiLoader.swift in Sources */,
-				5D6D6BB22953B16900087A66 /* Enviroment.swift in Sources */,
 				5D1A7C0229525ECC00270CD2 /* AppDelegate.swift in Sources */,
-				5D6D6BA02953B16800087A66 /* RequestBuilder.swift in Sources */,
 				5D6D6BDA2953D04200087A66 /* HomeBusiness.swift in Sources */,
 				5D91822E2958D2B2000F3403 /* UserDetailsModel.swift in Sources */,
 				5D6528F72953E5B10056DAD4 /* KQUsreDetailsRouter.swift in Sources */,
-				5D6D6B972953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 				5D54C068295388EE0003A0B7 /* KQUserTableViewCell.swift in Sources */,
 				5D6D6BC02953B38A00087A66 /* AppShared.swift in Sources */,
 				5D1A7C0429525ECC00270CD2 /* SceneDelegate.swift in Sources */,
-				5D6D6B9D2953B16800087A66 /* DefaultRequest.swift in Sources */,
+				5D9A546129839739000495C8 /* HomeApiHandler.swift in Sources */,
 				5DD2385D295C11A000D354BE /* ImageLoaderManager.swift in Sources */,
-				5D6D6B9A2953B16800087A66 /* AuthRequest.swift in Sources */,
 				5D6D6B672953AB7000087A66 /* KQHomePresenter.swift in Sources */,
 				5D6D6B6A2953AB7000087A66 /* KQHomeWorker.swift in Sources */,
 				5D90746E295543180086F045 /* UserServices.swift in Sources */,
-				5D6D6BA32953B16800087A66 /* Request.swift in Sources */,
-				5D6D6BAF2953B16900087A66 /* ServiceError.swift in Sources */,
 				5D6D6B6D2953AB7000087A66 /* KQHomeRouter.swift in Sources */,
 				5DAE18FE295A0F4300AE0DE3 /* AppGlobalSettings.swift in Sources */,
-				5DE20292295626F40010E6CE /* HomeApiHandler.swift in Sources */,
-				5D6D6BA92953B16900087A66 /* DefaultResponseParser.swift in Sources */,
-				5D6D6BA62953B16900087A66 /* ApiResponseHandler.swift in Sources */,
 				5D9074622954E7760086F045 /* AppTheme.swift in Sources */,
 				5D9074642955043A0086F045 /* LoadingOverlay.swift in Sources */,
 				5D6528FC2953F1280056DAD4 /* ImageViewExtension.swift in Sources */,
 				5DAE18EF2959540E00AE0DE3 /* UITableViewExtension.swift in Sources */,
 				5D907466295531540086F045 /* AlertHelper.swift in Sources */,
 				5D6528F82953E5B10056DAD4 /* KQUserDetailsModels.swift in Sources */,
-				5D6D6BAC2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D1A7C3B2952660400270CD2 /* KQSuperVC.swift in Sources */,
 				5D6D6B702953AB7000087A66 /* KQHomeModels.swift in Sources */,
 				5D6528F62953E5B10056DAD4 /* KQUserDetailsWorker.swift in Sources */,
@@ -805,11 +841,10 @@
 				5DD2385B295C116100D354BE /* ImageLoader.swift in Sources */,
 				5D42461129560F24005F4491 /* UserModel.swift in Sources */,
 				5D6528FA2953E5B10056DAD4 /* KQUserDetailsInteractor.swift in Sources */,
-				5D6D6BB52953B16900087A66 /* Reachability.swift in Sources */,
+				5D9A546029839739000495C8 /* UserApiHandler.swift in Sources */,
 				5D907468295537960086F045 /* TopMostController.swift in Sources */,
 				5D6D6B762953AB7000087A66 /* KQHomeInteractor.swift in Sources */,
 				5D6D6BDF2953D06500087A66 /* HomeService.swift in Sources */,
-				5D90747429554D450086F045 /* UserApiHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,26 +852,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6D6BA42953B16800087A66 /* Request.swift in Sources */,
-				5D6D6BB62953B16900087A66 /* Reachability.swift in Sources */,
-				5D6D6BA72953B16900087A66 /* ApiResponseHandler.swift in Sources */,
-				5D6D6BAD2953B16900087A66 /* ApiHandler.swift in Sources */,
 				5D547511295A1E30004364DE /* KQHomePresenterTests.swift in Sources */,
 				5D4349F0295687500046A924 /* KQHomeViewControllerTests.swift in Sources */,
-				5D6D6BA12953B16800087A66 /* RequestBuilder.swift in Sources */,
-				5D6D6B952953B16800087A66 /* ApiLoader.swift in Sources */,
-				5D6D6BB02953B16900087A66 /* ServiceError.swift in Sources */,
 				5DAE1929295A1D1400AE0DE3 /* KQHomeInteractorTests.swift in Sources */,
 				5DCDC9B92958B54300013C01 /* KQUserDetailsWorkerTests.swift in Sources */,
-				5D6D6B982953B16800087A66 /* ApiRequestHandler.swift in Sources */,
 				5D547512295A1E3D004364DE /* KQUserDetailsInteractorTests.swift in Sources */,
-				5D6D6B9E2953B16800087A66 /* DefaultRequest.swift in Sources */,
 				5D547510295A1E25004364DE /* KQUserDetailsPresenterTests.swift in Sources */,
 				5D4349F1295687500046A924 /* KQHomeWorkerTests.swift in Sources */,
 				5DCDC9B72958B54300013C01 /* KQUserDetailsViewControllerTests.swift in Sources */,
 				5D6D6BC12953B38A00087A66 /* AppShared.swift in Sources */,
-				5D6D6B9B2953B16800087A66 /* AuthRequest.swift in Sources */,
-				5D6D6BAA2953B16900087A66 /* DefaultResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1020,7 @@
 		};
 		5D1A7C2929525ECD00270CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA32C40E0A79CC07A69B287F /* Pods-KQTaskProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1025,6 +1050,7 @@
 		};
 		5D1A7C2A29525ECD00270CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63661821DF5249BFE8DA9687 /* Pods-KQTaskProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1054,6 +1080,7 @@
 		};
 		5D1A7C2C29525ECD00270CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61CAD9483437D5564C803739 /* Pods-KQTaskProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1079,6 +1106,7 @@
 		};
 		5D1A7C2D29525ECD00270CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 182425B078F45DA243A2FBD4 /* Pods-KQTaskProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1104,6 +1132,7 @@
 		};
 		5D415F8129563A9300C33DD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1711BC2E6CBC82E7537B7B /* Pods-KQTaskProject-KQTaskProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
@@ -1123,6 +1152,7 @@
 		};
 		5D415F8229563A9300C33DD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7F785092E997E41EEE8833 /* Pods-KQTaskProject-KQTaskProjectUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
@@ -1204,6 +1234,7 @@
 		};
 		5DAE18F12959FF0F00AE0DE3 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A5B08BBC45766762F76CEAF /* Pods-KQTaskProject.testing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1233,6 +1264,7 @@
 		};
 		5DAE18F22959FF0F00AE0DE3 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF61C59C7F970AFDB5B3A6B /* Pods-KQTaskProjectTests.testing.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1258,6 +1290,7 @@
 		};
 		5DAE18F32959FF0F00AE0DE3 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AA541A97CFA41565CE3176F /* Pods-KQTaskProject-KQTaskProjectUITests.testing.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
@@ -1339,6 +1372,7 @@
 		};
 		5DAE18F52959FF2400AE0DE3 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59477AA14661E2484CB5DB80 /* Pods-KQTaskProject.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1368,6 +1402,7 @@
 		};
 		5DAE18F62959FF2400AE0DE3 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6C84F29F6FC96C771EA543 /* Pods-KQTaskProjectTests.staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1393,6 +1428,7 @@
 		};
 		5DAE18F72959FF2400AE0DE3 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27D9ED0AEAB330769137688B /* Pods-KQTaskProject-KQTaskProjectUITests.staging.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
@@ -1468,6 +1504,7 @@
 		};
 		5DAE18F92959FF6200AE0DE3 /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA888A7C73D8B7B8E0D46D7A /* Pods-KQTaskProject.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1497,6 +1534,7 @@
 		};
 		5DAE18FA2959FF6200AE0DE3 /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CE571280CDE221B1700D52D /* Pods-KQTaskProjectTests.production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1522,6 +1560,7 @@
 		};
 		5DAE18FB2959FF6200AE0DE3 /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26117B41F9102DB4602BF438 /* Pods-KQTaskProject-KQTaskProjectUITests.production.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;

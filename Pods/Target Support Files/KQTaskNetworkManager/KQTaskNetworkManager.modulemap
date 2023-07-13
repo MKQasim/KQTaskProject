@@ -1,0 +1,6 @@
+framework module KQTaskNetworkManager {
+  umbrella header "KQTaskNetworkManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
