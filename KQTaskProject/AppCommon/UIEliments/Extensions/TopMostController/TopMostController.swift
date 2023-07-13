@@ -19,6 +19,7 @@ class TopMostController {
         return UIViewController()
     }
 }
+
 public extension UIViewController {
     func setStatusBar(color: UIColor) {
         let tag = 12321

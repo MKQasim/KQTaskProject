@@ -13,16 +13,14 @@
 import UIKit
 import Combine
 
-protocol KQUserDetailsDisplayLogic: AnyObject
-{
+protocol KQUserDetailsDisplayLogic: AnyObject {
     func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
     func displayValidationError(isValidated:Bool)
     func checkApiUrlSerssion(isCanceled:Bool)
     func presenApiNetworkError(message: String?)
 }
 
-class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
-{
+class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
     
     var interactor: KQUserDetailsBusinessLogic?
     var router: (NSObjectProtocol & KQUserDetailsRoutingLogic & KQUserDetailsDataPassing)?
@@ -33,22 +31,19 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     private var countryAnimator: UIViewPropertyAnimator?
     // MARK: Object lifecycle
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
     
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let presenter = KQUserDetailsPresenter()
         let interactor = KQUserDetailsInteractor(presenter: presenter)
@@ -61,24 +56,10 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         router.dataStore = interactor
     }
     
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-    
     // MARK: View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpNavigation()
         addViews()
         addConstraints()
@@ -181,7 +162,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
     
     // MARK: Fetch User Details
     
-    func getUserDetailsApiCall(selectedUser:User?){
+    func getUserDetailsApiCall(selectedUser:User?) {
         let request = KQUserDetailsModels.Model.Request(loginId: selectedUser?.login ?? "")
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
@@ -200,8 +181,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
         }
     }
     
-    func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel)
-    {
+    func displayUserDetails(viewModel: KQUserDetailsModels.Model.ViewModel) {
         userDetails = viewModel.userDetails
     }
     
@@ -239,7 +219,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic
 extension KQUserDetailsViewController{
     
     // MARK: - Add Views
-    private func addViews(){
+    private func addViews() {
         view.backgroundColor = AppTheme.shared.navBackgroundColor
         self.view.addSubview(superContainerView)
         self.superContainerView.addSubview(profileImageView)
@@ -251,7 +231,7 @@ extension KQUserDetailsViewController{
     
     // MARK: - Add Views Constraints
     
-    private func addConstraints(){
+    private func addConstraints() {
         NSLayoutConstraint.activate([
             // MARK: - superContainerView Constraints
             

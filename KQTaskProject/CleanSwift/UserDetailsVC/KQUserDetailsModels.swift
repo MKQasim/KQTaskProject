@@ -12,23 +12,18 @@
 
 import UIKit
 
-enum KQUserDetailsModels
-{
+enum KQUserDetailsModels {
     // MARK: Use cases
     
-    enum Model
-    {
-        struct Request
-        {
+    enum Model {
+        struct Request {
             var loginId: String?
         }
-        struct Response
-        {
+        struct Response {
             var selectedUser : User?
             var userDetails  : UserDetails?
         }
-        struct ViewModel
-        {
+        struct ViewModel {
             var selectedUser : User?
             var userDetails  : UserDetails?
         }

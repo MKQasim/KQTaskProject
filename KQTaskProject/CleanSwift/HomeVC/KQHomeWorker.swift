@@ -13,15 +13,13 @@
 import UIKit
 // MARK: - User List API
 
-protocol UserListProtocol
-{
+protocol UserListProtocol {
     // MARK: CRUD operations - Optional error
     
     func fetchOrders(completionHandler: @escaping ([User], UsersListError?) -> Void)
 }
 
-class KQHomeWorker
-{
+class KQHomeWorker {
     var usersList: UserListProtocol?
     init() {}
     

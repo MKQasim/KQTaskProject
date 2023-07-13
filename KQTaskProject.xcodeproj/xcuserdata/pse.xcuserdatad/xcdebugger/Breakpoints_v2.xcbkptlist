@@ -299,8 +299,8 @@
             filePath = "KQTaskProject/CleanSwift/HomeVC/KQHomePresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "presentUsers(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -551,8 +551,8 @@
             filePath = "KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsWorker.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "validateRequest(request:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -567,8 +567,8 @@
             filePath = "KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsWorker.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "validateRequest(request:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1549,8 +1549,8 @@
             filePath = "KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "presenApiNetworkError(message:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1565,42 +1565,10 @@
             filePath = "KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "presenApiNetworkError(message:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DB565999-17DB-431C-8DB1-354908B8089A - cf9dad397db1957c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KQTaskProject.KQUserDetailsViewController.presenApiNetworkError(message: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "KQTaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "209"
-                  endingLineNumber = "209"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  uuid = "DB565999-17DB-431C-8DB1-354908B8089A - 5b9e6a5234f4e065"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in KQTaskProject.KQUserDetailsViewController.presenApiNetworkError(message: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "KQTaskProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pse/Documents/KamQasim/Development/KQTaskProject_Mbition/KQTaskProject/KQTaskProject/CleanSwift/UserDetailsVC/KQUserDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "210"
-                  endingLineNumber = "210"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

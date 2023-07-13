@@ -12,15 +12,13 @@
 
 import UIKit
 
-protocol KQHomeDisplayLogic: AnyObject
-{
+protocol KQHomeDisplayLogic: AnyObject {
     func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
     func checkApiUrlSerssion(isCanceled:Bool)
     func presenApiNetworkError(message: String?)
 }
 
-class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
-{
+class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic {
     
     var interactor: KQHomeBusinessLogic?
     var homeServices : HomeServices?
@@ -40,22 +38,19 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
     var displayUsers : [User]? // model
     // MARK: Object lifecycle
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
     
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let presenter = KQHomePresenter()
         let interactor = KQHomeInteractor(presenter: presenter)
@@ -77,18 +72,6 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic
         setTableViewConstraint()
         
         tableView.delegate = self
-    }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
     }
     
     // MARK: View lifecycle

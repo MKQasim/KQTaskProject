@@ -20,20 +20,18 @@ protocol KQHomePresentationLogic
     
 }
 
-class KQHomePresenter: KQHomePresentationLogic
-{
+class KQHomePresenter: KQHomePresentationLogic {
     
     weak var viewController: KQHomeDisplayLogic?
     
     // MARK: Do something
     
-    func presentUsers(response: KQHome.HomeUsers.Response)
-    {
+    func presentUsers(response: KQHome.HomeUsers.Response) {
         let viewModel = KQHome.HomeUsers.ViewModel(users: response.homeUsers)
         viewController?.displayFetchedUsers(viewModel: viewModel)
     }
     
-    func checkApiUrlSerssion(isCanceled:Bool){
+    func checkApiUrlSerssion(isCanceled:Bool) {
         viewController?.checkApiUrlSerssion(isCanceled: isCanceled)
     }
     

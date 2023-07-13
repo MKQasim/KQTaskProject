@@ -12,23 +12,20 @@
 
 import UIKit
 
-protocol KQUserDetailsPresentationLogic
-{
+protocol KQUserDetailsPresentationLogic {
     func presentUserDetails(response: KQUserDetailsModels.Model.Response)
     func presentRequestValidationError(isValidated:Bool)
     func presenApiNetworkError(message: String?)
     func checkApiUrlSerssion(isCanceled: Bool)
 }
 
-class KQUserDetailsPresenter: KQUserDetailsPresentationLogic
-{
+class KQUserDetailsPresenter: KQUserDetailsPresentationLogic {
     
     weak var viewController: KQUserDetailsDisplayLogic?
     
     // MARK: present User Details
     
-    func presentUserDetails(response: KQUserDetailsModels.Model.Response)
-    {
+    func presentUserDetails(response: KQUserDetailsModels.Model.Response) {
         let viewModel = KQUserDetailsModels.Model.ViewModel(selectedUser : response.selectedUser , userDetails: response.userDetails)
         viewController?.displayUserDetails(viewModel: viewModel)
     }
@@ -37,7 +34,7 @@ class KQUserDetailsPresenter: KQUserDetailsPresentationLogic
         viewController?.displayValidationError(isValidated: isValidated)
     }
     
-    func checkApiUrlSerssion(isCanceled:Bool){
+    func checkApiUrlSerssion(isCanceled:Bool) {
         viewController?.checkApiUrlSerssion(isCanceled: isCanceled)
     }
     

@@ -12,39 +12,13 @@
 
 import UIKit
 
-@objc protocol KQUserDetailsRoutingLogic
-{
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-}
+@objc protocol KQUserDetailsRoutingLogic {}
 
-protocol KQUserDetailsDataPassing
-{
+protocol KQUserDetailsDataPassing {
     var dataStore: KQUserDetailsDataStore? { get }
 }
 
-class KQUsreDetailsRouter: NSObject, KQUserDetailsRoutingLogic, KQUserDetailsDataPassing
-{
+class KQUsreDetailsRouter: NSObject, KQUserDetailsRoutingLogic, KQUserDetailsDataPassing {
     weak var viewController: KQUserDetailsViewController?
     var dataStore: KQUserDetailsDataStore?
-    
-    // MARK: Routing
-    
-    func routeToSomewhere()
-    {
-      
-    }
-    
-    // MARK: Navigation
-    
-//    func navigateToSomewhere(source: KQUsrDetailsViewController, destination: SomewhereViewController)
-//    {
-//      source.show(destination, sender: nil)
-//    }
-    
-    // MARK: Passing data
-    
-//    func passDataToSomewhere(source: KQUserDetailsDataStore, destination: inout SomewhereDataStore)
-//    {
-//      destination.name = source.name
-//    }
 }

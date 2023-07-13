@@ -13,14 +13,11 @@
 import UIKit
 
 
-enum KQHome
-{
+enum KQHome {
     // MARK: Use cases
     
-    enum HomeUsers
-    {
-        struct Request
-        {
+    enum HomeUsers {
+        struct Request {
             
         }
         // MARK: - Home
@@ -28,10 +25,8 @@ enum KQHome
             var homeUsers : [User]?
         }
         
-        struct ViewModel
-        {
-            struct DisplayUser
-            {
+        struct ViewModel {
+            struct DisplayUser {
                 var displayUser: User?
             }
             var users: [User]?

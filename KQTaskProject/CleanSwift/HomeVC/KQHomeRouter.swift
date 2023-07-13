@@ -12,26 +12,22 @@
 
 import UIKit
 
-@objc protocol KQHomeRoutingLogic
-{
+@objc protocol KQHomeRoutingLogic {
     func routeToDetails()
 }
 
-protocol KQHomeDataPassing
-{
+protocol KQHomeDataPassing {
     var dataStore: KQHomeDataStore? { get set}
 }
 
-class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
-{
+class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing {
     
     weak var viewController: KQHomeViewController?
     var dataStore: KQHomeDataStore?
     
     // MARK: Routing
     
-    func routeToDetails()
-    {
+    func routeToDetails() {
         let destinationVC = KQUserDetailsViewController()
         guard let viewController = self.viewController else{return}
         guard let destinationRouter = destinationVC.router else {return}
@@ -43,15 +39,13 @@ class KQHomeRouter: NSObject, KQHomeRoutingLogic, KQHomeDataPassing
     
     // MARK: Navigation
     
-    func navigateToItemDetails(source: KQHomeViewController, destination: KQUserDetailsViewController)
-    {
+    func navigateToItemDetails(source: KQHomeViewController, destination: KQUserDetailsViewController) {
         source.show(destination, sender: nil)
     }
     
     //   MARK: Passing data
     
-    func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQUserDetailsDataStore)
-    {
+    func passDataToSomewhere(source: KQHomeDataStore, destination: inout KQUserDetailsDataStore) {
         destination.selectedUser = source.selectedUser
     }
 }
