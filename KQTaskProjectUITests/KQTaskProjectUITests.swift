@@ -1,73 +1,123 @@
-//
-//  KQTaskProjectUITests.swift
-//  KQTaskProjectUITests
-//
-//  Created by KamsQue on 23/12/2022.
-//
+  //
+  //  KQTaskProjectUITests.swift
+  //  KQTaskProjectUITests
+  //
+  //  Created by KamsQue on 23/12/2022.
+  //
 @testable import KQTaskProject
-
 import XCTest
 
 final class KQTaskProjectUITests: XCTestCase {
+
+  
+  func testNavigationToDetailsScreen() {
+      // Given
+    let app = XCUIApplication()
     
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      // When
+    app.launch()
+    app.launchArguments = ["enable-testing"]
+    let homeTableView = app.tables["HomeTableView"]
         
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
+      // Then
+    XCTAssertTrue(app.exists)
+    XCTAssertTrue(app.kqUserHomeViewController.waitForExistence(timeout: 5))
     
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    let cell = homeTableView.cells.firstMatch
+    cell.tap()
+    XCTAssertTrue(app.navigationBars["User Details"].waitForExistence(timeout: 5))
+  }
+  
+  func testTableViewList() {
+              // Given
+    let app = XCUIApplication()
+    app.launch()
+    app.launchArguments = ["enable-testing"]
     
-    func testListScreenUI(){
-        continueAfterFailure = true
-        let app = XCUIApplication()
+      // When
+    let homeTableView = app.tables["HomeTableView"]
+    
+      // Then
+    XCTAssertTrue(app.exists)
+    XCTAssertTrue(homeTableView.waitForExistence(timeout: 5))
+  }
+  
+  func testTableViewCellTap() {
+      // Given
+    let app = XCUIApplication()
+    app.launch()
+    app.launchArguments = ["enable-testing"]
+    let homeTableView = app.tables["HomeTableView"]
+    
+      // When
+    let cell = homeTableView.cells.firstMatch
+    cell.tap()
+    
+      // Then
+    XCTAssertTrue(app.exists)
+    XCTAssertTrue(app.otherElements["KQUserDetailsViewController"].waitForExistence(timeout: 5))
+    XCTAssertTrue(app.otherElements["SuperDetailsContainerView"].waitForExistence(timeout: 5))
+    XCTAssertTrue(app.otherElements["DetailsContainerView"].waitForExistence(timeout: 5))
+    XCTAssertTrue(app.staticTexts["nameLabel"].waitForExistence(timeout: 5))
+  }
+  
+  func testDetailsScreenComponents() {
+      // Given
+    let app = XCUIApplication()
+    app.launch()
+    app.launchArguments = ["enable-testing"]
+    let homeTableView = app.tables["HomeTableView"]
+    let cell = homeTableView.cells.firstMatch
+    cell.tap()
+      // When
+    let kqUserDetailsViewController = app.otherElements["KQUserDetailsViewController"]
+    let superContainerView = app.otherElements["SuperDetailsContainerView"]
+    let containerView = app.otherElements["DetailsContainerView"]
+    let nameLabel = app.staticTexts["nameLabel"]
+    
+      // Then
+    XCTAssertTrue(app.exists)
+    XCTAssertTrue(kqUserDetailsViewController.waitForExistence(timeout: 5))
+    XCTAssertTrue(superContainerView.waitForExistence(timeout: 5))
+    XCTAssertTrue(containerView.waitForExistence(timeout: 5))
+    XCTAssertTrue(nameLabel.waitForExistence(timeout: 5))
+  }
+  
+  func testLaunchPerformance() throws {
+    if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+        // Given
+      let app = XCUIApplication()
+      
+        // When
+      measure(metrics: [XCTApplicationLaunchMetric()]) {
         app.launch()
-        app.launchArguments = ["enable-testing"]
-        XCTAssertTrue(app.exists)
+      }
+      
+        // Then
+      XCTAssertTrue(app.exists)
     }
-    
-    func testFirstScreen(){
-        continueAfterFailure = true
-        let app = XCUIApplication()
-        app.launch()
-        let kqhomeviewcontrollerElement = app.otherElements["KQHomeViewController"]
-        XCTAssertTrue(kqhomeviewcontrollerElement.waitForExistence(timeout: 5))
-        let kqtableViewrElement = app.otherElements.element(boundBy: 0)
-        XCTAssertTrue(kqtableViewrElement.waitForExistence(timeout: 5))
-    }
-    
-    func testNavigateToDetailsScreen(){
-        continueAfterFailure = true
-        let app = XCUIApplication()
-        app.launch()
-        app.launchArguments = ["enable-testing"]
-        let kqhomeviewcontrollerElement = app.otherElements["KQHomeViewController"]
-        XCTAssertTrue(kqhomeviewcontrollerElement.waitForExistence(timeout: 5))
-        
-        let nav = XCUIApplication().navigationBars["Users List"]
-        XCTAssertTrue(nav.exists)
-    }
-    
-    func testSecondScreen(){
-        continueAfterFailure = true
-        let app = XCUIApplication()
-        app.launch()
-        app.launchArguments = ["enable-testing"]
-        XCTAssertTrue(XCUIApplication().navigationBars["Users List"].exists)
-        
-    }
-    
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+  }
 }
+
+// MARK: - KQHomeViewController UIComponents
+
+private extension XCUIApplication {
+  
+  var kqUserHomeViewController: XCUIElement { self.otherElements["KQHomeViewController"] }
+  var homeTableView: XCUIElement { self.otherElements["HomeTableView"] }
+  var homeCell: XCUIElement { self.otherElements["HomeTableView"].cells.firstMatch }
+
+}
+  // MARK: - KQUserDetailsViewController UIComponents
+
+private extension XCUIApplication {
+
+  var kqUserDetailsViewController: XCUIElement { self.otherElements["KQUserDetailsViewController"] }
+  var superContainerView: XCUIElement { self.otherElements["SuperDetailsContainerView"] }
+  var containerView: XCUIElement { self.otherElements["DetailsContainerView"] }
+  var nameLabel: XCUIElement { self.staticTexts["nameLabel"] }
+}
+
+
+
+

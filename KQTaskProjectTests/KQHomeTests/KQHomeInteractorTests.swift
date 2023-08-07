@@ -40,8 +40,6 @@ class KQHomeInteractorTests: XCTestCase
     // MARK: Test doubles
     
     class KQHomePresentationLogicSpy: KQHomePresentationLogic {
-        
-        
        
         var users : [User]?
         var presentFetchedUsersCalled = false
@@ -107,7 +105,6 @@ class KQHomeInteractorTests: XCTestCase
       // Then
         XCTAssertTrue(homeBussinessLogicSpy.checkUrlSessionisCalled, "checkApiUrlSerssion() should check Api UrlSerssion If AnySession Is There To Invalidate before Moving next Screen")
     }
-    
     
     func testResultShouldFormatedByPresenter()
     {

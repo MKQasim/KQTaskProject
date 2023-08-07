@@ -63,6 +63,11 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
         setUpNavigation()
         addViews()
         addConstraints()
+      self.nameLabel.accessibilityIdentifier = "nameLabel"
+//      self.inputField.accessibilityIdentifier = "input-field"
+//      self.submitButton.accessibilityIdentifier = "submit-button"
+      
+        accessibility(view: self.view, accessibilityLabel: "KQUserDetailsView", accessibilityIdentifier: "KQUserDetailsViewController")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +81,12 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
         countryCancellable?.cancel()
         getUserDetailsApiCall(selectedUser: router?.dataStore?.selectedUser)
     }
+  
+  private func accessibility(view: UIView ,accessibilityLabel : String , accessibilityIdentifier : String ){
+    view.isAccessibilityElement = true
+    view.accessibilityIdentifier = accessibilityIdentifier
+    view.accessibilityLabel = accessibilityLabel
+  }
     
     // MARK: - SetUp Navigation
     private func setUpNavigation() {
@@ -87,6 +98,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
     private lazy var superContainerView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        accessibility(view: view, accessibilityLabel: "KQSuperDetailsContainerView", accessibilityIdentifier: "SuperDetailsContainerView")
         view.clipsToBounds = true
         return view
     }()
@@ -106,6 +118,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.numberOfLines = 0
         label.textAlignment = .center
+         accessibility(view: view, accessibilityLabel: "accessnameLabel", accessibilityIdentifier: "nameLabel")
         label.textColor = AppTheme.shared.titleTextColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -127,6 +140,7 @@ class KQUserDetailsViewController: KQSuperVC, KQUserDetailsDisplayLogic {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
+        accessibility(view: view, accessibilityLabel: "KQDetailsContainerView", accessibilityIdentifier: "DetailsContainerView")
         return view
     }()
     
@@ -269,3 +283,4 @@ extension KQUserDetailsViewController{
         ])
     }
 }
+

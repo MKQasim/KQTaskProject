@@ -7,7 +7,7 @@ target 'KQTaskProject' do
   use_frameworks!
 
   # Pods for KQTaskProject
-pod 'KQTaskNetworkManager'
+#   pod 'KQTaskNetworkManager'
 
   target 'KQTaskProjectTests' do
     inherit! :search_paths

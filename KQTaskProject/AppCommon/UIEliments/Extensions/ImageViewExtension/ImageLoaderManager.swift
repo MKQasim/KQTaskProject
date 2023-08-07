@@ -31,7 +31,7 @@ class ImageLoaderManager {
     func loadImage(for url: String?) -> AnyPublisher<UIImage?, Never> {
         return Just(url)
             .flatMap({ url -> AnyPublisher<UIImage?, Never> in
-                let url = URL(string: url ?? "")!
+                let url = URL(string: url ?? "https://unsplash.com/photos/e616t35Vbeg")!
                 return ImageLoader.shared.loadImage(from: url)
             })
             .eraseToAnyPublisher()

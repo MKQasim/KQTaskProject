@@ -87,8 +87,8 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic {
     private func accessibility(){
         self.view.isAccessibilityElement = true
         self.view.accessibilityLabel = "KQHomeViewController"
+        tableView.accessibilityIdentifier = "HomeTableView"
         tableView.isAccessibilityElement = true
-        tableView.accessibilityLabel = "TableView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,9 +106,8 @@ class KQHomeViewController: KQSuperVC, KQHomeDisplayLogic {
         let request = KQHome.HomeUsers.Request()
         LoadingOverlay.shared.showOverlay(view: self.view)
         LoadingOverlay.shared.activityIndicator.startAnimating()
-        self.tableView.isUserInteractionEnabled = false
+        tableView.isUserInteractionEnabled = false
         interactor?.fetchUsers(request: request)
-        
     }
     // MARK: Display Users
     func displayFetchedUsers(viewModel: KQHome.HomeUsers.ViewModel)
@@ -190,7 +189,7 @@ extension KQHomeViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: KQUsersTableViewCell.identifire, for: indexPath) as! KQUsersTableViewCell
-        
+        cell.accessibilityIdentifier = "\(indexPath.row)"
         cell.selectedUser = displayUsers?[indexPath.row]
         return cell
     }
